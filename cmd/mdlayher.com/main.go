@@ -3,7 +3,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 	"net/http"
 
@@ -56,8 +55,8 @@ func main() {
 	go func() {
 		log.Println("starting HTTP redirect server")
 
-		h := http.RedirectHandler(fmt.Sprintf("https://%s", c.Domain), http.StatusMovedPermanently)
-		if err := http.ListenAndServe(":80", h); err != nil {
+		redirect := web.NewRedirectHandler(c.Domain)
+		if err := http.ListenAndServe(":80", redirect); err != nil {
 			log.Fatalf("failed to serve HTTP: %v", err)
 		}
 	}()

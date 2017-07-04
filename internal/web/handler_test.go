@@ -1,6 +1,7 @@
 package web
 
 import (
+	"crypto/tls"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -117,4 +118,61 @@ func testServer(t *testing.T, c Content) *http.Response {
 	}
 
 	return res
+}
+
+func Test_handlerRedirectSubdomainTLS(t *testing.T) {
+	const domain = "mdlayher.com"
+
+	h := NewHandler(Content{
+		Domain: domain,
+	})
+
+	tests := []struct {
+		prefix   string
+		redirect bool
+	}{
+		{
+			prefix:   "",
+			redirect: false,
+		},
+		{
+			prefix:   "www.",
+			redirect: true,
+		},
+		{
+			prefix:   "www.sub.",
+			redirect: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.prefix, func(t *testing.T) {
+			w := httptest.NewRecorder()
+			r := httptest.NewRequest(http.MethodGet, "/", nil)
+			r.TLS = &tls.ConnectionState{
+				// If prefix is not empty, expect to be redirected to
+				// base domain without prefix.
+				ServerName: tt.prefix + domain,
+			}
+
+			h.ServeHTTP(w, r)
+
+			wantCode := http.StatusMovedPermanently
+			if !tt.redirect {
+				wantCode = http.StatusOK
+			}
+
+			if want, got := wantCode, w.Code; want != got {
+				t.Fatalf("unexpected HTTP response code:\n- want: %d\n-  got: %d", want, got)
+			}
+
+			if !tt.redirect {
+				return
+			}
+
+			if want, got := "https://"+domain, w.Header().Get("Location"); want != got {
+				t.Fatalf("unexpected Location header:\n- want: %q\n-  got: %q", want, got)
+			}
+		})
+	}
 }
