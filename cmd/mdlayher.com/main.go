@@ -2,6 +2,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"html/template"
 	"log"
@@ -12,6 +13,12 @@ import (
 )
 
 func main() {
+	var (
+		useTLS = flag.Bool("tls", false, "use TLS with Let's Encrypt (production mode)")
+	)
+
+	flag.Parse()
+
 	// Information is hard-coded for simplicity of deployment, but this could
 	// be easily changed in the future.
 	c := content{
@@ -34,6 +41,25 @@ func main() {
 		},
 	}
 
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		// HSTS support: https://hstspreload.org/.
+		w.Header().Set("Strict-Transport-Security", "max-age=300; includeSubDomains")
+
+		if err := tmpl.Execute(w, c); err != nil {
+			log.Printf("failed to execute template: %v", err)
+		}
+	})
+
+	// Enable development mode when not using TLS.
+	if !*useTLS {
+		log.Println("starting HTTP development server")
+
+		if err := http.ListenAndServe(":8080", mux); err != nil {
+			log.Fatalf("failed to serve development HTTP: %v", err)
+		}
+	}
+
 	// Always redirect HTTP to HTTPS.
 	go func() {
 		log.Println("starting HTTP redirect server")
@@ -45,16 +71,6 @@ func main() {
 	}()
 
 	log.Printf("starting HTTPS server for domain %q", c.Domain)
-
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		// HSTS support: https://hstspreload.org/.
-		w.Header().Set("Strict-Transport-Security", "max-age=300; includeSubDomains")
-
-		if err := tmpl.Execute(w, c); err != nil {
-			log.Printf("failed to execute template: %v", err)
-		}
-	})
 
 	domains := []string{
 		c.Domain,
