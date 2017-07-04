@@ -8,7 +8,9 @@ import (
 	"log"
 	"net/http"
 	"strings"
+	"time"
 
+	"github.com/mdlayher/mdlayher.com/internal/web"
 	"golang.org/x/crypto/acme/autocert"
 )
 
@@ -44,7 +46,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// HSTS support: https://hstspreload.org/.
-		w.Header().Set("Strict-Transport-Security", "max-age=300; includeSubDomains")
+		w.Header().Set("Strict-Transport-Security", web.HSTSHeader(time.Now()))
 
 		if err := tmpl.Execute(w, c); err != nil {
 			log.Printf("failed to execute template: %v", err)
