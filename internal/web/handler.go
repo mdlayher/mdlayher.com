@@ -1,25 +1,31 @@
 package web
 
 import (
+	"context"
 	"fmt"
-	"html/template"
 	"log"
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/mdlayher/mdlayher.com/internal/github"
 )
 
-// A handler is a http.Handler that serves Content using a template.
+// A handler is a http.Handler that serves content using a template.
 type handler struct {
-	c        Content
+	static   StaticContent
 	redirect http.Handler
+	ghc      github.Client
 }
 
-// NewHandler creates a http.Handler that serves Content using a template.
-func NewHandler(c Content) http.Handler {
+// NewHandler creates a http.Handler that serves content using a template.
+// Additional dynamic content can be added by providing non-nil clients for
+// various services.
+func NewHandler(static StaticContent, ghc github.Client) http.Handler {
 	h := &handler{
-		c:        c,
-		redirect: NewRedirectHandler(c.Domain),
+		static:   static,
+		redirect: NewRedirectHandler(static.Domain),
+		ghc:      ghc,
 	}
 
 	mux := http.NewServeMux()
@@ -39,8 +45,27 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// HSTS support: https://hstspreload.org/.
 	w.Header().Set("Strict-Transport-Security", HSTSHeader(time.Now()))
 
-	if err := tmpl.Execute(w, h.c); err != nil {
-		log.Printf("failed to execute template: %v", err)
+	// Build content for display.
+	content := Content{
+		Static: h.static,
+	}
+
+	// If available, add GitHub content.
+	if h.ghc != nil {
+		repos, err := h.ghc.ListRepositories(context.Background())
+		if err != nil {
+			httpError(w, "failed to retrieve github repositories: %v", err)
+			return
+		}
+
+		content.GitHub = GitHubContent{
+			Repositories: repos,
+		}
+	}
+
+	if err := tmpl.Execute(w, content); err != nil {
+		httpError(w, "failed to execute template: %v", err)
+		return
 	}
 }
 
@@ -50,36 +75,9 @@ func NewRedirectHandler(domain string) http.Handler {
 	return http.RedirectHandler(fmt.Sprintf("https://%s", domain), http.StatusMovedPermanently)
 }
 
-// Content is the top-level object for the HTML template.
-type Content struct {
-	Domain  string
-	Name    string
-	Tagline string
-	Links   []Link
+// httpError returns a generic HTTP 500 to a client and logs an informative
+// message to the logger.
+func httpError(w http.ResponseWriter, format string, a ...interface{}) {
+	log.Printf(format, a...)
+	http.Error(w, "internal server error", http.StatusInternalServerError)
 }
-
-// A Link is a hyperlink and a display title for that link.
-type Link struct {
-	Title string
-	Link  string
-}
-
-// tmpl is the HTML template served to users of the site.
-var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{.Name}}</title>
-	<meta charset='utf-8' />
-	<meta name="description" content="{{.Name}} - {{.Domain}}" />
-</head>
-<body>
-	<h1>{{.Name}}</h1>
-	<p>{{.Tagline}}</p>
-	<ul>
-		{{range .Links}}<li><a href="{{.Link}}">{{.Title}}</a></li>
-		{{end}}
-	</ul>
-</body>
-</html>
-`)))

@@ -5,7 +5,9 @@ import (
 	"flag"
 	"log"
 	"net/http"
+	"time"
 
+	"github.com/mdlayher/mdlayher.com/internal/github"
 	"github.com/mdlayher/mdlayher.com/internal/web"
 
 	"golang.org/x/crypto/acme/autocert"
@@ -20,7 +22,7 @@ func main() {
 
 	// Information is hard-coded for simplicity of deployment, but this could
 	// be easily changed in the future.
-	c := web.Content{
+	static := web.StaticContent{
 		Domain:  "mdlayher.com",
 		Name:    "Matt Layher",
 		Tagline: "Software Engineer. Go, Linux, and open source software enthusiast. On and ever upward.",
@@ -40,7 +42,10 @@ func main() {
 		},
 	}
 
-	handler := web.NewHandler(c)
+	// Retrieve GitHub repositories for display, cache for set amount of time.
+	ghc := github.NewClient("mdlayher", 30*time.Minute)
+
+	handler := web.NewHandler(static, ghc)
 
 	// Enable development mode when not using TLS.
 	if !*useTLS {
@@ -55,18 +60,18 @@ func main() {
 	go func() {
 		log.Println("starting HTTP redirect server")
 
-		redirect := web.NewRedirectHandler(c.Domain)
+		redirect := web.NewRedirectHandler(static.Domain)
 		if err := http.ListenAndServe(":80", redirect); err != nil {
 			log.Fatalf("failed to serve HTTP: %v", err)
 		}
 	}()
 
-	log.Printf("starting HTTPS server for domain %q", c.Domain)
+	log.Printf("starting HTTPS server for domain %q", static.Domain)
 
 	domains := []string{
-		c.Domain,
+		static.Domain,
 		// Also include www subdomain.
-		"www." + c.Domain,
+		"www." + static.Domain,
 	}
 
 	if err := http.Serve(autocert.NewListener(domains...), handler); err != nil {
