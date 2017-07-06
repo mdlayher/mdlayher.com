@@ -10,6 +10,7 @@ import (
 	"testing"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
 func Test_handlerRedirectSubdomainTLS(t *testing.T) {
@@ -17,7 +18,7 @@ func Test_handlerRedirectSubdomainTLS(t *testing.T) {
 
 	h := NewHandler(StaticContent{
 		Domain: domain,
-	}, nil)
+	}, nil, nil)
 
 	tests := []struct {
 		prefix   string
@@ -74,6 +75,7 @@ func Test_handlerServeHTTP(t *testing.T) {
 		name   string
 		static StaticContent
 		ghc    github.Client
+		mc     medium.Client
 		check  func(t *testing.T, res *http.Response)
 	}{
 		{
@@ -153,11 +155,30 @@ func Test_handlerServeHTTP(t *testing.T) {
 				`<ul><li>bar baz</li></ul>`,
 			}),
 		},
+		{
+			name: "body contains Medium content",
+			mc: &testMediumClient{
+				posts: []*medium.Post{
+					{
+						Title: "Foo Bar",
+						Link:  "https://foo.com",
+					},
+					{
+						Title: "Bar Baz",
+						Link:  "https://bar.com",
+					},
+				},
+			},
+			check: bodyContains(t, []string{
+				`<li><a href="https://foo.com">Foo Bar</a></li>`,
+				`<li><a href="https://bar.com">Bar Baz</a></li>`,
+			}),
+		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tt.check(t, testServer(t, tt.static, tt.ghc))
+			tt.check(t, testServer(t, tt.static, tt.ghc, tt.mc))
 		})
 	}
 }
@@ -187,8 +208,8 @@ func bodyContains(t *testing.T, strs []string) func(t *testing.T, res *http.Resp
 
 // testServer performs a single HTTP request against a handler
 // populated with content and returns the HTTP response.
-func testServer(t *testing.T, static StaticContent, ghc github.Client) *http.Response {
-	s := httptest.NewServer(NewHandler(static, ghc))
+func testServer(t *testing.T, static StaticContent, ghc github.Client, mc medium.Client) *http.Response {
+	s := httptest.NewServer(NewHandler(static, ghc, mc))
 	defer s.Close()
 
 	req, err := http.NewRequest(http.MethodGet, s.URL, nil)
@@ -213,4 +234,15 @@ type testGitHubClient struct {
 
 func (c *testGitHubClient) ListRepositories(_ context.Context) ([]*github.Repository, error) {
 	return c.repos, nil
+}
+
+var _ medium.Client = &testMediumClient{}
+
+// testMediumClient is a medium.Client that returns static content.
+type testMediumClient struct {
+	posts []*medium.Post
+}
+
+func (c *testMediumClient) ListPosts() ([]*medium.Post, error) {
+	return c.posts, nil
 }

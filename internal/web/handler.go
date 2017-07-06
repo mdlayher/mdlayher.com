@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
 // A handler is a http.Handler that serves content using a template.
@@ -16,16 +17,18 @@ type handler struct {
 	static   StaticContent
 	redirect http.Handler
 	ghc      github.Client
+	mc       medium.Client
 }
 
 // NewHandler creates a http.Handler that serves content using a template.
 // Additional dynamic content can be added by providing non-nil clients for
 // various services.
-func NewHandler(static StaticContent, ghc github.Client) http.Handler {
+func NewHandler(static StaticContent, ghc github.Client, mc medium.Client) http.Handler {
 	h := &handler{
 		static:   static,
 		redirect: NewRedirectHandler(static.Domain),
 		ghc:      ghc,
+		mc:       mc,
 	}
 
 	mux := http.NewServeMux()
@@ -60,6 +63,19 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 		content.GitHub = GitHubContent{
 			Repositories: repos,
+		}
+	}
+
+	// If available, add Medium content.
+	if h.mc != nil {
+		posts, err := h.mc.ListPosts()
+		if err != nil {
+			httpError(w, "failed to retrieve medium posts: %v", err)
+			return
+		}
+
+		content.Medium = MediumContent{
+			Posts: posts,
 		}
 	}
 

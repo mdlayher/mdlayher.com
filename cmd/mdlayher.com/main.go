@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/medium"
 	"github.com/mdlayher/mdlayher.com/internal/web"
 
 	"golang.org/x/crypto/acme/autocert"
@@ -42,10 +43,11 @@ func main() {
 		},
 	}
 
-	// Retrieve GitHub repositories for display, cache for set amount of time.
+	// Retrieve external metadata for display, cache for set amount of time.
 	ghc := github.NewClient("mdlayher", 30*time.Minute)
+	mc := medium.NewClient("mdlayher", 12*time.Hour)
 
-	handler := web.NewHandler(static, ghc)
+	handler := web.NewHandler(static, ghc, mc)
 
 	// Enable development mode when not using TLS.
 	if !*useTLS {

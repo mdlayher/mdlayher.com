@@ -5,12 +5,14 @@ import (
 	"strings"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
 // Content is the top-level object for the HTML template.
 type Content struct {
 	Static StaticContent
 	GitHub GitHubContent
+	Medium MediumContent
 }
 
 // StaticContent contains statically defined content for the HTML template.
@@ -24,6 +26,11 @@ type StaticContent struct {
 // GitHubContent contains dynamic content from GitHub for the HTML template.
 type GitHubContent struct {
 	Repositories []*github.Repository
+}
+
+// MediumContent contains dynamic content from Medium for the HTML template.
+type MediumContent struct {
+	Posts []*medium.Post
 }
 
 // A Link is a hyperlink and a display title for that link.
@@ -55,6 +62,13 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 		<ul><li>{{.Description}}</li></ul>
 		{{end}}
 		</ul>
+	{{end}}
+	{{if .Medium.Posts}}
+	<h2>Blog Posts</h2>
+	<ul>
+	{{range .Medium.Posts}}<li><a href="{{.Link}}">{{.Title}}</a></li>
+	{{end}}
+	</ul>
 	{{end}}
 </body>
 </html>
