@@ -8,9 +8,45 @@ import (
 	"net/url"
 	"reflect"
 	"testing"
+	"time"
 
 	"github.com/google/go-github/github"
 )
+
+func Test_newClientListRepositories(t *testing.T) {
+	// Expect only once call to HTTP server because of cache.
+	var calls int
+	s := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		calls++
+
+		// Verify user agent while we're at it.
+		if want, got := r.UserAgent(), "github.com/mdlayher/mdlayher.com/internal/github"; want != got {
+			t.Fatalf("unexpected user agent:\n- want: %q\n-  got: %q", want, got)
+		}
+
+		if calls > 1 {
+			t.Fatalf("too many calls to GitHub API: %d", calls)
+		}
+	}))
+	defer s.Close()
+
+	u, err := url.Parse(s.URL)
+	if err != nil {
+		t.Fatalf("failed to parse URL: %v", err)
+	}
+
+	ghc := github.NewClient(nil)
+	ghc.BaseURL = u
+
+	// Cache should expire long after this test completes.
+	c := newClient(ghc, "mdlayher", 1*time.Hour)
+
+	for i := 0; i < 5; i++ {
+		if _, err := c.ListRepositories(context.Background()); err != nil {
+			t.Fatalf("error listing repositories: %v", err)
+		}
+	}
+}
 
 func Test_clientListRepositories(t *testing.T) {
 	// This test covers the actual GitHub client interactions, verifying that
