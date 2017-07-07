@@ -160,18 +160,22 @@ func Test_handlerServeHTTP(t *testing.T) {
 			mc: &testMediumClient{
 				posts: []*medium.Post{
 					{
-						Title: "Foo Bar",
-						Link:  "https://foo.com",
+						Title:    "Foo Bar",
+						Subtitle: "foo bar baz",
+						Link:     "https://foo.com",
 					},
 					{
-						Title: "Bar Baz",
-						Link:  "https://bar.com",
+						Title:    "Bar Baz",
+						Subtitle: "bar baz qux",
+						Link:     "https://bar.com",
 					},
 				},
 			},
 			check: bodyContains(t, []string{
 				`<li><a href="https://foo.com">Foo Bar</a></li>`,
+				`<ul><li>foo bar baz</li></ul>`,
 				`<li><a href="https://bar.com">Bar Baz</a></li>`,
+				`<ul><li>bar baz qux</li></ul>`,
 			}),
 		},
 	}

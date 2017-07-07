@@ -67,6 +67,7 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 	<h2>Blog Posts</h2>
 	<ul>
 	{{range .Medium.Posts}}<li><a href="{{.Link}}">{{.Title}}</a></li>
+	<ul><li>{{.Subtitle}}</li></ul>
 	{{end}}
 	</ul>
 	{{end}}
