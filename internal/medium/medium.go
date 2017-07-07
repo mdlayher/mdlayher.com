@@ -45,8 +45,9 @@ type Client interface {
 
 // A Post contains metadata about a Medium post.
 type Post struct {
-	Title string
-	Link  string
+	Title    string
+	Subtitle string
+	Link     string
 
 	created int
 }
@@ -109,9 +110,15 @@ type postMetadata struct {
 
 // rawPost is the raw structure of a Post.
 type rawPost struct {
-	CreatedAt  int    `json:"createdAt"`
-	Title      string `json:"title"`
-	UniqueSlug string `json:"uniqueSlug"`
+	CreatedAt  int            `json:"createdAt"`
+	Title      string         `json:"title"`
+	UniqueSlug string         `json:"uniqueSlug"`
+	Content    rawPostContent `json:"content"`
+}
+
+// rawPostContent is an object within a rawPost containing more metadata.
+type rawPostContent struct {
+	Subtitle string `json:"subtitle"`
 }
 
 // ListPosts implements Client.
@@ -136,9 +143,10 @@ func (c *client) ListPosts() ([]*Post, error) {
 		link.Path = fmt.Sprintf("/@%s/%s", c.username, v.UniqueSlug)
 
 		posts = append(posts, &Post{
-			Title:   v.Title,
-			Link:    link.String(),
-			created: v.CreatedAt,
+			Title:    v.Title,
+			Subtitle: v.Content.Subtitle,
+			Link:     link.String(),
+			created:  v.CreatedAt,
 		})
 	}
 

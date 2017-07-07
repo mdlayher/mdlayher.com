@@ -67,11 +67,17 @@ func Test_clientListPosts(t *testing.T) {
 				CreatedAt:  10,
 				Title:      "foo",
 				UniqueSlug: "foo-deadbeef",
+				Content: rawPostContent{
+					Subtitle: "dead beef dead",
+				},
 			},
 			"foobar": {
 				CreatedAt:  20,
 				Title:      "bar",
 				UniqueSlug: "bar-foobar",
+				Content: rawPostContent{
+					Subtitle: "foo bar baz",
+				},
 			},
 		}
 
@@ -97,14 +103,16 @@ func Test_clientListPosts(t *testing.T) {
 
 	want := []*Post{
 		{
-			Title:   "bar",
-			Link:    "https://medium.com/@" + username + "/bar-foobar",
-			created: 20,
+			Title:    "bar",
+			Subtitle: "foo bar baz",
+			Link:     "https://medium.com/@" + username + "/bar-foobar",
+			created:  20,
 		},
 		{
-			Title:   "foo",
-			Link:    "https://medium.com/@" + username + "/foo-deadbeef",
-			created: 10,
+			Title:    "foo",
+			Subtitle: "dead beef dead",
+			Link:     "https://medium.com/@" + username + "/foo-deadbeef",
+			created:  10,
 		},
 	}
 
