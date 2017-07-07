@@ -44,8 +44,8 @@ func main() {
 	}
 
 	// Retrieve external metadata for display, cache for set amount of time.
-	ghc := github.NewClient("mdlayher", 30*time.Minute)
-	mc := medium.NewClient("mdlayher", 12*time.Hour)
+	ghc := github.NewClient("mdlayher", 12*time.Hour)
+	mc := medium.NewClient("mdlayher", 24*time.Hour)
 
 	handler := web.NewHandler(static, ghc, mc)
 
