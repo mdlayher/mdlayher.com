@@ -45,8 +45,13 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 <html>
 <head>
 	<title>{{.Static.Name}}</title>
-	<meta charset='utf-8' />
+	<meta charset="utf-8" />
 	<meta name="description" content="{{.Static.Name}} - {{.Static.Domain}}" />
+	<style>
+		* {
+			font-family: sans-serif;
+		}
+	</style>
 </head>
 <body>
 	<h1>{{.Static.Name}}</h1>
