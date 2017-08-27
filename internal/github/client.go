@@ -88,9 +88,19 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 		repos = append(repos, &Repository{
 			Name:        *r.Name,
 			Link:        *r.HTMLURL,
-			Description: *r.Description,
+			Description: ptrString(r.Description),
 		})
 	}
 
 	return repos, nil
+}
+
+// ptrString returns the string contents of a *string, or empty string
+// if the pointer is nil.
+func ptrString(s *string) string {
+	if s == nil {
+		return ""
+	}
+
+	return *s
 }

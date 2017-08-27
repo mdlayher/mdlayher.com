@@ -78,9 +78,9 @@ func Test_clientListRepositories(t *testing.T) {
 				Description: "first",
 			},
 			{
-				Name:        "world",
-				HTMLURL:     "https://github.com/mdlayher/world",
-				Description: "second",
+				Name:    "world",
+				HTMLURL: "https://github.com/mdlayher/world",
+				// No Description to confirm the client will not panic.
 			},
 		}
 
@@ -113,9 +113,8 @@ func Test_clientListRepositories(t *testing.T) {
 			Description: "first",
 		},
 		{
-			Name:        "world",
-			Link:        "https://github.com/mdlayher/world",
-			Description: "second",
+			Name: "world",
+			Link: "https://github.com/mdlayher/world",
 		},
 	}
 
