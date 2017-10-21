@@ -35,6 +35,9 @@ func Test_newClientListRepositories(t *testing.T) {
 		t.Fatalf("failed to parse URL: %v", err)
 	}
 
+	// New go-github insists that base URL should have a trailing slash.
+	u.Path = "/"
+
 	ghc := github.NewClient(nil)
 	ghc.BaseURL = u
 
@@ -92,6 +95,9 @@ func Test_clientListRepositories(t *testing.T) {
 	if err != nil {
 		t.Fatalf("failed to parse URL: %v", err)
 	}
+
+	// New go-github insists that base URL should have a trailing slash.
+	u.Path = "/"
 
 	ghc := github.NewClient(nil)
 	ghc.BaseURL = u
