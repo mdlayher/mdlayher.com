@@ -10,6 +10,7 @@ import (
 	"testing"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/gittalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
@@ -18,7 +19,7 @@ func Test_handlerRedirectSubdomainTLS(t *testing.T) {
 
 	h := NewHandler(StaticContent{
 		Domain: domain,
-	}, nil, nil)
+	}, nil, nil, nil)
 
 	tests := []struct {
 		prefix   string
@@ -76,6 +77,7 @@ func Test_handlerServeHTTP(t *testing.T) {
 		static StaticContent
 		ghc    github.Client
 		mc     medium.Client
+		gtc    gittalks.Client
 		check  func(t *testing.T, res *http.Response)
 	}{
 		{
@@ -180,8 +182,8 @@ func Test_handlerServeHTTP(t *testing.T) {
 		},
 		{
 			name: "body contains talks",
-			static: StaticContent{
-				Talks: []Talk{
+			gtc: &testGitTalksClient{
+				talks: []*gittalks.Talk{
 					{
 						Title:       "foo",
 						VideoLink:   "https://bar.com",
@@ -189,25 +191,29 @@ func Test_handlerServeHTTP(t *testing.T) {
 						Description: "qux",
 					},
 					{
-						Title:       "bar",
-						VideoLink:   "https://baz.com",
+						Title:       "novideo",
 						SlidesLink:  "https://qux.com",
 						Description: "corge",
+					},
+					{
+						Title:      "nodescription",
+						SlidesLink: "https://qux.com",
 					},
 				},
 			},
 			check: bodyContains(t, []string{
 				`<li><a href="https://bar.com">foo</a> [<a href="https://baz.com">slides</a>]</li>`,
 				`<ul><li>qux</li></ul>`,
-				`<li><a href="https://baz.com">bar</a> [<a href="https://qux.com">slides</a>]</li>`,
+				`<li>novideo [<a href="https://qux.com">slides</a>]</li>`,
 				`<ul><li>corge</li></ul>`,
+				`<li>nodescription [<a href="https://qux.com">slides</a>]</li>`,
 			}),
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tt.check(t, testServer(t, tt.static, tt.ghc, tt.mc))
+			tt.check(t, testServer(t, tt.static, tt.ghc, tt.mc, tt.gtc))
 		})
 	}
 }
@@ -237,8 +243,14 @@ func bodyContains(t *testing.T, strs []string) func(t *testing.T, res *http.Resp
 
 // testServer performs a single HTTP request against a handler
 // populated with content and returns the HTTP response.
-func testServer(t *testing.T, static StaticContent, ghc github.Client, mc medium.Client) *http.Response {
-	s := httptest.NewServer(NewHandler(static, ghc, mc))
+func testServer(
+	t *testing.T,
+	static StaticContent,
+	ghc github.Client,
+	mc medium.Client,
+	gtc gittalks.Client,
+) *http.Response {
+	s := httptest.NewServer(NewHandler(static, ghc, mc, gtc))
 	defer s.Close()
 
 	req, err := http.NewRequest(http.MethodGet, s.URL, nil)
@@ -274,4 +286,15 @@ type testMediumClient struct {
 
 func (c *testMediumClient) ListPosts() ([]*medium.Post, error) {
 	return c.posts, nil
+}
+
+var _ gittalks.Client = &testGitTalksClient{}
+
+// testGitTalksClient is a gittalks.Client that returns static content.
+type testGitTalksClient struct {
+	talks []*gittalks.Talk
+}
+
+func (c *testGitTalksClient) ListTalks(_ context.Context) ([]*gittalks.Talk, error) {
+	return c.talks, nil
 }

@@ -5,14 +5,16 @@ import (
 	"strings"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/gittalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
 // Content is the top-level object for the HTML template.
 type Content struct {
-	Static StaticContent
-	GitHub GitHubContent
-	Medium MediumContent
+	Static   StaticContent
+	GitHub   GitHubContent
+	Medium   MediumContent
+	GitTalks GitTalksContent
 }
 
 // StaticContent contains statically defined content for the HTML template.
@@ -21,7 +23,6 @@ type StaticContent struct {
 	Name    string
 	Tagline string
 	Links   []Link
-	Talks   []Talk
 }
 
 // GitHubContent contains dynamic content from GitHub for the HTML template.
@@ -34,18 +35,16 @@ type MediumContent struct {
 	Posts []*medium.Post
 }
 
+// GitTalksContent contains dynamic content from a git repository about talks
+// for the HTML template.
+type GitTalksContent struct {
+	Talks []*gittalks.Talk
+}
+
 // A Link is a hyperlink and a display title for that link.
 type Link struct {
 	Title string
 	Link  string
-}
-
-// A Talk is the metadata for a talk, with slides and video links.
-type Talk struct {
-	Title       string
-	SlidesLink  string
-	VideoLink   string
-	Description string
 }
 
 // tmpl is the HTML template served to users of the site.
@@ -85,11 +84,11 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 	{{end}}
 	</ul>
 	{{end}}
-	{{if .Static.Talks}}
+	{{if .GitTalks.Talks}}
 	<h2>Talks</h2>
 	<ul>
-	{{range .Static.Talks}}<li><a href="{{.VideoLink}}">{{.Title}}</a> [<a href="{{.SlidesLink}}">slides</a>]</li>
-	<ul><li>{{.Description}}</li></ul>
+	{{range .GitTalks.Talks}}<li>{{if .VideoLink}}<a href="{{.VideoLink}}">{{.Title}}</a> [<a href="{{.SlidesLink}}">slides</a>]{{else}}{{.Title}} [<a href="{{.SlidesLink}}">slides</a>]{{end}}</li>
+	{{if .Description}}<ul><li>{{.Description}}</li></ul>{{end}}
 	{{end}}
 	</ul>
 	{{end}}

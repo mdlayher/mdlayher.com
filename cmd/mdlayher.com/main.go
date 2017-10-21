@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/gittalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 	"github.com/mdlayher/mdlayher.com/internal/web"
 
@@ -41,22 +42,14 @@ func main() {
 				Link:  "https://twitter.com/mdlayher",
 			},
 		},
-		// TODO(mdlayher): populate talks using some API or maybe a config file?
-		Talks: []web.Talk{
-			{
-				Title:       "GopherCon 2017 - Lightning Talk: Ethernet and Go",
-				SlidesLink:  "http://go-talks.appspot.com/github.com/mdlayher/talks/ethernet-and-go.slide#1",
-				VideoLink:   "https://www.youtube.com/watch?v=DgNiktCFuBg",
-				Description: "A lightning talk about using Ethernet frames and raw sockets directly in Go.",
-			},
-		},
 	}
 
 	// Retrieve external metadata for display, cache for set amount of time.
 	ghc := github.NewClient("mdlayher", 12*time.Hour)
 	mc := medium.NewClient("mdlayher", 24*time.Hour)
+	gtc := gittalks.NewClient("https://github.com/mdlayher/talks", 24*time.Hour)
 
-	handler := web.NewHandler(static, ghc, mc)
+	handler := web.NewHandler(static, ghc, mc, gtc)
 
 	// Enable development mode when not using TLS.
 	if !*useTLS {

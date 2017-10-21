@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/gittalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
@@ -18,17 +19,19 @@ type handler struct {
 	redirect http.Handler
 	ghc      github.Client
 	mc       medium.Client
+	gtc      gittalks.Client
 }
 
 // NewHandler creates a http.Handler that serves content using a template.
 // Additional dynamic content can be added by providing non-nil clients for
 // various services.
-func NewHandler(static StaticContent, ghc github.Client, mc medium.Client) http.Handler {
+func NewHandler(static StaticContent, ghc github.Client, mc medium.Client, gtc gittalks.Client) http.Handler {
 	h := &handler{
 		static:   static,
 		redirect: NewRedirectHandler(static.Domain),
 		ghc:      ghc,
 		mc:       mc,
+		gtc:      gtc,
 	}
 
 	mux := http.NewServeMux()
@@ -76,6 +79,19 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 		content.Medium = MediumContent{
 			Posts: posts,
+		}
+	}
+
+	// If available, add git talks content.
+	if h.gtc != nil {
+		talks, err := h.gtc.ListTalks(context.Background())
+		if err != nil {
+			httpError(w, "failed to retrieve git talks: %v", err)
+			return
+		}
+
+		content.GitTalks = GitTalksContent{
+			Talks: talks,
 		}
 	}
 
