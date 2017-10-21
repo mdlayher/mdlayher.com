@@ -21,6 +21,7 @@ type StaticContent struct {
 	Name    string
 	Tagline string
 	Links   []Link
+	Talks   []Talk
 }
 
 // GitHubContent contains dynamic content from GitHub for the HTML template.
@@ -37,6 +38,14 @@ type MediumContent struct {
 type Link struct {
 	Title string
 	Link  string
+}
+
+// A Talk is the metadata for a talk, with slides and video links.
+type Talk struct {
+	Title       string
+	SlidesLink  string
+	VideoLink   string
+	Description string
 }
 
 // tmpl is the HTML template served to users of the site.
@@ -73,6 +82,14 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 	<ul>
 	{{range .Medium.Posts}}<li><a href="{{.Link}}">{{.Title}}</a></li>
 	<ul><li>{{.Subtitle}}</li></ul>
+	{{end}}
+	</ul>
+	{{end}}
+	{{if .Static.Talks}}
+	<h2>Talks</h2>
+	<ul>
+	{{range .Static.Talks}}<li><a href="{{.VideoLink}}">{{.Title}}</a> [<a href="{{.SlidesLink}}">slides</a>]</li>
+	<ul><li>{{.Description}}</li></ul>
 	{{end}}
 	</ul>
 	{{end}}

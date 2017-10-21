@@ -178,6 +178,31 @@ func Test_handlerServeHTTP(t *testing.T) {
 				`<ul><li>bar baz qux</li></ul>`,
 			}),
 		},
+		{
+			name: "body contains talks",
+			static: StaticContent{
+				Talks: []Talk{
+					{
+						Title:       "foo",
+						VideoLink:   "https://bar.com",
+						SlidesLink:  "https://baz.com",
+						Description: "qux",
+					},
+					{
+						Title:       "bar",
+						VideoLink:   "https://baz.com",
+						SlidesLink:  "https://qux.com",
+						Description: "corge",
+					},
+				},
+			},
+			check: bodyContains(t, []string{
+				`<li><a href="https://bar.com">foo</a> [<a href="https://baz.com">slides</a>]</li>`,
+				`<ul><li>qux</li></ul>`,
+				`<li><a href="https://baz.com">bar</a> [<a href="https://qux.com">slides</a>]</li>`,
+				`<ul><li>corge</li></ul>`,
+			}),
+		},
 	}
 
 	for _, tt := range tests {
