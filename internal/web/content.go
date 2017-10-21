@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
-	"github.com/mdlayher/mdlayher.com/internal/gittalks"
+	"github.com/mdlayher/mdlayher.com/internal/httptalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
@@ -14,7 +14,7 @@ type Content struct {
 	Static   StaticContent
 	GitHub   GitHubContent
 	Medium   MediumContent
-	GitTalks GitTalksContent
+	HTTPTalks HTTPTalksContent
 }
 
 // StaticContent contains statically defined content for the HTML template.
@@ -35,10 +35,10 @@ type MediumContent struct {
 	Posts []*medium.Post
 }
 
-// GitTalksContent contains dynamic content from a git repository about talks
+// HTTPTalksContent contains dynamic content from an HTTP URL about talks
 // for the HTML template.
-type GitTalksContent struct {
-	Talks []*gittalks.Talk
+type HTTPTalksContent struct {
+	Talks []*httptalks.Talk
 }
 
 // A Link is a hyperlink and a display title for that link.
@@ -84,10 +84,10 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 	{{end}}
 	</ul>
 	{{end}}
-	{{if .GitTalks.Talks}}
+	{{if .HTTPTalks.Talks}}
 	<h2>Talks</h2>
 	<ul>
-	{{range .GitTalks.Talks}}<li>{{if .VideoLink}}<a href="{{.VideoLink}}">{{.Title}}</a> [<a href="{{.SlidesLink}}">slides</a>]{{else}}{{.Title}} [<a href="{{.SlidesLink}}">slides</a>]{{end}}</li>
+	{{range .HTTPTalks.Talks}}<li>{{if .VideoLink}}<a href="{{.VideoLink}}">{{.Title}}</a> [<a href="{{.SlidesLink}}">slides</a>]{{else}}{{.Title}} [<a href="{{.SlidesLink}}">slides</a>]{{end}}</li>
 	{{if .Description}}<ul><li>{{.Description}}</li></ul>{{end}}
 	{{end}}
 	</ul>

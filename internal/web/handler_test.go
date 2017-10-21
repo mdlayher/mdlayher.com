@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
-	"github.com/mdlayher/mdlayher.com/internal/gittalks"
+	"github.com/mdlayher/mdlayher.com/internal/httptalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
@@ -77,7 +77,7 @@ func Test_handlerServeHTTP(t *testing.T) {
 		static StaticContent
 		ghc    github.Client
 		mc     medium.Client
-		gtc    gittalks.Client
+		htc    httptalks.Client
 		check  func(t *testing.T, res *http.Response)
 	}{
 		{
@@ -182,8 +182,8 @@ func Test_handlerServeHTTP(t *testing.T) {
 		},
 		{
 			name: "body contains talks",
-			gtc: &testGitTalksClient{
-				talks: []*gittalks.Talk{
+			htc: &testHTTPTalksClient{
+				talks: []*httptalks.Talk{
 					{
 						Title:       "foo",
 						VideoLink:   "https://bar.com",
@@ -213,7 +213,7 @@ func Test_handlerServeHTTP(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tt.check(t, testServer(t, tt.static, tt.ghc, tt.mc, tt.gtc))
+			tt.check(t, testServer(t, tt.static, tt.ghc, tt.mc, tt.htc))
 		})
 	}
 }
@@ -248,9 +248,9 @@ func testServer(
 	static StaticContent,
 	ghc github.Client,
 	mc medium.Client,
-	gtc gittalks.Client,
+	htc httptalks.Client,
 ) *http.Response {
-	s := httptest.NewServer(NewHandler(static, ghc, mc, gtc))
+	s := httptest.NewServer(NewHandler(static, ghc, mc, htc))
 	defer s.Close()
 
 	req, err := http.NewRequest(http.MethodGet, s.URL, nil)
@@ -288,13 +288,13 @@ func (c *testMediumClient) ListPosts() ([]*medium.Post, error) {
 	return c.posts, nil
 }
 
-var _ gittalks.Client = &testGitTalksClient{}
+var _ httptalks.Client = &testHTTPTalksClient{}
 
-// testGitTalksClient is a gittalks.Client that returns static content.
-type testGitTalksClient struct {
-	talks []*gittalks.Talk
+// testHTTPTalksClient is a httptalks.Client that returns static content.
+type testHTTPTalksClient struct {
+	talks []*httptalks.Talk
 }
 
-func (c *testGitTalksClient) ListTalks(_ context.Context) ([]*gittalks.Talk, error) {
+func (c *testHTTPTalksClient) ListTalks(_ context.Context) ([]*httptalks.Talk, error) {
 	return c.talks, nil
 }

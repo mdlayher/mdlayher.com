@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
-	"github.com/mdlayher/mdlayher.com/internal/gittalks"
+	"github.com/mdlayher/mdlayher.com/internal/httptalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 	"github.com/mdlayher/mdlayher.com/internal/web"
 
@@ -47,9 +47,9 @@ func main() {
 	// Retrieve external metadata for display, cache for set amount of time.
 	ghc := github.NewClient("mdlayher", 12*time.Hour)
 	mc := medium.NewClient("mdlayher", 24*time.Hour)
-	gtc := gittalks.NewClient("https://github.com/mdlayher/talks", 24*time.Hour)
+	htc := httptalks.NewClient("https://raw.githubusercontent.com/mdlayher/talks/master/talks.json", 24*time.Hour)
 
-	handler := web.NewHandler(static, ghc, mc, gtc)
+	handler := web.NewHandler(static, ghc, mc, htc)
 
 	// Enable development mode when not using TLS.
 	if !*useTLS {
