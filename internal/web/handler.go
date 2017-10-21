@@ -82,11 +82,11 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// If available, add git talks content.
+	// If available, add HTTP talks content.
 	if h.htc != nil {
 		talks, err := h.htc.ListTalks(context.Background())
 		if err != nil {
-			httpError(w, "failed to retrieve git talks: %v", err)
+			httpError(w, "failed to retrieve talks: %v", err)
 			return
 		}
 

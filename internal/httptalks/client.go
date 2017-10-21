@@ -13,7 +13,7 @@ import (
 // userAgent identifies this client.
 const userAgent = "github.com/mdlayher/mdlayher.com/internal/httptalks"
 
-// A Client is a git talks client.
+// A Client is an HTTP talks client.
 type Client interface {
 	ListTalks(ctx context.Context) ([]*Talk, error)
 }
@@ -26,9 +26,9 @@ type Talk struct {
 	VideoLink   string
 }
 
-// NewClient creates a caching git talks client that retrieves talks
-// from the specified repository URL.  Data for subsequent calls
-// is cached until the expiration period elapses.
+// NewClient creates a caching HTTP talks client that retrieves talks
+// from the specified  URL.  Data for subsequent calls is cached until
+// the expiration period elapses.
 func NewClient(addr string, expire time.Duration) Client {
 	return newClient(addr, expire)
 }
@@ -46,7 +46,7 @@ func newClient(addr string, expire time.Duration) Client {
 
 var _ Client = &cachingClient{}
 
-// A cachingClient is a caching git talks client.
+// A cachingClient is a caching HTTP talks client.
 type cachingClient struct {
 	cache  memocache.Cache
 	client Client
@@ -66,8 +66,7 @@ func (c *cachingClient) ListTalks(ctx context.Context) ([]*Talk, error) {
 
 var _ Client = &client{}
 
-// A client is a wrapper around a cloner to clone a repository and decode
-// its talks.json file.
+// A client fetches an HTTP URL and decodes its JSON output.
 type client struct {
 	client *http.Client
 	addr   string
