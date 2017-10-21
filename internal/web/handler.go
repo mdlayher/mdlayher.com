@@ -51,48 +51,45 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// HSTS support: https://hstspreload.org/.
 	w.Header().Set("Strict-Transport-Security", HSTSHeader(time.Now()))
 
+	// Dispatch a group of futures to fetch external data, to be evaluated
+	// once ready to populate the Content structure.
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	repoFn := h.fetchGitHub(ctx)
+	postFn := h.fetchMedium(ctx)
+	talkFn := h.fetchTalks(ctx)
+
+	repos, err := repoFn()
+	if err != nil {
+		httpError(w, "failed to fetch github repositories: %v", err)
+		return
+	}
+
+	posts, err := postFn()
+	if err != nil {
+		httpError(w, "failed to fetch medium posts: %v", err)
+		return
+	}
+
+	talks, err := talkFn()
+	if err != nil {
+		httpError(w, "failed to fetch talks: %v", err)
+		return
+	}
+
 	// Build content for display.
 	content := Content{
 		Static: h.static,
-	}
-
-	// If available, add GitHub content.
-	if h.ghc != nil {
-		repos, err := h.ghc.ListRepositories(context.Background())
-		if err != nil {
-			httpError(w, "failed to retrieve github repositories: %v", err)
-			return
-		}
-
-		content.GitHub = GitHubContent{
+		GitHub: GitHubContent{
 			Repositories: repos,
-		}
-	}
-
-	// If available, add Medium content.
-	if h.mc != nil {
-		posts, err := h.mc.ListPosts()
-		if err != nil {
-			httpError(w, "failed to retrieve medium posts: %v", err)
-			return
-		}
-
-		content.Medium = MediumContent{
+		},
+		Medium: MediumContent{
 			Posts: posts,
-		}
-	}
-
-	// If available, add HTTP talks content.
-	if h.htc != nil {
-		talks, err := h.htc.ListTalks(context.Background())
-		if err != nil {
-			httpError(w, "failed to retrieve talks: %v", err)
-			return
-		}
-
-		content.HTTPTalks = HTTPTalksContent{
+		},
+		HTTPTalks: HTTPTalksContent{
 			Talks: talks,
-		}
+		},
 	}
 
 	if err := tmpl.Execute(w, content); err != nil {
