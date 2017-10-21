@@ -41,6 +41,15 @@ func main() {
 				Link:  "https://twitter.com/mdlayher",
 			},
 		},
+		// TODO(mdlayher): populate talks using some API or maybe a config file?
+		Talks: []web.Talk{
+			{
+				Title:       "GopherCon 2017 - Lightning Talk: Ethernet and Go",
+				SlidesLink:  "http://go-talks.appspot.com/github.com/mdlayher/talks/ethernet-and-go.slide#1",
+				VideoLink:   "https://www.youtube.com/watch?v=DgNiktCFuBg",
+				Description: "A lightning talk about using Ethernet frames and raw sockets directly in Go.",
+			},
+		},
 	}
 
 	// Retrieve external metadata for display, cache for set amount of time.
