@@ -63,6 +63,18 @@
 			"revisionTime": "2015-12-15T15:34:51Z"
 		},
 		{
+			"checksumSHA1": "CSMVjFF7FnylAUUKW1e/4r+VFXA=",
+			"path": "golang.org/x/crypto/acme",
+			"revision": "edd5e9b0879d13ee6970a50153d85b8fec9f7686",
+			"revisionTime": "2017-10-19T01:58:03Z"
+		},
+		{
+			"checksumSHA1": "4JU5m5FGcmRYDq/oPlwQC+K8TYA=",
+			"path": "golang.org/x/crypto/acme/autocert",
+			"revision": "edd5e9b0879d13ee6970a50153d85b8fec9f7686",
+			"revisionTime": "2017-10-19T01:58:03Z"
+		},
+		{
 			"checksumSHA1": "IQkUIOnvlf0tYloFx9mLaXSvXWQ=",
 			"path": "golang.org/x/crypto/curve25519",
 			"revision": "edd5e9b0879d13ee6970a50153d85b8fec9f7686",
