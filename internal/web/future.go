@@ -36,10 +36,6 @@ func future(name string, fn func() (interface{}, error)) func() (interface{}, er
 	}
 }
 
-// handler.fetch* methods don't return any errors because they all return
-// slices. No result iteration occurs when the slice is nil.  An error is
-// logged if any problems occur.
-
 // fetchGitHub fetches GitHub repositories in a future.
 func (h *handler) fetchGitHub(ctx context.Context) func() ([]*github.Repository, error) {
 	fn := future("github", func() (interface{}, error) {
