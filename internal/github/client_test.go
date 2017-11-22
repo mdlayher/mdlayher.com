@@ -63,7 +63,7 @@ func Test_clientListRepositories(t *testing.T) {
 
 		q := r.URL.Query()
 
-		if want, got := "10", q.Get("per_page"); want != got {
+		if want, got := "15", q.Get("per_page"); want != got {
 			t.Fatalf("unexpected per_page parameter:\n- want: %q\n-  got: %q", want, got)
 		}
 		if want, got := "pushed", q.Get("sort"); want != got {
@@ -74,6 +74,7 @@ func Test_clientListRepositories(t *testing.T) {
 			Name        string `json:"name"`
 			HTMLURL     string `json:"html_url"`
 			Description string `json:"description"`
+			Archived    bool   `json:"archived"`
 		}{
 			{
 				Name:        "hello",
@@ -84,6 +85,12 @@ func Test_clientListRepositories(t *testing.T) {
 				Name:    "world",
 				HTMLURL: "https://github.com/mdlayher/world",
 				// No Description to confirm the client will not panic.
+			},
+			{
+				Name:    "archived",
+				HTMLURL: "https://github.com/mdlayher/archived",
+				// Should not be displayed because repo is archived.
+				Archived: true,
 			},
 		}
 
