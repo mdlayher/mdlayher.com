@@ -3,10 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "cSRIy+bgQF1ggi0qK8w2xuwhvZ8=",
+			"checksumSHA1": "ZqrUOc6uNT+9CSttwBPU9odm9uo=",
 			"path": "github.com/google/go-github/github",
-			"revision": "a021c14a5f1960591b0e1773a4a2ef8257ec93b8",
-			"revisionTime": "2017-10-14T14:39:26Z"
+			"revision": "471e67c93cdd36a5f7c9bba5d6d11665ba12147d",
+			"revisionTime": "2017-11-16T23:56:13Z"
 		},
 		{
 			"checksumSHA1": "p3IB18uJRs4dL2K5yx24MrLYE9A=",
