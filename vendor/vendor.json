@@ -21,10 +21,10 @@
 			"revisionTime": "2017-10-19T01:58:03Z"
 		},
 		{
-			"checksumSHA1": "4JU5m5FGcmRYDq/oPlwQC+K8TYA=",
+			"checksumSHA1": "lBWiVnI+9tnYWuXnUiWljDy9dnc=",
 			"path": "golang.org/x/crypto/acme/autocert",
-			"revision": "edd5e9b0879d13ee6970a50153d85b8fec9f7686",
-			"revisionTime": "2017-10-19T01:58:03Z"
+			"revision": "13931e22f9e72ea58bb73048bc752b48c6d4d4ac",
+			"revisionTime": "2018-01-11T11:10:38Z"
 		}
 	],
 	"rootPath": "github.com/mdlayher/mdlayher.com"
