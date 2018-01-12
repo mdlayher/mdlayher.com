@@ -2,9 +2,12 @@
 package main
 
 import (
+	"crypto/tls"
 	"flag"
 	"log"
 	"net/http"
+	"os/user"
+	"path/filepath"
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
@@ -60,25 +63,44 @@ func main() {
 		}
 	}
 
-	// Always redirect HTTP to HTTPS.
+	user, err := user.Current()
+	if err != nil {
+		log.Fatalf("failed to get current user: %v", err)
+	}
+
+	// Same location as autocert.NewListener uses.
+	dir := filepath.Join(user.HomeDir, ".cache", "golang-autocert")
+
+	// Use Let's Encrypt for TLS.
+	m := &autocert.Manager{
+		Cache:  autocert.DirCache(dir),
+		Prompt: autocert.AcceptTOS,
+		HostPolicy: autocert.HostWhitelist(
+			static.Domain,
+			// Also include www subdomain.
+			"www."+static.Domain,
+		),
+	}
+
+	// Always redirect HTTP to HTTPS, and provide the handler necessary
+	// for Let's Encrypt to perform the http-01 challenge.
 	go func() {
 		log.Println("starting HTTP redirect server")
 
-		redirect := web.NewRedirectHandler(static.Domain)
-		if err := http.ListenAndServe(":80", redirect); err != nil {
+		if err := http.ListenAndServe(":http", m.HTTPHandler(nil)); err != nil {
 			log.Fatalf("failed to serve HTTP: %v", err)
 		}
 	}()
 
 	log.Printf("starting HTTPS server for domain %q", static.Domain)
 
-	domains := []string{
-		static.Domain,
-		// Also include www subdomain.
-		"www." + static.Domain,
+	s := &http.Server{
+		Addr:      ":https",
+		Handler:   handler,
+		TLSConfig: &tls.Config{GetCertificate: m.GetCertificate},
 	}
 
-	if err := http.Serve(autocert.NewListener(domains...), handler); err != nil {
+	if err := s.ListenAndServeTLS("", ""); err != nil {
 		log.Fatalf("failed to serve HTTPS: %v", err)
 	}
 }
