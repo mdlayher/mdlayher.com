@@ -37,7 +37,7 @@ func main() {
 				Link:  "https://github.com/mdlayher",
 			},
 			{
-				Title: "Medium (blog)",
+				Title: "Medium",
 				Link:  "https://medium.com/@mdlayher",
 			},
 			{
