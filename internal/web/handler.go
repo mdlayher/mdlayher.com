@@ -48,7 +48,8 @@ func NewHandler(static StaticContent, ghc github.Client, mc medium.Client, htc h
 		}, []string{"target"}),
 	}
 
-	prometheus.MustRegister(h.requestDurationSeconds)
+	// Don't worry about registering this multiple times during tests.
+	_ = prometheus.Register(h.requestDurationSeconds)
 
 	// Set up application routes and metrics.
 	mux := http.NewServeMux()
