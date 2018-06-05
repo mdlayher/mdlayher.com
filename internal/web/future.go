@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"sync"
+	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
 	"github.com/mdlayher/mdlayher.com/internal/httptalks"
@@ -15,10 +16,10 @@ var errNilClient = errors.New("client not configured")
 
 // future executes fn immediately in a goroutine and returns a function which
 // can be invoked to receive the results of fn.
-func future(name string, fn func() (interface{}, error)) func() (interface{}, error) {
-	// TODO(mdlayher): instrument with prometheus using name.
-
+func (h *handler) future(name string, fn func() (interface{}, error)) func() (interface{}, error) {
 	var (
+		start = time.Now()
+
 		v   interface{}
 		err error
 	)
@@ -31,6 +32,20 @@ func future(name string, fn func() (interface{}, error)) func() (interface{}, er
 	}()
 
 	return func() (interface{}, error) {
+		defer func() {
+			// If the future completed extremely quickly, the caching layer must
+			// be in play.  Ignore this observation in metrics for now.
+			//
+			// TODO(mdlayher): decouple the caching layer and remove the need
+			// for this total hack.
+			dur := time.Now().Sub(start)
+			if dur < 1*time.Millisecond {
+				return
+			}
+
+			h.requestDurationSeconds.WithLabelValues(name).Observe(dur.Seconds())
+		}()
+
 		wg.Wait()
 		return v, err
 	}
@@ -38,7 +53,7 @@ func future(name string, fn func() (interface{}, error)) func() (interface{}, er
 
 // fetchGitHub fetches GitHub repositories in a future.
 func (h *handler) fetchGitHub(ctx context.Context) func() ([]*github.Repository, error) {
-	fn := future("github", func() (interface{}, error) {
+	fn := h.future("github", func() (interface{}, error) {
 		// No client configured.
 		if h.ghc == nil {
 			return nil, errNilClient
@@ -63,7 +78,7 @@ func (h *handler) fetchGitHub(ctx context.Context) func() ([]*github.Repository,
 
 // fetchMedium fetches Medium posts in a future.
 func (h *handler) fetchMedium(ctx context.Context) func() ([]*medium.Post, error) {
-	fn := future("medium", func() (interface{}, error) {
+	fn := h.future("medium", func() (interface{}, error) {
 		// No client configured.
 		if h.mc == nil {
 			return nil, errNilClient
@@ -88,7 +103,7 @@ func (h *handler) fetchMedium(ctx context.Context) func() ([]*medium.Post, error
 
 // fetchTalks fetches HTTP talks in a future.
 func (h *handler) fetchTalks(ctx context.Context) func() ([]*httptalks.Talk, error) {
-	fn := future("talks", func() (interface{}, error) {
+	fn := h.future("talks", func() (interface{}, error) {
 		// No client configured.
 		if h.htc == nil {
 			return nil, errNilClient

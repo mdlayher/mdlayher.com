@@ -11,6 +11,9 @@ import (
 	"github.com/mdlayher/mdlayher.com/internal/github"
 	"github.com/mdlayher/mdlayher.com/internal/httptalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
+
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 // A handler is a http.Handler that serves content using a template.
@@ -20,22 +23,37 @@ type handler struct {
 	ghc      github.Client
 	mc       medium.Client
 	htc      httptalks.Client
+
+	requestDurationSeconds *prometheus.HistogramVec
 }
 
 // NewHandler creates a http.Handler that serves content using a template.
 // Additional dynamic content can be added by providing non-nil clients for
 // various services.
 func NewHandler(static StaticContent, ghc github.Client, mc medium.Client, htc httptalks.Client) http.Handler {
+	const namespace = "mdlayher"
+
 	h := &handler{
 		static:   static,
 		redirect: NewRedirectHandler(static.Domain),
 		ghc:      ghc,
 		mc:       mc,
 		htc:      htc,
+
+		requestDurationSeconds: prometheus.NewHistogramVec(prometheus.HistogramOpts{
+			Namespace: namespace,
+			Name:      "request_duration_seconds",
+			Help:      "Duration of requests to external services.",
+			Buckets:   prometheus.ExponentialBuckets(0.1, 2, 7),
+		}, []string{"target"}),
 	}
 
+	prometheus.MustRegister(h.requestDurationSeconds)
+
+	// Set up application routes and metrics.
 	mux := http.NewServeMux()
-	mux.Handle("/", h)
+	mux.Handle("/", prometheus.InstrumentHandler("web", h))
+	mux.Handle("/metrics", promhttp.Handler())
 
 	return mux
 }
