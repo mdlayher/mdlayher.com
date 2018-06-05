@@ -11,9 +11,9 @@ import (
 
 // Content is the top-level object for the HTML template.
 type Content struct {
-	Static   StaticContent
-	GitHub   GitHubContent
-	Medium   MediumContent
+	Static    StaticContent
+	GitHub    GitHubContent
+	Medium    MediumContent
 	HTTPTalks HTTPTalksContent
 }
 
