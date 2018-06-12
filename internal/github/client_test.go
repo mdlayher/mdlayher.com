@@ -75,6 +75,7 @@ func Test_clientListRepositories(t *testing.T) {
 			HTMLURL     string `json:"html_url"`
 			Description string `json:"description"`
 			Archived    bool   `json:"archived"`
+			Fork        bool   `json:"fork"`
 		}{
 			{
 				Name:        "hello",
@@ -91,6 +92,12 @@ func Test_clientListRepositories(t *testing.T) {
 				HTMLURL: "https://github.com/mdlayher/archived",
 				// Should not be displayed because repo is archived.
 				Archived: true,
+			},
+			{
+				Name:    "fork",
+				HTMLURL: "https://github.com/mdlayher/fork",
+				// Should not be displayed because repo is a fork.
+				Fork: true,
 			},
 		}
 

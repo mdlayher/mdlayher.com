@@ -86,15 +86,17 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 
 	var repos []*Repository
 	for _, r := range ghrepos {
-		// Skip archived repositories.
-		if r.GetArchived() {
+		// Skip:
+		//   - archived repositories
+		//   - forks
+		if r.GetArchived() || r.GetFork() {
 			continue
 		}
 
 		repos = append(repos, &Repository{
-			Name:        *r.Name,
-			Link:        *r.HTMLURL,
-			Description: ptrString(r.Description),
+			Name:        r.GetName(),
+			Link:        r.GetHTMLURL(),
+			Description: r.GetDescription(),
 		})
 
 		// Only return 10 repositories at most.
@@ -104,14 +106,4 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 	}
 
 	return repos, nil
-}
-
-// ptrString returns the string contents of a *string, or empty string
-// if the pointer is nil.
-func ptrString(s *string) string {
-	if s == nil {
-		return ""
-	}
-
-	return *s
 }
