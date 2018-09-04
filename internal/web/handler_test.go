@@ -198,6 +198,7 @@ func Test_handlerServeHTTP(t *testing.T) {
 					{
 						Title:      "nodescription",
 						SlidesLink: "https://qux.com",
+						BlogLink:   "https://qux.com/blog",
 					},
 				},
 			},
@@ -206,7 +207,7 @@ func Test_handlerServeHTTP(t *testing.T) {
 				`<ul><li>qux</li></ul>`,
 				`<li>novideo [<a href="https://qux.com">slides</a>]</li>`,
 				`<ul><li>corge</li></ul>`,
-				`<li>nodescription [<a href="https://qux.com">slides</a>]</li>`,
+				`<li>nodescription [<a href="https://qux.com">slides</a>] [<a href="https://qux.com/blog">blog</a>]</li>`,
 			}),
 		},
 	}

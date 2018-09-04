@@ -24,6 +24,7 @@ type Talk struct {
 	Description string
 	SlidesLink  string
 	VideoLink   string
+	BlogLink    string
 }
 
 // NewClient creates a caching HTTP talks client that retrieves talks

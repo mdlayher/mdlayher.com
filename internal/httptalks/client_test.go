@@ -39,6 +39,12 @@ func Test_newClientListTalks(t *testing.T) {
 					"SlidesLink":  "https://bar.com/slides",
 					"VideoLink":   "https://bar.com/video",
 					"Description": "second"
+				},
+				{
+					"Title":       "goodbye",
+					"SlidesLink":  "https://baz.com/slides",
+					"BlogLink":    "https://baz.com/blog",
+					"Description": "third"
 				}
 			]
 			`)
@@ -71,6 +77,12 @@ func Test_newClientListTalks(t *testing.T) {
 			SlidesLink:  "https://bar.com/slides",
 			VideoLink:   "https://bar.com/video",
 			Description: "second",
+		},
+		{
+			Title:       "goodbye",
+			SlidesLink:  "https://baz.com/slides",
+			BlogLink:    "https://baz.com/blog",
+			Description: "third",
 		},
 	}
 
