@@ -22,9 +22,10 @@ type Client interface {
 type Talk struct {
 	Title       string
 	Description string
+	AudioLink   string
+	BlogLink    string
 	SlidesLink  string
 	VideoLink   string
-	BlogLink    string
 }
 
 // NewClient creates a caching HTTP talks client that retrieves talks

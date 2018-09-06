@@ -44,7 +44,8 @@ func Test_newClientListTalks(t *testing.T) {
 					"Title":       "goodbye",
 					"SlidesLink":  "https://baz.com/slides",
 					"BlogLink":    "https://baz.com/blog",
-					"Description": "third"
+					"Description": "third",
+					"AudioLink":   "https://baz.com/audio"
 				}
 			]
 			`)
@@ -69,20 +70,21 @@ func Test_newClientListTalks(t *testing.T) {
 	want := []*Talk{
 		{
 			Title:       "hello",
-			SlidesLink:  "https://foo.com/slides",
 			Description: "first",
+			SlidesLink:  "https://foo.com/slides",
 		},
 		{
 			Title:       "world",
+			Description: "second",
 			SlidesLink:  "https://bar.com/slides",
 			VideoLink:   "https://bar.com/video",
-			Description: "second",
 		},
 		{
 			Title:       "goodbye",
-			SlidesLink:  "https://baz.com/slides",
-			BlogLink:    "https://baz.com/blog",
 			Description: "third",
+			AudioLink:   "https://baz.com/audio",
+			BlogLink:    "https://baz.com/blog",
+			SlidesLink:  "https://baz.com/slides",
 		},
 	}
 

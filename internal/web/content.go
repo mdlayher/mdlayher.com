@@ -87,11 +87,16 @@ var tmpl = template.Must(template.New("html").Parse(strings.TrimSpace(`
 	{{if .HTTPTalks.Talks}}
 	<h2>Talks</h2>
 	<ul>
-	{{range .HTTPTalks.Talks}}<li>{{if .VideoLink}}<a href="{{.VideoLink}}">{{.Title}}</a> [<a href="{{.SlidesLink}}">slides</a>]{{else}}{{.Title}} [<a href="{{.SlidesLink}}">slides</a>]{{end}}{{if .BlogLink}} [<a href="{{.BlogLink}}">blog</a>]{{end}}</li>
-	{{if .Description}}<ul><li>{{.Description}}</li></ul>{{end}}
+	{{range .HTTPTalks.Talks}}<li>{{if .VideoLink}}<a href="{{.VideoLink}}">{{.Title}}</a>{{else}}{{.Title}}{{end}}</li>
+		<ul>
+		{{if .Description}}<li>{{.Description}}</li>{{end}}
+		<li>{{if .AudioLink}} [<a href="{{.AudioLink}}">audio</a>]{{end}}{{if .BlogLink}} [<a href="{{.BlogLink}}">blog</a>]{{end}}{{if .SlidesLink}} [<a href="{{.SlidesLink}}">slides</a>]{{end}}</li>
+		</ul>
 	{{end}}
 	</ul>
 	{{end}}
 </body>
 </html>
 `)))
+
+//
