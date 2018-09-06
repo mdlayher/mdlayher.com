@@ -67,6 +67,12 @@ func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Only serve a page for root.
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
+
 	// HSTS support: https://hstspreload.org/.
 	w.Header().Set("Strict-Transport-Security", HSTSHeader(time.Now()))
 
