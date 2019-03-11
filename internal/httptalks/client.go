@@ -19,10 +19,14 @@ type Client interface {
 type Talk struct {
 	Title       string
 	Description string
-	AudioLink   string
-	BlogLink    string
-	SlidesLink  string
 	VideoLink   string
+	Resources   []Resource
+}
+
+// A Resource is a type of external content resource.
+type Resource struct {
+	Kind string
+	Link string
 }
 
 // NewClient creates a caching HTTP talks client that retrieves talks

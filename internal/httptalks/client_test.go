@@ -32,21 +32,42 @@ func Test_newClientListTalks(t *testing.T) {
 			[
 				{
 					"Title":       "hello",
-					"SlidesLink":  "https://foo.com/slides",
-					"Description": "first"
+					"Description": "first",
+					"Resources": [
+						{
+							"Kind": "slides",
+							"Link":  "https://foo.com/slides"
+						}
+					]
 				},
 				{
 					"Title":       "world",
-					"SlidesLink":  "https://bar.com/slides",
 					"VideoLink":   "https://bar.com/video",
-					"Description": "second"
+					"Description": "second",
+					"Resources": [
+						{
+							"Kind": "slides",
+							"Link":  "https://bar.com/slides"
+						}
+					]
 				},
 				{
 					"Title":       "goodbye",
-					"SlidesLink":  "https://baz.com/slides",
-					"BlogLink":    "https://baz.com/blog",
 					"Description": "third",
-					"AudioLink":   "https://baz.com/audio"
+					"Resources": [
+						{
+							"Kind": "audio",
+							"Link":  "https://baz.com/audio"
+						},
+						{
+							"Kind": "blog",
+							"Link":  "https://baz.com/blog"
+						},
+						{
+							"Kind": "slides",
+							"Link":  "https://baz.com/slides"
+						}
+					]
 				}
 			]
 			`)
@@ -65,20 +86,37 @@ func Test_newClientListTalks(t *testing.T) {
 		{
 			Title:       "hello",
 			Description: "first",
-			SlidesLink:  "https://foo.com/slides",
+			Resources: []Resource{{
+				Kind: "slides",
+				Link: "https://foo.com/slides",
+			}},
 		},
 		{
 			Title:       "world",
 			Description: "second",
-			SlidesLink:  "https://bar.com/slides",
 			VideoLink:   "https://bar.com/video",
+			Resources: []Resource{{
+				Kind: "slides",
+				Link: "https://bar.com/slides",
+			}},
 		},
 		{
 			Title:       "goodbye",
 			Description: "third",
-			AudioLink:   "https://baz.com/audio",
-			BlogLink:    "https://baz.com/blog",
-			SlidesLink:  "https://baz.com/slides",
+			Resources: []Resource{
+				{
+					Kind: "audio",
+					Link: "https://baz.com/audio",
+				},
+				{
+					Kind: "blog",
+					Link: "https://baz.com/blog",
+				},
+				{
+					Kind: "slides",
+					Link: "https://baz.com/slides",
+				},
+			},
 		},
 	}
 

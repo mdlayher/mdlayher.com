@@ -1,5 +1,15 @@
 [
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "mdlayher.com",
+		"Link": "https://github.com/mdlayher/mdlayher.com",
+		"Description": "Matt Layher's personal static website.  MIT Licensed."
+	},
+	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -25,11 +35,6 @@
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	},
 	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
 		"Name": "apcupsd",
 		"Link": "https://github.com/mdlayher/apcupsd",
 		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
@@ -43,10 +48,5 @@
 		"Name": "wifi",
 		"Link": "https://github.com/mdlayher/wifi",
 		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed."
-	},
-	{
-		"Name": "kobject",
-		"Link": "https://github.com/mdlayher/kobject",
-		"Description": "Package kobject provides access to Linux kobject userspace events. MIT Licensed."
 	}
 ]
