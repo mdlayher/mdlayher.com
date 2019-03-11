@@ -2,3 +2,7 @@ baseURL = "https://mdlayher.com/"
 languageCode = "en-us"
 title = "Matt Layher"
 theme = "tale"
+
+[params]
+  Description = "Matt Layher - mdlayher.com"
+  css = ["/override.css"]
