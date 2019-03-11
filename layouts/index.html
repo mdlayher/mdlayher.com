@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+<main>
+    {{ .Content }}
+    {{ partial "index/github.html" . }}
+    {{ partial "index/medium.html" . }}
+    {{ partial "index/talks.html" . }}
+</main>
+
+{{ end }}

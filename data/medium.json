@@ -1,0 +1,52 @@
+[
+	{
+		"Title": "Exploring byte parsing APIs in Go",
+		"Subtitle": "An exploration into building safe and ergonomic byte parsing APIs in Go.",
+		"Link": "https://medium.com/@mdlayher/exploring-byte-parsing-apis-in-go-a0a57abd7ef2"
+	},
+	{
+		"Title": "Network Protocol Breakdown: NDP and Go",
+		"Subtitle": "An introduction to the IPv6 Neighbor Discovery protocol, and how to utilize it from Go.",
+		"Link": "https://medium.com/@mdlayher/network-protocol-breakdown-ndp-and-go-3dc2900b1c20"
+	},
+	{
+		"Title": "A programmer’s journey with RSI",
+		"Subtitle": "My experiences as a professional programmer dealing with RSI and cubital tunnel syndrome, and how I manage these issues.",
+		"Link": "https://medium.com/@mdlayher/a-programmers-journey-with-rsi-c73628eed0c4"
+	},
+	{
+		"Title": "Accessing SMBIOS information with Go",
+		"Subtitle": "Accessing hardware information using the SMBIOS standard with Go.",
+		"Link": "https://medium.com/@mdlayher/accessing-smbios-information-with-go-30658fac7151"
+	},
+	{
+		"Title": "unsafe.Pointer and system calls",
+		"Subtitle": "Using Go’s unsafe.Pointer type to cast raw memory and work with system calls.",
+		"Link": "https://medium.com/@mdlayher/unsafe-pointer-and-system-calls-3f034395709d"
+	},
+	{
+		"Title": "Open Source at DigitalOcean: Introducing go-qemu and go-libvirt",
+		"Subtitle": "Controlling QEMU and libvirt programmatically using pure Go interfaces.",
+		"Link": "https://medium.com/@mdlayher/open-source-at-digitalocean-introducing-go-qemu-and-go-libvirt-7f4639f11631"
+	},
+	{
+		"Title": "Cthulhu: Organizing Go Code in a Scalable Repo",
+		"Subtitle": "Lessons learned while working with DigitalOcean’s monolithic Go code repository, cthulhu.",
+		"Link": "https://medium.com/@mdlayher/cthulhu-organizing-go-code-in-a-scalable-repo-63d89a8d28b"
+	},
+	{
+		"Title": "Network Protocol Breakdown: Ethernet and Go",
+		"Subtitle": "An introduction to Ethernet frames, VLAN tags, and raw sockets, and how to leverage low-level networking primitives in Go.",
+		"Link": "https://medium.com/@mdlayher/network-protocol-breakdown-ethernet-and-go-de985d726cc1"
+	},
+	{
+		"Title": "Linux VM sockets in Go",
+		"Subtitle": "Leveraging Linux VM sockets to enable bidirectional, many-to-one communication between a hypervisor and its VMs, using Go.",
+		"Link": "https://medium.com/@mdlayher/linux-vm-sockets-in-go-ea11768e9e67"
+	},
+	{
+		"Title": "Linux, Netlink, and Go — Part 3: packages netlink, genetlink, and wifi",
+		"Subtitle": "Using netlink, generic netlink, and nl80211 to manipulate WiFi network interfaces on Linux, using Go.",
+		"Link": "https://medium.com/@mdlayher/linux-netlink-and-go-part-3-packages-netlink-genetlink-and-wifi-b0ca78e62f8a"
+	}
+]

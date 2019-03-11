@@ -1,0 +1,28 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{- if eq .URL "/" }}
+	<meta name="description" content="{{ .Site.Params.Description }}">
+	{{- else if .Description }}
+	<meta name="description" content="{{ .Description }}">
+	{{- end }}
+
+	<title>
+		{{- if eq .URL "/" }}
+		{{ .Site.Title }}
+		{{- else }}
+		{{ .Title }} &middot; {{ .Site.Title }}
+		{{- end }}
+	</title>
+
+	<!-- CSS -->
+	{{- $inServerMode	:= .Site.IsServer }}
+	{{- $cssTarget		:= "css/style.css" }}
+	{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+	{{- $style			:= resources.Get "scss/tale.scss" | toCSS $cssOptions }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+	{{ range .Site.Params.css -}}
+	<link rel="stylesheet" href="{{ . | relURL }}">
+	{{ end -}}
+</head>

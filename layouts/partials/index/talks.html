@@ -1,0 +1,17 @@
+<h2 id="talks">Talks</h2>
+<ul>
+    {{range .Site.Data.talks}}<li>{{if .VideoLink}}<a href="{{.VideoLink}}">{{.Title}}</a>{{else}}{{.Title}}{{end}}
+    </li>
+    <ul>
+        {{if .Description}}<li>{{.Description}}</li>{{end}}
+        {{ $length := len .Resources }}
+        {{ if gt $length 0 }}
+        <li>
+            {{range $i, $e := sort .Resources "Kind"}}
+            <a href="{{$e.Link}}">{{$e.Kind}}</a>{{ if ne (sub $length 1) $i }}, {{ end }}
+            {{end}}
+        </li>
+        {{ end }}
+    </ul>
+    {{end}}
+</ul>

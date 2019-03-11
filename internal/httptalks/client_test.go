@@ -2,6 +2,7 @@ package httptalks
 
 import (
 	"context"
+	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -19,12 +20,12 @@ func Test_newClientListTalks(t *testing.T) {
 		calls++
 
 		// Verify user agent while we're at it.
-		if want, got := r.UserAgent(), "github.com/mdlayher/mdlayher.com/internal/httptalks"; want != got {
-			t.Fatalf("unexpected user agent:\n- want: %q\n-  got: %q", want, got)
+		if want, got := "github.com/mdlayher/mdlayher.com/internal/httptalks", r.UserAgent(); want != got {
+			panicf("unexpected user agent:\n- want: %q\n-  got: %q", want, got)
 		}
 
 		if calls > 1 {
-			t.Fatalf("too many calls to server: %d", calls)
+			panicf("too many calls to server: %d", calls)
 		}
 
 		_, _ = io.WriteString(w, `
@@ -53,18 +54,11 @@ func Test_newClientListTalks(t *testing.T) {
 	defer s.Close()
 
 	// Cache should expire long after this test completes.
-	c := NewClient(s.URL, 1*time.Hour)
+	c := NewClient(s.URL)
 
-	var (
-		got []*Talk
-		err error
-	)
-
-	for i := 0; i < 5; i++ {
-		got, err = c.ListTalks(context.Background())
-		if err != nil {
-			t.Fatalf("error listing talks: %v", err)
-		}
+	got, err := c.ListTalks(context.Background())
+	if err != nil {
+		t.Fatalf("error listing talks: %v", err)
 	}
 
 	want := []*Talk{
@@ -94,7 +88,7 @@ func Test_newClientListTalks(t *testing.T) {
 }
 
 func TestClientListTalksIntegration(t *testing.T) {
-	c := NewClient(talksPath, 1*time.Hour)
+	c := NewClient(talksPath)
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
@@ -112,4 +106,8 @@ func TestClientListTalksIntegration(t *testing.T) {
 	if l := len(talks); l < 5 {
 		t.Fatalf("expected 5+ talks, but found: %d", l)
 	}
+}
+
+func panicf(format string, a ...interface{}) {
+	panic(fmt.Sprintf(format, a...))
 }

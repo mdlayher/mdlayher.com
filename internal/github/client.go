@@ -2,10 +2,8 @@ package github
 
 import (
 	"context"
-	"time"
 
 	"github.com/google/go-github/github"
-	"github.com/mdlayher/mdlayher.com/internal/memocache"
 )
 
 // A Client is a GitHub client.
@@ -23,42 +21,20 @@ type Repository struct {
 // userAgent identifies this client to GitHub's API.
 const userAgent = "github.com/mdlayher/mdlayher.com/internal/github"
 
-// NewClient creates a caching GitHub client that retrieves information
-// for the user specified by username.  Data for subsequent calls
-// is cached until the expiration period elapses.
-func NewClient(username string, expire time.Duration) Client {
-	return newClient(github.NewClient(nil), username, expire)
+// NewClient creates a GitHub client that retrieves information for the user
+// specified by username.
+func NewClient(username string) Client {
+	return newClient(github.NewClient(nil), username)
 }
 
 // newClient is the internal constructor for a Client.
-func newClient(ghc *github.Client, username string, expire time.Duration) Client {
+func newClient(ghc *github.Client, username string) Client {
 	ghc.UserAgent = userAgent
 
-	return &cachingClient{
-		cache: memocache.New(expire),
-		client: &client{
-			c:        ghc,
-			username: username,
-		},
+	return &client{
+		c:        ghc,
+		username: username,
 	}
-}
-
-// A cachingClient is a caching GitHub client.
-type cachingClient struct {
-	cache  memocache.Cache
-	client Client
-}
-
-// ListRepositories implements Client.
-func (c *cachingClient) ListRepositories(ctx context.Context) ([]*Repository, error) {
-	repos, err := c.cache.Get(func() (memocache.Object, error) {
-		return c.client.ListRepositories(ctx)
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	return repos.([]*Repository), nil
 }
 
 var _ Client = &client{}

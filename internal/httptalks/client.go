@@ -5,9 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"time"
-
-	"github.com/mdlayher/mdlayher.com/internal/memocache"
 )
 
 // userAgent identifies this client.
@@ -29,41 +26,17 @@ type Talk struct {
 }
 
 // NewClient creates a caching HTTP talks client that retrieves talks
-// from the specified  URL.  Data for subsequent calls is cached until
-// the expiration period elapses.
-func NewClient(addr string, expire time.Duration) Client {
-	return newClient(addr, expire)
+// from the specified URL.
+func NewClient(addr string) Client {
+	return newClient(addr)
 }
 
 // newClient is the internal constructor for a Client.
-func newClient(addr string, expire time.Duration) Client {
-	return &cachingClient{
-		cache: memocache.New(expire),
-		client: &client{
-			client: &http.Client{},
-			addr:   addr,
-		},
+func newClient(addr string) Client {
+	return &client{
+		client: &http.Client{},
+		addr:   addr,
 	}
-}
-
-var _ Client = &cachingClient{}
-
-// A cachingClient is a caching HTTP talks client.
-type cachingClient struct {
-	cache  memocache.Cache
-	client Client
-}
-
-// ListTalks implements Client.
-func (c *cachingClient) ListTalks(ctx context.Context) ([]*Talk, error) {
-	talks, err := c.cache.Get(func() (memocache.Object, error) {
-		return c.client.ListTalks(ctx)
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	return talks.([]*Talk), nil
 }
 
 var _ Client = &client{}
@@ -80,6 +53,7 @@ func (c *client) ListTalks(ctx context.Context) ([]*Talk, error) {
 	if err != nil {
 		return nil, err
 	}
+	req = req.WithContext(ctx)
 
 	req.Header.Add("User-Agent", userAgent)
 

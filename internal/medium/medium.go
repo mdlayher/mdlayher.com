@@ -2,15 +2,13 @@ package medium
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"sort"
-	"time"
-
-	"github.com/mdlayher/mdlayher.com/internal/memocache"
 )
 
 const (
@@ -40,7 +38,7 @@ var jsonHijackingPrefix = []byte("])}while(1);</x>")
 
 // A Client is a Medium client.
 type Client interface {
-	ListPosts() ([]*Post, error)
+	ListPosts(ctx context.Context) ([]*Post, error)
 }
 
 // A Post contains metadata about a Medium post.
@@ -53,40 +51,18 @@ type Post struct {
 }
 
 // NewClient creates a caching Medium client that retrieves information
-// for the user specified by username.  Data for subsequent calls is
-// cached until the expiration period elapses.
-func NewClient(username string, expire time.Duration) Client {
-	return newClient(baseURL, username, expire)
+// for the user specified by username.
+func NewClient(username string) Client {
+	return newClient(baseURL, username)
 }
 
 // newClient is the internal constructor for a Client.
-func newClient(apiURL *url.URL, username string, expire time.Duration) Client {
-	return &cachingClient{
-		cache: memocache.New(expire),
-		client: &client{
-			client:   &http.Client{},
-			apiURL:   apiURL,
-			username: username,
-		},
+func newClient(apiURL *url.URL, username string) Client {
+	return &client{
+		client:   &http.Client{},
+		apiURL:   apiURL,
+		username: username,
 	}
-}
-
-// A cachingClient is a caching Medium client.
-type cachingClient struct {
-	cache  memocache.Cache
-	client Client
-}
-
-// ListPosts implements Client.
-func (c *cachingClient) ListPosts() ([]*Post, error) {
-	posts, err := c.cache.Get(func() (memocache.Object, error) {
-		return c.client.ListPosts()
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	return posts.([]*Post), nil
 }
 
 var _ Client = &client{}
@@ -122,8 +98,9 @@ type rawPostContent struct {
 }
 
 // ListPosts implements Client.
-func (c *client) ListPosts() ([]*Post, error) {
+func (c *client) ListPosts(ctx context.Context) ([]*Post, error) {
 	req, err := c.newRequest(
+		ctx,
 		http.MethodGet,
 		fmt.Sprintf("/@%s/latest", c.username),
 	)
@@ -161,7 +138,7 @@ func (c *client) ListPosts() ([]*Post, error) {
 // newRequest creates a new HTTP request, using the specified HTTP method and
 // API endpoint. Additionally, it accepts a struct which can be marshaled to
 // a JSON body.
-func (c *client) newRequest(method string, endpoint string) (*http.Request, error) {
+func (c *client) newRequest(ctx context.Context, method string, endpoint string) (*http.Request, error) {
 	rel, err := url.Parse(endpoint)
 	if err != nil {
 		return nil, err
@@ -172,6 +149,7 @@ func (c *client) newRequest(method string, endpoint string) (*http.Request, erro
 	if err != nil {
 		return nil, err
 	}
+	req = req.WithContext(ctx)
 
 	// Must add Accept header to get JSON back.
 	req.Header.Add("Accept", applicationJSON)

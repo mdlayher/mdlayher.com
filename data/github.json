@@ -1,0 +1,52 @@
+[
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "dhcp6",
+		"Link": "https://github.com/mdlayher/dhcp6",
+		"Description": "Package dhcp6 implements a DHCPv6 server, as described in RFC 3315. MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "xdp",
+		"Link": "https://github.com/mdlayher/xdp",
+		"Description": "Package xdp provides access to Linux userspace XDP sockets (AF_XDP). MIT Licensed."
+	},
+	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
+	},
+	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
+	},
+	{
+		"Name": "wireguardctrl",
+		"Link": "https://github.com/mdlayher/wireguardctrl",
+		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+	},
+	{
+		"Name": "wifi",
+		"Link": "https://github.com/mdlayher/wifi",
+		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed."
+	},
+	{
+		"Name": "kobject",
+		"Link": "https://github.com/mdlayher/kobject",
+		"Description": "Package kobject provides access to Linux kobject userspace events. MIT Licensed."
+	}
+]
