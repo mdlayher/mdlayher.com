@@ -1,9 +1,9 @@
 <h2 id="open-source">Open Source</h2>
 <ul>
-    {{range .Site.Data.github}}<li><a href="{{.Link}}">{{.Name}}</a>
+    {{ range .Site.Data.github }}<li><a href="{{ .Link }}">{{ .Name }}</a>
     </li>
     <ul>
-        <li>{{.Description}}</li>
+        <li>{{ .Description }}</li>
     </ul>
-    {{end}}
+    {{ end }}
 </ul>

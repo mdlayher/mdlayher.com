@@ -11,7 +11,6 @@ import (
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
-	"github.com/mdlayher/mdlayher.com/internal/httptalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
@@ -39,16 +38,6 @@ func main() {
 
 	if err := writeJSON("data/medium.json", posts); err != nil {
 		log.Fatalf("failed to create Medium data file: %v", err)
-	}
-
-	tc := httptalks.NewClient("https://raw.githubusercontent.com/mdlayher/talks/master/talks.json")
-	talks, err := tc.ListTalks(ctx)
-	if err != nil {
-		log.Fatalf("failed to get talks metadata: %v", err)
-	}
-
-	if err := writeJSON("data/talks.json", talks); err != nil {
-		log.Fatalf("failed to create talks data file: %v", err)
 	}
 }
 
