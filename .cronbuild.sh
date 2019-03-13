@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 set -e
 set -x
-PATH=$PATH:/usr/local/bin:/usr/local/go/bin
+PATH=$PATH:/usr/local/go/bin
 
 cd "$(dirname "$0")"
 
 git pull
 
-# Regenerate static content and blog.
+# Regenerate data and see if anything changed.
 go generate ./...
-hugo
 
 if [[ -z $(git status -s) ]]; then
     # Nothing to do.
