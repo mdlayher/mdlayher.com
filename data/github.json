@@ -1,13 +1,13 @@
 [
 	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
 		"Name": "mdlayher.com",
 		"Link": "https://github.com/mdlayher/mdlayher.com",
 		"Description": "Matt Layher's personal static website. MIT Licensed."
+	},
+	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
 		"Name": "netlink",
