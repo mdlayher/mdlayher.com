@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -x
-PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 
 cd "$(dirname "$0")"
 
