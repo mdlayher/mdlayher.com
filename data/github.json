@@ -1,13 +1,23 @@
 [
 	{
+		"Name": "mdlayher.com",
+		"Link": "https://github.com/mdlayher/mdlayher.com",
+		"Description": "Matt Layher's personal static website. MIT Licensed."
+	},
+	{
+		"Name": "wireguardctrl",
+		"Link": "https://github.com/mdlayher/wireguardctrl",
+		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+	},
+	{
+		"Name": "genetlink",
+		"Link": "https://github.com/mdlayher/genetlink",
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
+	},
+	{
 		"Name": "talks",
 		"Link": "https://github.com/mdlayher/talks",
 		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
-		"Name": "mdlayher.com",
-		"Link": "https://github.com/mdlayher/mdlayher.com",
-		"Description": "Matt Layher's personal static website.  MIT Licensed."
 	},
 	{
 		"Name": "netlink",
@@ -38,15 +48,5 @@
 		"Name": "apcupsd",
 		"Link": "https://github.com/mdlayher/apcupsd",
 		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
-	},
-	{
-		"Name": "wireguardctrl",
-		"Link": "https://github.com/mdlayher/wireguardctrl",
-		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
-	},
-	{
-		"Name": "wifi",
-		"Link": "https://github.com/mdlayher/wifi",
-		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed."
 	}
 ]
