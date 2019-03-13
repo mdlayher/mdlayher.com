@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 set -x
 PATH=$PATH:/usr/local/bin:/usr/local/go/bin
 
