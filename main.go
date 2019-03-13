@@ -7,12 +7,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"net/http"
 	"os"
-	"strings"
 	"time"
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
+	"github.com/mdlayher/mdlayher.com/internal/httptalks"
 	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
@@ -42,17 +41,14 @@ func main() {
 		log.Fatalf("failed to create Medium data file: %v", err)
 	}
 
-	etag, ok, err := checkETag("https://raw.githubusercontent.com/mdlayher/talks/master/talks.json")
+	tc := httptalks.NewClient("https://raw.githubusercontent.com/mdlayher/talks/master/talks.json")
+	talks, err := tc.ListTalks(ctx)
 	if err != nil {
-		log.Fatalf("failed to check talks ETag: %v", err)
+		log.Fatalf("failed to get talks metadata: %v", err)
 	}
 
-	if ok {
-		// We have an ETag, write it to a metadata file so that changes are
-		// picked up by the automated update script.
-		if err := writeJSON("data/.talks-etag.json", etag); err != nil {
-			log.Fatalf("failed to create talks ETag file: %v", err)
-		}
+	if err := writeJSON("data/talks.json", talks); err != nil {
+		log.Fatalf("failed to create talks data file: %v", err)
 	}
 }
 
@@ -74,22 +70,4 @@ func writeJSON(file string, v interface{}) error {
 	}
 
 	return nil
-}
-
-func checkETag(uri string) (string, bool, error) {
-	c := &http.Client{
-		Timeout: 5 * time.Second,
-	}
-
-	res, err := c.Head(uri)
-	if err != nil {
-		return "", false, fmt.Errorf("failed to send HTTP HEAD %q: %v", uri, err)
-	}
-	_ = res.Body.Close()
-
-	// Ensure an ETag was sent.
-	etag := strings.Trim(res.Header.Get("ETag"), `"`)
-	ok := etag != ""
-
-	return etag, ok, nil
 }
