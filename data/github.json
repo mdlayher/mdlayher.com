@@ -1,5 +1,45 @@
 [
 	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
+	},
+	{
+		"Name": "mdlayher.com",
+		"Link": "https://github.com/mdlayher/mdlayher.com",
+		"Description": "Matt Layher's personal static website. MIT Licensed."
+	},
+	{
+		"Name": "kobject",
+		"Link": "https://github.com/mdlayher/kobject",
+		"Description": "Package kobject provides access to Linux kobject userspace events. MIT Licensed."
+	},
+	{
+		"Name": "hdhomerun_exporter",
+		"Link": "https://github.com/mdlayher/hdhomerun_exporter",
+		"Description": "Command hdhomerun_exporter implements a Prometheus exporter for SiliconDust HDHomeRun devices. MIT Licensed."
+	},
+	{
+		"Name": "hdhomerun",
+		"Link": "https://github.com/mdlayher/hdhomerun",
+		"Description": "Package hdhomerun enables interacting with SiliconDust HDHomeRun devices. MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
+	},
+	{
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
+	},
+	{
 		"Name": "taskstats",
 		"Link": "https://github.com/mdlayher/taskstats",
 		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed."
@@ -8,45 +48,5 @@
 		"Name": "ndp",
 		"Link": "https://github.com/mdlayher/ndp",
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
-	},
-	{
-		"Name": "arp",
-		"Link": "https://github.com/mdlayher/arp",
-		"Description": "Package arp implements the ARP protocol, as described in RFC 826. MIT Licensed."
-	},
-	{
-		"Name": "ethernet",
-		"Link": "https://github.com/mdlayher/ethernet",
-		"Description": "Package ethernet implements marshaling and unmarshaling of IEEE 802.3 Ethernet II frames and IEEE 802.1Q VLAN tags. MIT Licensed."
-	},
-	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
-		"Name": "wireguardctrl",
-		"Link": "https://github.com/mdlayher/wireguardctrl",
-		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
-	},
-	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
-		"Name": "mdlayher.com",
-		"Link": "https://github.com/mdlayher/mdlayher.com",
-		"Description": "Matt Layher's personal static website. MIT Licensed."
 	}
 ]
