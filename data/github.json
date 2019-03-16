@@ -5,6 +5,11 @@
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
 	},
 	{
+		"Name": "raw",
+		"Link": "https://github.com/mdlayher/raw",
+		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
+	},
+	{
 		"Name": "mdlayher.com",
 		"Link": "https://github.com/mdlayher/mdlayher.com",
 		"Description": "Matt Layher's personal static website. MIT Licensed."
@@ -43,10 +48,5 @@
 		"Name": "taskstats",
 		"Link": "https://github.com/mdlayher/taskstats",
 		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed."
-	},
-	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	}
 ]
