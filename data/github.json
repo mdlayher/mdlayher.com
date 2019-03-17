@@ -1,10 +1,5 @@
 [
 	{
-		"Name": "mdlayher.com",
-		"Link": "https://github.com/mdlayher/mdlayher.com",
-		"Description": "Matt Layher's personal static website. MIT Licensed."
-	},
-	{
 		"Name": "vsock",
 		"Link": "https://github.com/mdlayher/vsock",
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
@@ -48,5 +43,10 @@
 		"Name": "taskstats",
 		"Link": "https://github.com/mdlayher/taskstats",
 		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed."
+	},
+	{
+		"Name": "mdlayher.com",
+		"Link": "https://github.com/mdlayher/mdlayher.com",
+		"Description": "Matt Layher's personal static website. MIT Licensed."
 	}
 ]

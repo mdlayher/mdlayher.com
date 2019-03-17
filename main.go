@@ -27,6 +27,27 @@ func main() {
 		log.Fatalf("failed to get GitHub repositories: %v", err)
 	}
 
+	// If mdlayher.com is present in the list, place it at the very end, to
+	// avoid unneeded churn during the daily automatic update.
+	var (
+		repoIdx     = -1
+		websiteRepo *github.Repository
+	)
+
+	for i, r := range repos {
+		if r.Name == "mdlayher.com" {
+			repoIdx = i
+			websiteRepo = r
+			break
+		}
+	}
+
+	if repoIdx != -1 && websiteRepo != nil {
+		// https://github.com/golang/go/wiki/SliceTricks#delete
+		repos = append(repos[:repoIdx], repos[repoIdx+1:]...)
+		repos = append(repos, websiteRepo)
+	}
+
 	if err := writeJSON("data/github.json", repos); err != nil {
 		log.Fatalf("failed to create GitHub data file: %v", err)
 	}
