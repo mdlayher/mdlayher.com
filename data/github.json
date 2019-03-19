@@ -5,6 +5,16 @@
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
 	},
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "wireguardctrl",
+		"Link": "https://github.com/mdlayher/wireguardctrl",
+		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+	},
+	{
 		"Name": "raw",
 		"Link": "https://github.com/mdlayher/raw",
 		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
@@ -33,16 +43,6 @@
 		"Name": "apcupsd_exporter",
 		"Link": "https://github.com/mdlayher/apcupsd_exporter",
 		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
-	},
-	{
-		"Name": "taskstats",
-		"Link": "https://github.com/mdlayher/taskstats",
-		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
