@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
 		"Name": "wireguardctrl",
 		"Link": "https://github.com/mdlayher/wireguardctrl",
 		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
@@ -13,11 +18,6 @@
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
 		"Name": "raw",
