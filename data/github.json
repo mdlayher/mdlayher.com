@@ -1,8 +1,18 @@
 [
 	{
+		"Name": "genetlink",
+		"Link": "https://github.com/mdlayher/genetlink",
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
+	},
+	{
 		"Name": "vsock",
 		"Link": "https://github.com/mdlayher/vsock",
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "raw",
@@ -33,16 +43,6 @@
 		"Name": "hdhomerun_exporter",
 		"Link": "https://github.com/mdlayher/hdhomerun_exporter",
 		"Description": "Command hdhomerun_exporter implements a Prometheus exporter for SiliconDust HDHomeRun devices. MIT Licensed."
-	},
-	{
-		"Name": "hdhomerun",
-		"Link": "https://github.com/mdlayher/hdhomerun",
-		"Description": "Package hdhomerun enables interacting with SiliconDust HDHomeRun devices. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
