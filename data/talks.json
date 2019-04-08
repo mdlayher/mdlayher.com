@@ -1,12 +1,27 @@
 [
 	{
+		"Title": "GoTO, April 2019: Ethernet and Go",
+		"Description": "An updated presentation and demo of using Ethernet frames and sockets directly in Go.",
+		"VideoLink": "",
+		"Resources": [
+			{
+				"Kind": "blog",
+				"Link": "https://medium.com/@mdlayher/network-protocol-breakdown-ethernet-and-go-de985d726cc1"
+			},
+			{
+				"Kind": "slides",
+				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/meetups/2019-04-goto-ethernet-and-go/ethernet-and-go.slide#1"
+			}
+		]
+	},
+	{
 		"Title": "Orchestructure, March 2019: Exploring IPv6 at Home: Preparing for the Future of the Internet Protocol",
 		"Description": "An overview of IPv6, and a demonstration of how to set up IPv4/6 dual-stack networks at home.",
 		"VideoLink": "https://www.youtube.com/watch?v=_Mco3qgr4_I",
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://github.com/mdlayher/talks/blob/master/orchestructure/exploring-ipv6-at-home/exploring-ipv6-at-home.pdf"
+				"Link": "https://github.com/mdlayher/talks/blob/master/meetups/orchestructure/exploring-ipv6-at-home/exploring-ipv6-at-home.pdf"
 			}
 		]
 	},

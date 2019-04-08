@@ -1,8 +1,8 @@
 [
 	{
-		"Name": "wireguardctrl",
-		"Link": "https://github.com/mdlayher/wireguardctrl",
-		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "genetlink",
@@ -10,9 +10,14 @@
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
 	},
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "wireguardctrl",
+		"Link": "https://github.com/mdlayher/wireguardctrl",
+		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
 	},
 	{
 		"Name": "vsock",
@@ -23,11 +28,6 @@
 		"Name": "raw",
 		"Link": "https://github.com/mdlayher/raw",
 		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
 		"Name": "homelab",
