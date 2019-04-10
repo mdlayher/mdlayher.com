@@ -5,6 +5,11 @@
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
+		"Name": "monkey-rs",
+		"Link": "https://github.com/mdlayher/monkey-rs",
+		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
+	},
+	{
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "kobject",
 		"Link": "https://github.com/mdlayher/kobject",
 		"Description": "Package kobject provides access to Linux kobject userspace events. MIT Licensed."
-	},
-	{
-		"Name": "hdhomerun_exporter",
-		"Link": "https://github.com/mdlayher/hdhomerun_exporter",
-		"Description": "Command hdhomerun_exporter implements a Prometheus exporter for SiliconDust HDHomeRun devices. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
