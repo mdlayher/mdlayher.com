@@ -2,6 +2,8 @@ baseURL = "https://mdlayher.com/"
 languageCode = "en-us"
 title = "Matt Layher"
 theme = "tale"
+pygmentsCodeFences = true
+pygmentsStyle = "vs"
 
 [params]
   Description = "Matt Layher - mdlayher.com"
