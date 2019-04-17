@@ -11,7 +11,7 @@
         <!-- Ranges through content/blog/*.md -->
         {{ range .Pages }}
         <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+            <a href="{{.Permalink}}">{{.Title}}</a>, {{.Date.Format "January 2, 2006"}}
             <ul>
                 <li>{{.Params.Subtitle}}</li>
             </ul>
