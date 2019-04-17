@@ -4,7 +4,7 @@ title = "Linux, Netlink, and Go - Part 2: generic netlink"
 subtitle = "An introduction to generic netlink: an extensible netlink family. This post also describes how to leverage generic netlink in Go."
 +++
 
-In [Part 1 of this series](./linux-netlink-and-go-part-1-netlink.md), I
+In [Part 1 of this series](../linux-netlink-and-go-part-1-netlink.md), I
 described some of the fundamental concepts of netlink: sockets, messages, and
 attributes. It is assumed that readers are already familiar with netlink from
 the previous post in this series.
@@ -16,7 +16,7 @@ The pseudo-code in this series will use Go’s [`golang.org/x/sys/unix`](https:/
 package and types from my `netlink`, `genetlink`, and `wifi` packages. The
 series is broken up as follows:
 
-- [Part 1: netlink](./linux-netlink-and-go-part-1-netlink.md): an introduction
+- [Part 1: netlink](../linux-netlink-and-go-part-1-netlink.md): an introduction
   to netlink.
 - [Part 2: generic netlink](.): an introduction to generic netlink, a netlink
   family meant to simplify creation of new families.
