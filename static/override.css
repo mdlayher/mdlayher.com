@@ -9,3 +9,7 @@ code *, pre * {
 blockquote {
     color: #555;
 }
+
+h2 a {
+    color: #353535;
+}

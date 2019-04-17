@@ -12,7 +12,6 @@ import (
 
 	"github.com/mdlayher/mdlayher.com/internal/github"
 	"github.com/mdlayher/mdlayher.com/internal/httptalks"
-	"github.com/mdlayher/mdlayher.com/internal/medium"
 )
 
 //go:generate go run main.go
@@ -50,16 +49,6 @@ func main() {
 
 	if err := writeJSON("data/github.json", repos); err != nil {
 		log.Fatalf("failed to create GitHub data file: %v", err)
-	}
-
-	mc := medium.NewClient("mdlayher")
-	posts, err := mc.ListPosts(ctx)
-	if err != nil {
-		log.Fatalf("failed to get Medium posts: %v", err)
-	}
-
-	if err := writeJSON("data/medium.json", posts); err != nil {
-		log.Fatalf("failed to create Medium data file: %v", err)
 	}
 
 	tc := httptalks.NewClient("https://raw.githubusercontent.com/mdlayher/talks/master/talks.json")
