@@ -5,3 +5,7 @@
 code *, pre * {
     font-family: monospace !important;
 }
+
+blockquote {
+    color: #555;
+}
