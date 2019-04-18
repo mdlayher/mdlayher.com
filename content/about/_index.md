@@ -31,8 +31,11 @@ Some of my non-technology hobbies include [craft beer](https://untappd.com/user/
 bourbon, exercise, food, and music. It's always nice to take a break from computers
 and enjoy some time away with friends and family!
 
-If you'd like to get in touch, feel free to reach out on [Twitter](https://twitter.com/mdlayher)
-or via email at [mdlayher@gmail.com](mailto:mdlayher@gmail.com).
+If you'd like to get in touch, feel free to reach out on:
+
+- [Twitter: @mdlayher](https://twitter.com/mdlayher)
+- [Email: mdlayher@gmail.com](mailto:mdlayher@gmail.com)
+- [Gophers Slack: @mdlayher, #networking](https://invite.slack.golangbridge.org/)
 
 ![KubeCon avatar](/img/avatar/kubecon.jpg)
 *My current avatar*
