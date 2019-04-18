@@ -1,6 +1,7 @@
 <footer>
     <span>
-        &copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Params.AuthorName }} | <a
-            href="https://{{ .Site.Params.Source }}" title="source code">{{ .Site.Params.Source }}</a>
+        &copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> <a href="/about"
+            title="about">{{ .Site.Params.AuthorName }}</a> | <a href="https://{{ .Site.Params.Source }}"
+            title="source code">{{ .Site.Params.Source }}</a>
     </span>
 </footer>
