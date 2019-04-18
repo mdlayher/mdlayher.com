@@ -43,8 +43,8 @@ First, the necessary kernel modules must be loaded on the hypervisor (with
 kernel 4.8+).
 
 ```text
-hypervisor $ uname -a  
-Linux hypervisor 4.8.0-39-generic #42~16.04.1-Ubuntu SMP Mon Feb 20 15:06:07 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux  
+hypervisor $ uname -a
+Linux hypervisor 4.8.0-39-generic #42~16.04.1-Ubuntu SMP Mon Feb 20 15:06:07 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
 hypervisor $ sudo modprobe vhost_vsock
 ```
 
@@ -53,7 +53,7 @@ the hypervisor.
 
 ```text
 hypervisor $ ls -l /dev/vhost-vsock
-crw------- 1 root root 10, 53 May  4 11:55 /dev/vhost-vsock  
+crw------- 1 root root 10, 53 May  4 11:55 /dev/vhost-vsock
 hypervisor $ ls -l /dev/vsock
 crw-rw-rw- 1 root root 10, 54 May  4 11:55 /dev/vsock
 ```
@@ -111,28 +111,28 @@ should seem quite familiar. First, let's start up a VM sockets server on the
 hypervisor.
 
 ```go
-// Retrieve host's context ID from /dev/vsock. More on this later.  
+// Retrieve host's context ID from /dev/vsock. More on this later.
 cid := localContextID()
 
-// Establish a connection-oriented VM socket.  
-socket, err := unix.Socket(unix.AF_VSOCK, unix.SOCK_STREAM, 0)  
-if err != nil {  
-    return err  
+// Establish a connection-oriented VM socket.
+socket, err := unix.Socket(unix.AF_VSOCK, unix.SOCK_STREAM, 0)
+if err != nil {
+    return err
 }
 
-// Bind socket to local context ID, port 1024.  
-sockaddr := &unix.SockaddrVM{  
-    CID:  cid,  
-    Port: 1024,  
+// Bind socket to local context ID, port 1024.
+sockaddr := &unix.SockaddrVM{
+    CID:  cid,
+    Port: 1024,
 }
-if err := unix.Bind(socket, sockaddr); err != nil {  
-    return err  
+if err := unix.Bind(socket, sockaddr); err != nil {
+    return err
 }
 
-// Listen for up to 32 incoming connections.  
-fd, err := unix.Listen(socket, 32)  
-if err != nil {  
-    return err  
+// Listen for up to 32 incoming connections.
+fd, err := unix.Listen(socket, 32)
+if err != nil {
+    return err
 }
 
 // Use fd to read and write data to and from a VM.
@@ -142,19 +142,19 @@ Next, we can dial out to the server running on the hypervisor, from a client
 running in the VM.
 
 ```go
-// Establish a connection-oriented VM socket.  
-socket, err := unix.Socket(unix.AF_VSOCK, unix.SOCK_STREAM, 0)  
-if err != nil {  
-    return err  
+// Establish a connection-oriented VM socket.
+socket, err := unix.Socket(unix.AF_VSOCK, unix.SOCK_STREAM, 0)
+if err != nil {
+    return err
 }
 
-// Connect socket to hypervisor context ID, port 1024.  
-sockaddr := &unix.SockaddrVM{  
-    CID:  2,  
-    Port: 1024,  
-}  
-if err := unix.Connect(socket, sockaddr); err != nil {  
-   return err  
+// Connect socket to hypervisor context ID, port 1024.
+sockaddr := &unix.SockaddrVM{
+    CID:  2,
+    Port: 1024,
+}
+if err := unix.Connect(socket, sockaddr); err != nil {
+   return err
 }
 
 // Use fd to read and write data to and from the hypervisor.
@@ -170,23 +170,23 @@ of a given machine. This can be done by performing an `ioctl()` system call on
 `/dev/vsock`.
 
 ```go
-// Open /dev/vsock to perform ioctl().  
-f, err := os.Open("/dev/vsock")  
-if err != nil {  
-    return err  
-}  
+// Open /dev/vsock to perform ioctl().
+f, err := os.Open("/dev/vsock")
+if err != nil {
+    return err
+}
 defer f.Close()
 
-// Ask kernel to deference a pointer to cid and place the local  
-// CID for this host in the uint32 value "cid".  
-var cid uint32  
+// Ask kernel to deference a pointer to cid and place the local
+// CID for this host in the uint32 value "cid".
+var cid uint32
 err := ioctl(
     f.Fd(),
     unix.IOCTL_VM_SOCKETS_GET_LOCAL_CID,
     uintptr(unsafe.Pointer(&cid)),
 )
-if err != nil {  
-    return err  
+if err != nil {
+    return err
 }
 ```
 
@@ -210,47 +210,47 @@ echoed back to the client.
 Here's the code for the server:
 
 ```go
-// Listen for VM sockets connections on port 1024.  
-l, err := vsock.Listen(1024)  
-if err != nil {  
-    return err  
-}  
+// Listen for VM sockets connections on port 1024.
+l, err := vsock.Listen(1024)
+if err != nil {
+    return err
+}
 defer l.Close()
 
-// Accept a single connection.  
-c, err := l.Accept()  
-if err != nil {  
-    return err  
-}  
+// Accept a single connection.
+c, err := l.Accept()
+if err != nil {
+    return err
+}
 defer c.Close()
 
-// Echo all data from the client back to the client.  
-if _, err := io.Copy(c, c); err != nil {  
-    return err  
+// Echo all data from the client back to the client.
+if _, err := io.Copy(c, c); err != nil {
+    return err
 }
 ```
 
 The code for the client is succinct as well:
 
 ```go
-// Dial a VM sockets connection to a process on the hypervisor  
-// bound to port 1024.  
-c, err := vsock.Dial(vsock.Host, 1024)  
-if err != nil {  
-    return err  
-}  
+// Dial a VM sockets connection to a process on the hypervisor
+// bound to port 1024.
+c, err := vsock.Dial(vsock.Host, 1024)
+if err != nil {
+    return err
+}
 defer c.Close()
 
-// Send a brief message to the hypervisor.  
-if _, err := c.Write([]byte("hello world")); err != nil {  
-    return err  
+// Send a brief message to the hypervisor.
+if _, err := c.Write([]byte("hello world")); err != nil {
+    return err
 }
 
-// Read back the echoed response from the hypervisor.  
-b := make([]byte, 16)  
-n, err := c.Read(b)  
-if err != nil {  
-    return err  
+// Read back the echoed response from the hypervisor.
+b := make([]byte, 16)
+n, err := c.Read(b)
+if err != nil {
+    return err
 }
 
 fmt.Println(string(b[:n]))

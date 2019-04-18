@@ -230,7 +230,7 @@ problems at the same time:
   it, which breaks the self-defeating mental/physical cycle.
 - I'm in a better mood overall, because I can go to the gym to lift weights,
   run, etc. to combat stress at work and in my personal life.
-  
+
 ## The journey continues
 
 I've been dealing RSI and cubital tunnel syndrome in some form or another for
