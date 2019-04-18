@@ -6,7 +6,7 @@
 		"Resources": [
 			{
 				"Kind": "blog",
-				"Link": "https://medium.com/@mdlayher/network-protocol-breakdown-ethernet-and-go-de985d726cc1"
+				"Link": "https://mdlayher.com/blog/network-protocol-breakdown-ethernet-and-go/"
 			},
 			{
 				"Kind": "slides",
@@ -32,7 +32,7 @@
 		"Resources": [
 			{
 				"Kind": "blog",
-				"Link": "https://medium.com/@mdlayher/linux-netlink-and-go-part-1-netlink-4781aaeeaca8"
+				"Link": "https://mdlayher.com/blog/linux-netlink-and-go-part-1-netlink/"
 			},
 			{
 				"Kind": "slides",
@@ -95,7 +95,7 @@
 		"Resources": [
 			{
 				"Kind": "blog",
-				"Link": "https://medium.com/@mdlayher/network-protocol-breakdown-ethernet-and-go-de985d726cc1"
+				"Link": "https://mdlayher.com/blog/network-protocol-breakdown-ethernet-and-go/"
 			},
 			{
 				"Kind": "slides",
