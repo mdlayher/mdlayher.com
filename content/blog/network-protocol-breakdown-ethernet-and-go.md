@@ -245,7 +245,7 @@ for {
 ```
 
 That's it! If you'd like to give this a try at home and have two or more Linux
-or BSD machines available, you can try out my [`etherecho`](https://github.com/mdlayher/ethernet/tree/master/cmd/etherecho)`
+or BSD machines available, you can try out my [`etherecho`](https://github.com/mdlayher/ethernet/tree/master/cmd/etherecho)
 demo binary.
 
 ## Summary
