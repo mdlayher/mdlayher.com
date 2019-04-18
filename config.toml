@@ -6,5 +6,7 @@ pygmentsCodeFences = true
 pygmentsStyle = "vs"
 
 [params]
+  AuthorName = "Matt Layher"
   Description = "Matt Layher - mdlayher.com"
+  Source = "github.com/mdlayher/mdlayher.com"
   css = ["/override.css"]
