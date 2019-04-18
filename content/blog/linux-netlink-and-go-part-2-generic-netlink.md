@@ -12,7 +12,7 @@ the previous post in this series.
 In this post, I will dive into **generic netlink**, a specialized netlink family
 designed to be more extensible than a typical netlink family.
 
-The pseudo-code in this series will use Go’s [`golang.org/x/sys/unix`](https://godoc.org/golang.org/x/sys/unix)
+The pseudo-code in this series will use Go's [`golang.org/x/sys/unix`](https://godoc.org/golang.org/x/sys/unix)
 package and types from my `netlink`, `genetlink`, and `wifi` packages. The
 series is broken up as follows:
 
@@ -46,7 +46,7 @@ parameters for a command, or data in response to a command.
 
 ## Generic netlink families
 
-Not to be confused with netlink’s families, generic netlink also has a concept
+Not to be confused with netlink's families, generic netlink also has a concept
 of families: kernel modules which register with the generic netlink bus for
 communication. Some examples of these may include:
 
@@ -119,7 +119,7 @@ netlink family, such as:
 
 - **ID** (16 bits): unique identifier for family. **Note**: ID may change between
   reboots or if certain kernel modules are loaded or unloaded. Always perform a
-  lookup by name to retrieve a family’s ID!
+  lookup by name to retrieve a family's ID!
 - **Name** (null-terminated string): human-readable name for the family, like
   "nlctrl", "TASKSTATS", or "nl80211".
 - **Version** (32 bits): version of generic netlink family. Oddly, this field is

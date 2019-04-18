@@ -1,7 +1,7 @@
 +++
 date = "2017-12-15T08:00:00+00:00"
 title = "unsafe.Pointer and system calls"
-subtitle = "Using Go’s unsafe.Pointer type to cast raw memory and work with system calls."
+subtitle = "Using Go's unsafe.Pointer type to cast raw memory and work with system calls."
 +++
 
 > This blog was originally written for [Gopher Academy's Advent 2017](https://blog.gopheracademy.com/advent-2017/unsafe-pointer-and-system-calls/)

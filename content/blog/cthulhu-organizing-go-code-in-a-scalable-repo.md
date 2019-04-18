@@ -1,7 +1,7 @@
 +++
 date = "2017-10-10T08:00:00+00:00"
 title = "Cthulhu: Organizing Go Code in a Scalable Repo"
-subtitle = "Lessons learned while working with DigitalOcean’s monolithic Go code repository, cthulhu."
+subtitle = "Lessons learned while working with DigitalOcean's monolithic Go code repository, cthulhu."
 +++
 
 > This post is hosted on the DigitalOcean blog, and this page exists only to

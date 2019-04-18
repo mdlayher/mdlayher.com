@@ -4,7 +4,7 @@ title = "Linux, Netlink, and Go - Part 1: netlink"
 subtitle = "An introduction to Linux's netlink subsystem, and a tutorial on how to make use of it with Go."
 +++
 
-I’m a big fan of [Prometheus](https://prometheus.io/). I use it quite a lot at
+I'm a big fan of [Prometheus](https://prometheus.io/). I use it quite a lot at
 both home and work, and greatly enjoy having insight into what my systems are
 doing at any given moment. One of the most widely used Prometheus exporters is
 the [node_exporter](https://github.com/prometheus/node_exporter): a daemon that
@@ -31,7 +31,7 @@ implementing these packages in Go, and hopefully provide a nice reference for
 others who wish to experiment with netlink and/or WiFi devices in their language
 of choice.
 
-The pseudo-code in this series will use Go’s [`golang.org/x/sys/unix`](https://godoc.org/golang.org/x/sys/unix)
+The pseudo-code in this series will use Go's [`golang.org/x/sys/unix`](https://godoc.org/golang.org/x/sys/unix)
 package and types from my `netlink`, `genetlink`, and `wifi` packages. The
 series is broken up as follows:
 
@@ -58,11 +58,11 @@ processes.
 
 Netlink makes use of the standard [BSD sockets API](https://en.wikipedia.org/wiki/Berkeley_sockets),
 which is typically used for network programming in C. If you'd like to learn more
-about BSD sockets, I recommend the excellent [Beej’s Guide to Network Programming](http://beej.us/guide/bgnet/)
+about BSD sockets, I recommend the excellent [Beej's Guide to Network Programming](http://beej.us/guide/bgnet/)
 for a primer on the topic.
 
 It is important to note that **netlink communications never traverse beyond the local host**.
-With this in mind, let’s begin diving into how netlink sockets work!
+With this in mind, let's begin diving into how netlink sockets work!
 
 To communicate with netlink, a netlink socket must be opened. This is done
 using the `socket()` system call:
@@ -84,7 +84,7 @@ The family parameter specifies a particular netlink family: essentially, a
 kernel subsystem which can be communicated with using netlink sockets. These
 families may offer functionality such as:
 
-- `NETLINK_ROUTE`: manipulation of Linux’s network interfaces, routes, IP
+- `NETLINK_ROUTE`: manipulation of Linux's network interfaces, routes, IP
   addresses, etc.
 - `NETLINK_GENERIC`: a building block for simplified addition of new netlink
   families, like nl80211, Open vSwitch, etc.
@@ -151,7 +151,7 @@ These fields contain the following information:
   incremented on each request.
 - **Process ID (PID)** (32 bits): sometimes referred to as port ID; a number used
   to uniquely identify a particular netlink socket; may or may not be the
-  process’s ID.
+  process's ID.
 
 Finally, a payload may immediately follow a netlink header. Again, note that the
 payload must be padded to a 4 byte boundary.
@@ -214,14 +214,14 @@ complicated, depending on a variety of factors. Netlink may reply with:
 - An explicit error number, when header type is "error".
 
 In addition, the sequence number and PID of each message should be validated
-as well. When working with raw system calls, it’s up to the socket’s user to
+as well. When working with raw system calls, it's up to the socket's user to
 handle these cases.
 
 ## Large messages
 
-To deal with large messages, I’ve employed a technique of allocating a single
+To deal with large messages, I've employed a technique of allocating a single
 page of memory, peeking at the buffer (without draining it), and then doubling
-the size of the buffer if it’s too small to read the entire message. Thanks,
+the size of the buffer if it's too small to read the entire message. Thanks,
 [Dominik Honnef](https://github.com/dominikh) for your insight on this problem.
 
 ```go
@@ -261,20 +261,20 @@ to retrieve the final message with header type "done". This is very important or
 else netlink will simply hang on subsequent requests, waiting for the caller to
 drain the final header type "done" message.
 
-The code for this isn’t as trivial as other examples, but you can take a look
+The code for this isn't as trivial as other examples, but you can take a look
 at [my implementation](https://github.com/mdlayher/netlink/blob/1c1ce40bf284f4af7cecfe578a9d3276536a2b2d/conn.go#L274)
-if you’d like a reference.
+if you'd like a reference.
 
 ## Netlink error numbers
 
 If netlink cannot satisfy a request for whatever reason, it will return an
 explicit error number in the payload of a message containing header type
-"error". These error numbers are the same as Linux’s classic error numbers, such
+"error". These error numbers are the same as Linux's classic error numbers, such
 as `ENOENT` for "no such file or directory", or `EPERM` for "permission denied".
 
-If a message’s header type indicates an error, the error number will be encoded
+If a message's header type indicates an error, the error number will be encoded
 as a signed 32 bit integer (note: also uses system endianness) in the first 4
-bytes of the message’s payload.
+bytes of the message's payload.
 
 ```go
 const name = "foo0"
@@ -303,9 +303,9 @@ PID validation may vary slightly, depending on several conditions.
   for a given socket on the first response. This PID should be used (and
   validated) in subsequent communications.
 
-Assuming you didn’t specify a PID in `bind()`, when opening multiple netlink
+Assuming you didn't specify a PID in `bind()`, when opening multiple netlink
 sockets in a single application, the first one will be assigned a PID of the
-process’s ID. Subsequent ones will have a random number chosen by netlink. In my
+process's ID. Subsequent ones will have a random number chosen by netlink. In my
 experience, it is much easier to just **let netlink assign all PIDs** itself,
 and make sure you keep track of which numbers it assigns for each socket.
 
@@ -372,7 +372,7 @@ There are two special flags which may be present in netlink attributes, though
 I have yet to encounter them in my work.
 
 - `NLA_F_NESTED`: specifies a nested attribute; used as a hint for parsing.
-  Doesn’t always appear to be used, even if nested attributes are present.
+  Doesn't always appear to be used, even if nested attributes are present.
 - `NLA_F_NET_BYTEORDER`: attribute data is stored in network byte order (big
   endian) instead of host endianness.
 

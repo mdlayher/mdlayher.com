@@ -35,7 +35,7 @@ I was pointed to netlink by a colleague as a possible solution. I was familiar
 with several existing netlink packages for Go, but I was unable to find one that
 I felt suited my needs.
 
-Several of the existing, popular packages made decisions I wasn’t happy with:
+Several of the existing, popular packages made decisions I wasn't happy with:
 
 - lack of documentation
 - lack of tests
@@ -137,7 +137,7 @@ This package enables sending and receiving netlink messages but also offers
 convenience methods to retrieve generic netlink families from `nlctrl`, the
 generic netlink controller.
 
-If you’d like to dive in, you may reference the [source code](https://github.com/mdlayher/genetlink)
+If you'd like to dive in, you may reference the [source code](https://github.com/mdlayher/genetlink)
 and [documentation](https://godoc.org/github.com/mdlayher/genetlink) for further
 information.
 
@@ -230,10 +230,10 @@ msgs, _ := conn.Execute(req, f.ID, flags)
 ## Package wifi
 
 Package `wifi` provides access to IEEE 802.11 WiFi device actions and statistics.
-At this time, it only works with Linux, though I’d love to incorporate support
+At this time, it only works with Linux, though I'd love to incorporate support
 for more operating systems in the future.
 
-If you’d like to dive in, you may reference the [source code](https://github.com/mdlayher/wifi)
+If you'd like to dive in, you may reference the [source code](https://github.com/mdlayher/wifi)
 and [documentation](https://godoc.org/github.com/mdlayher/wifi) for further
 information.
 
@@ -267,27 +267,27 @@ for _, ifi := range ifis {
 }
 ```
 
-That’s really all there is to it! Netlink, generic netlink, and nl80211 do the
+That's really all there is to it! Netlink, generic netlink, and nl80211 do the
 heavy lifting of requesting and retrieving data from the kernel, decoding it,
 and packaging it up nicely for the user.
 
 ## Summary
 
-That wraps up my series on Linux, Netlink, and Go! I hope you’ve enjoyed the
-series, and found it informative. If you’d like to get started working with
-netlink, I’d encourage you to check out:
+That wraps up my series on Linux, Netlink, and Go! I hope you've enjoyed the
+series, and found it informative. If you'd like to get started working with
+netlink, I'd encourage you to check out:
 
 - [the importers list of package `netlink`](https://godoc.org/github.com/mdlayher/netlink?importers)
 - [my GopherCon 2018 lightning talk](https://www.youtube.com/watch?v=tw-9fNygYE4)
 - [the slides from my lightning talk](https://github.com/mdlayher/talks/blob/master/gophercon2018/linux-netlink-and-go.pdf)
 
-If you’d like to begin work on a new netlink family package, I’d love to hear
+If you'd like to begin work on a new netlink family package, I'd love to hear
 from you. I happily welcome contributions to all of the packages discussed in
-this series. Please file an issue if you’d like to contribute!
+this series. Please file an issue if you'd like to contribute!
 
 If you have questions or comments, feel free to reach out via [Twitter](https://twitter.com/mdlayher)
 or [Gophers Slack](https://invite.slack.golangbridge.org/) (username: mdlayher).
 
-Thank you very much for your time. It’s been a pleasure authoring this series,
-and I’ve received some great feedback from a wide variety of readers.
-I’ll keep writing if you keep reading! Until next time!
+Thank you very much for your time. It's been a pleasure authoring this series,
+and I've received some great feedback from a wide variety of readers.
+I'll keep writing if you keep reading! Until next time!

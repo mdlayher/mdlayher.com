@@ -13,7 +13,7 @@ Although VM sockets were originally introduced by VMware, they can be used with
 QEMU+KVM virtual machines as well. This post will detail how VM sockets work and
 how they can be used.
 
-If you’d like to see more examples and make use of VM sockets in your own Go
+If you'd like to see more examples and make use of VM sockets in your own Go
 applications, check out: [github.com/mdlayher/vsock](https://github.com/mdlayher/vsock).
 
 ## Introduction to VM sockets
@@ -25,7 +25,7 @@ existing communication mechanisms faced:
   communications.
 - Only 512 serial ports are available (relatively low limit).
 
-Because VM sockets do not rely on the host’s networking stack at all, it is
+Because VM sockets do not rely on the host's networking stack at all, it is
 possible to configure VMs entirely without networking: only allowing
 communication using VM sockets.
 
@@ -60,7 +60,7 @@ crw-rw-rw- 1 root root 10, 54 May  4 11:55 /dev/vsock
 
 Next, QEMU must be started with a special `vhost-vsock-pci` device attached
 that enables VM sockets communication within the VM. Note that each VM on a
-hypervisor must have a unique "cid" (context ID). For this example, we’ve
+hypervisor must have a unique "cid" (context ID). For this example, we've
 chosen `guest-cid=3`.
 
 ```text
@@ -97,17 +97,17 @@ these ports.
 
 ## VM sockets API
 
-Now that we are familiar with some of the basics of VM sockets, let’s dive
+Now that we are familiar with some of the basics of VM sockets, let's dive
 into the API. As with other socket types on Linux, the BSD sockets API is
 used when configuring VM sockets. It appears that VM sockets can be used in
 both connection-oriented (like TCP) and connection-less (like UDP) modes, but
 this post will only cover the connection-oriented variant.
 
-All pseudo-code in this post will make use of Go’s [`golang.org/x/sys/unix`](https://godoc.org/golang.org/x/sys/unix)
+All pseudo-code in this post will make use of Go's [`golang.org/x/sys/unix`](https://godoc.org/golang.org/x/sys/unix)
 package.
 
 If you have experience creating TCP sockets using system calls, this process
-should seem quite familiar. First, let’s start up a VM sockets server on the
+should seem quite familiar. First, let's start up a VM sockets server on the
 hypervisor.
 
 ```go
@@ -192,7 +192,7 @@ if err != nil {
 
 Because of the very versatile and somewhat dangerous nature of the `ioctl()`
 system call, it is not implemented directly in `x/sys/unix`. You can see how
-I’ve implemented it in package `vsock` [here](https://github.com/mdlayher/vsock/blob/master/ioctl_linux.go).
+I've implemented it in package `vsock` [here](https://github.com/mdlayher/vsock/blob/master/ioctl_linux.go).
 
 ## Package vsock
 
@@ -203,11 +203,11 @@ Using package `vsock`, one can build client/server applications in Go using VM
 sockets in a rather straightforward and familiar way: using the `net.Listener`
 and `net.Conn` interfaces.
 
-As an example, let’s create an "echo" service using VM sockets. A server listens
+As an example, let's create an "echo" service using VM sockets. A server listens
 for incoming connections, and when a message is received from a client, it is
 echoed back to the client.
 
-Here’s the code for the server:
+Here's the code for the server:
 
 ```go
 // Listen for VM sockets connections on port 1024.  
@@ -267,14 +267,14 @@ services on Infrastructure-as-a-Service platforms. Guest agents running inside
 the VM could leverage services provided by the hypervisor in new and interesting
 ways. The possibilities are limitless!
 
-If you’d like a more in-depth look at VM sockets, I recommend
+If you'd like a more in-depth look at VM sockets, I recommend
 [this excellent presentation](https://vmsplice.net/~stefan/stefanha-kvm-forum-2015.pdf)
-by Stefan Hajnoczi. You may also be interested in Stefan’s
+by Stefan Hajnoczi. You may also be interested in Stefan's
 [proposed additions to the virtio specification](https://stefanha.github.io/virtio/#x1-2830007)
-for virtio socket devices. Finally, I’d like to thank Stefan for personally
+for virtio socket devices. Finally, I'd like to thank Stefan for personally
 answering several of my questions about VM sockets terminology and architecture.
 
-Thank you for reading, and I hope you’ve learned something new from this post.
+Thank you for reading, and I hope you've learned something new from this post.
 I encourage you to set up VM sockets in a development environment, and to try
 out package [`vsock`](https://github.com/mdlayher/vsock) as well!
 
