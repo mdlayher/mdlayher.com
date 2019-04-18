@@ -26,7 +26,7 @@ The fundamental unit of Layer 2 data transmission for Ethernet networks is an
 Ethernet frame. The frame's structure is rather straightforward, compared to
 some more complex protocols built on top of it.
 
-![image](/blog/2017-06-15_network-protocol-breakdown-ethernet-and-go/images/1.png)
+![image](/img/blog/network-protocol-breakdown-ethernet-and-go/1.png)
 *Source: [https://en.wikipedia.org/wiki/Ethernet_frame#Ethernet_II](https://en.wikipedia.org/wiki/Ethernet_frame#Ethernet_II)*
 
 The first two fields in an Ethernet frame are the destination and source MAC
@@ -109,7 +109,7 @@ the concept of a VLAN: a Virtual LAN segment.
 splitting a single network segment into many different segments, through clever
 re-use of the EtherType field in an Ethernet frame.
 
-![image](/blog/2017-06-15_network-protocol-breakdown-ethernet-and-go/images/2.gif)
+![image](/img/blog/network-protocol-breakdown-ethernet-and-go/2.gif)
 *Source: [http://sclabs.blogspot.com/2014/10/ccnp-switch-vlans-and-trunks.html](http://sclabs.blogspot.com/2014/10/ccnp-switch-vlans-and-trunks.html), note: CFI has now been re-purposed as Drop Eligible Indicator (DEI) instead.*
 
 When a VLAN tag is added, the 16 bit EtherType field becomes the Tag Protocol
@@ -130,7 +130,7 @@ After the VLAN tag, the EtherType which indicates the encapsulated traffic is
 present, as normal.
 
 In some circumstances, multiple VLAN tags may be present
-([IEEE 802.1ad](https://en.wikipedia.org/wiki/IEEE_802.1ad), also known as
+([IEEE 802.1ad](https://en.wikipedia.org/wiki/IEEE_802.1ad)), also known as
 "Q-in-Q"). As an example, this enables an internet provider to encapsulate a
 customer's traffic in a single VLAN, while the customer may also encapsulate
 their own traffic in many different VLANs.
