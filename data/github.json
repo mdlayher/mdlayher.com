@@ -45,8 +45,8 @@
 		"Description": "Package kobject provides access to Linux kobject userspace events. MIT Licensed."
 	},
 	{
-		"Name": "wireguardctrl",
-		"Link": "https://github.com/mdlayher/wireguardctrl",
-		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+		"Name": "mdlayher.com",
+		"Link": "https://github.com/mdlayher/mdlayher.com",
+		"Description": "Matt Layher's personal static website. MIT Licensed."
 	}
 ]
