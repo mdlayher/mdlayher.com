@@ -1,5 +1,15 @@
 [
 	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
 		"Name": "quota",
 		"Link": "https://github.com/mdlayher/quota",
 		"Description": "Package quota provides access to Linux quota netlink notifications. MIT Licensed."
@@ -33,16 +43,6 @@
 		"Name": "ndp",
 		"Link": "https://github.com/mdlayher/ndp",
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
-	},
-	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
-		"Name": "kobject",
-		"Link": "https://github.com/mdlayher/kobject",
-		"Description": "Package kobject provides access to Linux kobject userspace events. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
