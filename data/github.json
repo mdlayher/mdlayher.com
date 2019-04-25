@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "cryptonl",
+		"Link": "https://github.com/mdlayher/cryptonl",
+		"Description": "Package cryptonl provides access to the Linux kernel crypto API's netlink interface. MIT Licensed."
+	},
+	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "wol",
 		"Link": "https://github.com/mdlayher/wol",
 		"Description": "Package wol implements a Wake-on-LAN client.  MIT Licensed."
-	},
-	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
