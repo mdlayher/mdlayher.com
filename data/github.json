@@ -10,6 +10,16 @@
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
+	},
+	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -33,16 +43,6 @@
 		"Name": "smbios-rs",
 		"Link": "https://github.com/mdlayher/smbios-rs",
 		"Description": "Provides detection and access to System Management BIOS (SMBIOS) and Desktop Management Interface (DMI) data and structures. MIT Licensed."
-	},
-	{
-		"Name": "vsock",
-		"Link": "https://github.com/mdlayher/vsock",
-		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
-	},
-	{
-		"Name": "wol",
-		"Link": "https://github.com/mdlayher/wol",
-		"Description": "Package wol implements a Wake-on-LAN client.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",

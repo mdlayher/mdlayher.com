@@ -2,7 +2,7 @@
 	{
 		"Title": "GoTO, April 2019: Ethernet and Go",
 		"Description": "An updated presentation and demo of using Ethernet frames and sockets directly in Go.",
-		"VideoLink": "",
+		"VideoLink": "https://www.youtube.com/watch?v=PaAkgkysFvs",
 		"Resources": [
 			{
 				"Kind": "blog",
