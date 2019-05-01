@@ -37,8 +37,11 @@ If you'd like to get in touch, feel free to reach out on:
 - [Email: mdlayher@gmail.com](mailto:mdlayher@gmail.com)
 - [Gophers Slack: @mdlayher, #networking](https://invite.slack.golangbridge.org/)
 
+![Colorado avatar](/img/avatar/colorado.jpg)
+*Hiking in Colorado*
+
 ![KubeCon avatar](/img/avatar/kubecon.jpg)
-*My current avatar*
+*KubeCon presentation*
 
 ![skydiving avatar](/img/avatar/skydiving.jpg)
-*My previous avatar (skydiving is great!)*
+*Skydiving is great!*
