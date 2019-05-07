@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "wireguardctrl",
+		"Link": "https://github.com/mdlayher/wireguardctrl",
+		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+	},
+	{
 		"Name": "cryptonl",
 		"Link": "https://github.com/mdlayher/cryptonl",
 		"Description": "Package cryptonl provides access to the Linux kernel crypto API's netlink interface. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "devlink",
 		"Link": "https://github.com/mdlayher/devlink",
 		"Description": "Package devlink provides access to Linux's devlink interface. MIT Licensed."
-	},
-	{
-		"Name": "smbios-rs",
-		"Link": "https://github.com/mdlayher/smbios-rs",
-		"Description": "Provides detection and access to System Management BIOS (SMBIOS) and Desktop Management Interface (DMI) data and structures. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
