@@ -53,6 +53,7 @@ func Test_newClientListTalks(t *testing.T) {
 				},
 				{
 					"Title":       "goodbye",
+					"Venue":       "meetup",
 					"Description": "third",
 					"Resources": [
 						{
@@ -102,6 +103,7 @@ func Test_newClientListTalks(t *testing.T) {
 		},
 		{
 			Title:       "goodbye",
+			Venue:       "meetup",
 			Description: "third",
 			Resources: []Resource{
 				{

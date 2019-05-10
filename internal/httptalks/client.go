@@ -18,6 +18,7 @@ type Client interface {
 // A Talk is a presentation and its metadata.
 type Talk struct {
 	Title       string
+	Venue       string
 	Description string
 	VideoLink   string
 	Resources   []Resource
