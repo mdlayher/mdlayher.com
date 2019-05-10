@@ -1,5 +1,16 @@
 [
 	{
+		"Title": "GoCon Canada 2019: Using unsafe.Pointer to explore Linux system calls",
+		"Description": "Using Go's unsafe.Pointer type to cast raw memory and work with system calls.",
+		"VideoLink": "",
+		"Resources": [
+			{
+				"Kind": "blog",
+				"Link": "https://mdlayher.com/blog/unsafe-pointer-and-system-calls/"
+			}
+		]
+	},
+	{
 		"Title": "GoTO, April 2019: Ethernet and Go",
 		"Description": "An updated presentation and demo of using Ethernet frames and sockets directly in Go.",
 		"VideoLink": "https://www.youtube.com/watch?v=PaAkgkysFvs",
@@ -10,7 +21,7 @@
 			},
 			{
 				"Kind": "slides",
-				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/meetups/2019-04-goto-ethernet-and-go/ethernet-and-go.slide#1"
+				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/meetups/2019/04-goto/ethernet-and-go.slide#1"
 			}
 		]
 	},
@@ -21,7 +32,7 @@
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://github.com/mdlayher/talks/blob/master/meetups/orchestructure/exploring-ipv6-at-home/exploring-ipv6-at-home.pdf"
+				"Link": "https://github.com/mdlayher/talks/blob/master/meetups/2019/03-orchestructure/exploring-ipv6-at-home.pdf"
 			}
 		]
 	},
@@ -36,7 +47,7 @@
 			},
 			{
 				"Kind": "slides",
-				"Link": "https://github.com/mdlayher/talks/blob/master/gophercon2018/linux-netlink-and-go.pdf"
+				"Link": "https://github.com/mdlayher/talks/blob/master/conferences/2018/gophercon/linux-netlink-and-go.pdf"
 			}
 		]
 	},
@@ -51,7 +62,7 @@
 			},
 			{
 				"Kind": "slides",
-				"Link": "https://github.com/mdlayher/talks/blob/master/gophercon2018/implementing-a-network-protocol-in-go.pdf"
+				"Link": "https://github.com/mdlayher/talks/blob/master/conferences/2018/gophercon/implementing-a-network-protocol-in-go.pdf"
 			}
 		]
 	},
@@ -73,7 +84,7 @@
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://github.com/mdlayher/talks/blob/master/cnceu2018/htepmfjaa/how-to-export-prometheus-metrics-from-just-about-anything.pdf"
+				"Link": "https://github.com/mdlayher/talks/blob/master/conferences/2018/kccnceu/how-to-export-prometheus-metrics-from-just-about-anything.pdf"
 			}
 		]
 	},
@@ -84,7 +95,7 @@
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://github.com/mdlayher/talks/blob/master/ovscon2017/ovs-manipulation-with-go-at-digitalocean.pdf"
+				"Link": "https://github.com/mdlayher/talks/blob/master/conferences/2017/ovscon/ovs-manipulation-with-go-at-digitalocean.pdf"
 			}
 		]
 	},
@@ -99,7 +110,7 @@
 			},
 			{
 				"Kind": "slides",
-				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/gophercon2017/ethernet-and-go/ethernet-and-go.slide#1"
+				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/conferences/2017/gophercon/ethernet-and-go.slide#1"
 			}
 		]
 	},
