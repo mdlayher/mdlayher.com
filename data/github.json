@@ -1,8 +1,13 @@
 [
 	{
-		"Name": "wireguardctrl",
-		"Link": "https://github.com/mdlayher/wireguardctrl",
-		"Description": "Package wireguardctrl enables control of WireGuard devices on multiple platforms. MIT Licensed."
+		"Name": "genetlink",
+		"Link": "https://github.com/mdlayher/genetlink",
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "talks",
@@ -25,11 +30,6 @@
 		"Description": "Package cryptonl provides access to the Linux kernel crypto API's netlink interface. MIT Licensed."
 	},
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -40,9 +40,9 @@
 		"Description": "Package quota provides access to Linux quota netlink notifications. MIT Licensed."
 	},
 	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
+		"Name": "devlink",
+		"Link": "https://github.com/mdlayher/devlink",
+		"Description": "Package devlink provides access to Linux's devlink interface. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
