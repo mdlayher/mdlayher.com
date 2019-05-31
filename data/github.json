@@ -1,5 +1,20 @@
 [
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "rtorrent",
+		"Link": "https://github.com/mdlayher/rtorrent",
+		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed."
+	},
+	{
+		"Name": "rtorrent_exporter",
+		"Link": "https://github.com/mdlayher/rtorrent_exporter",
+		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
+	},
+	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -28,21 +43,6 @@
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
-		"Name": "vsock",
-		"Link": "https://github.com/mdlayher/vsock",
-		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
-	},
-	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
