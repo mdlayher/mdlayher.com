@@ -1,5 +1,15 @@
 [
 	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
+	},
+	{
+		"Name": "genetlink",
+		"Link": "https://github.com/mdlayher/genetlink",
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
+	},
+	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -30,19 +40,9 @@
 		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
 	},
 	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
-	},
-	{
 		"Name": "promtest",
 		"Link": "https://github.com/mdlayher/promtest",
 		"Description": "Package promtest provides helpers for testing applications which export Prometheus metrics. MIT Licensed."
-	},
-	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
