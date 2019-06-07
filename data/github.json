@@ -1,5 +1,20 @@
 [
 	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "raw",
+		"Link": "https://github.com/mdlayher/raw",
+		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
+	},
+	{
+		"Name": "ethernet",
+		"Link": "https://github.com/mdlayher/ethernet",
+		"Description": "Package ethernet implements marshaling and unmarshaling of IEEE 802.3 Ethernet II frames and IEEE 802.1Q VLAN tags. MIT Licensed."
+	},
+	{
 		"Name": "wireguard_exporter",
 		"Link": "https://github.com/mdlayher/wireguard_exporter",
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
@@ -8,11 +23,6 @@
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "rtorrent",
@@ -30,19 +40,9 @@
 		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
 	},
 	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
 		"Name": "apcupsd_exporter",
 		"Link": "https://github.com/mdlayher/apcupsd_exporter",
 		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
-	},
-	{
-		"Name": "promtest",
-		"Link": "https://github.com/mdlayher/promtest",
-		"Description": "Package promtest provides helpers for testing applications which export Prometheus metrics. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
