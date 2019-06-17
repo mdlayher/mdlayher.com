@@ -20,6 +20,9 @@ source projects:
   [x/sys/unix](https://godoc.org/golang.org/x/sys/unix)
 - [the Prometheus metrics and monitoring system](https://prometheus.io/)
   - team member, focused on [node_exporter](https://github.com/prometheus/node_exporter)
+- [the WireGuard VPN tunnel project](https://www.wireguard.com/)
+  - maintainer of [wgctrl-go](https://github.com/WireGuard/wgctrl-go) and
+  contributor to [wireguard-go](https://git.zx2c4.com/wireguard-go/)
 
 I enjoy authoring [blog posts](/blog) and [giving presentations](/#talks) about
 technical content at both meetups and conferences, including GopherCon and
