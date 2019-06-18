@@ -1,10 +1,5 @@
 [
 	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
-	},
-	{
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
@@ -13,6 +8,11 @@
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
 		"Name": "raw",
