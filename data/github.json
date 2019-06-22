@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "wgdynamic-go",
+		"Link": "https://github.com/mdlayher/wgdynamic-go",
+		"Description": "Package wgdynamic implements a client and server for the the wg-dynamic protocol. MIT Licensed."
+	},
+	{
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "rtorrent_exporter",
 		"Link": "https://github.com/mdlayher/rtorrent_exporter",
 		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
