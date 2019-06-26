@@ -5,6 +5,16 @@
 		"Description": "Package wgdynamic implements a client and server for the the wg-dynamic protocol. MIT Licensed."
 	},
 	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "raw",
+		"Link": "https://github.com/mdlayher/raw",
+		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
+	},
+	{
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
@@ -20,11 +30,6 @@
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
 		"Name": "ethernet",
 		"Link": "https://github.com/mdlayher/ethernet",
 		"Description": "Package ethernet implements marshaling and unmarshaling of IEEE 802.3 Ethernet II frames and IEEE 802.1Q VLAN tags. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "talks",
 		"Link": "https://github.com/mdlayher/talks",
 		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
-		"Name": "rtorrent_exporter",
-		"Link": "https://github.com/mdlayher/rtorrent_exporter",
-		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
