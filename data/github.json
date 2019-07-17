@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "ethernet",
 		"Link": "https://github.com/mdlayher/ethernet",
 		"Description": "Package ethernet implements marshaling and unmarshaling of IEEE 802.3 Ethernet II frames and IEEE 802.1Q VLAN tags. MIT Licensed."
-	},
-	{
-		"Name": "rtorrent",
-		"Link": "https://github.com/mdlayher/rtorrent",
-		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
