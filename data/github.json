@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "wol",
+		"Link": "https://github.com/mdlayher/wol",
+		"Description": "Package wol implements a Wake-on-LAN client.  MIT Licensed."
+	},
+	{
 		"Name": "apcupsd_exporter",
 		"Link": "https://github.com/mdlayher/apcupsd_exporter",
 		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "wireguard_exporter",
 		"Link": "https://github.com/mdlayher/wireguard_exporter",
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
-	},
-	{
-		"Name": "ethernet",
-		"Link": "https://github.com/mdlayher/ethernet",
-		"Description": "Package ethernet implements marshaling and unmarshaling of IEEE 802.3 Ethernet II frames and IEEE 802.1Q VLAN tags. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
