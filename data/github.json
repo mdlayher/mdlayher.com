@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "rtorrent_exporter",
+		"Link": "https://github.com/mdlayher/rtorrent_exporter",
+		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
+	},
+	{
 		"Name": "wol",
 		"Link": "https://github.com/mdlayher/wol",
 		"Description": "Package wol implements a Wake-on-LAN client.  MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
