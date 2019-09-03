@@ -5,14 +5,19 @@
 		"Description": "Command wgipamd implements an IP Address Management (IPAM) daemon for dynamic IP address assignment to WireGuard peers, using the wg-dynamic protocol. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+		"Name": "promtest",
+		"Link": "https://github.com/mdlayher/promtest",
+		"Description": "Package promtest provides helpers for testing applications which export Prometheus metrics. MIT Licensed."
 	},
 	{
 		"Name": "wgdynamic-go",
 		"Link": "https://github.com/mdlayher/wgdynamic-go",
 		"Description": "Package wgdynamic implements a client and server for the the wg-dynamic protocol. MIT Licensed."
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "raw",
@@ -38,11 +43,6 @@
 		"Name": "wol",
 		"Link": "https://github.com/mdlayher/wol",
 		"Description": "Package wol implements a Wake-on-LAN client.  MIT Licensed."
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
