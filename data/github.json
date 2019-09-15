@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "heos",
+		"Link": "https://github.com/mdlayher/heos",
+		"Description": "Package heos provides a client for the Denon HEOS wireless music system protocol. MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "talks",
 		"Link": "https://github.com/mdlayher/talks",
 		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
-		"Name": "rtorrent_exporter",
-		"Link": "https://github.com/mdlayher/rtorrent_exporter",
-		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
