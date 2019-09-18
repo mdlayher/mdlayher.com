@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
+	},
+	{
 		"Name": "heos",
 		"Link": "https://github.com/mdlayher/heos",
 		"Description": "Package heos provides a client for the Denon HEOS wireless music system protocol. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
