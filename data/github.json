@@ -5,6 +5,16 @@
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
+		"Name": "rtorrent_exporter",
+		"Link": "https://github.com/mdlayher/rtorrent_exporter",
+		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
+	},
+	{
+		"Name": "rtorrent",
+		"Link": "https://github.com/mdlayher/rtorrent",
+		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed."
+	},
+	{
 		"Name": "monkey-rs",
 		"Link": "https://github.com/mdlayher/monkey-rs",
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
@@ -33,16 +43,6 @@
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
-		"Name": "wgdynamic-go",
-		"Link": "https://github.com/mdlayher/wgdynamic-go",
-		"Description": "Package wgdynamic implements a client and server for the the wg-dynamic protocol. MIT Licensed."
-	},
-	{
-		"Name": "promtest",
-		"Link": "https://github.com/mdlayher/promtest",
-		"Description": "Package promtest provides helpers for testing applications which export Prometheus metrics. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
