@@ -5,6 +5,16 @@
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
+		"Name": "wgipam",
+		"Link": "https://github.com/mdlayher/wgipam",
+		"Description": "Command wgipamd implements an IP Address Management (IPAM) daemon for dynamic IP address assignment to WireGuard peers, using the wg-dynamic protocol. Apache 2.0 Licensed."
+	},
+	{
+		"Name": "wgdynamic-go",
+		"Link": "https://github.com/mdlayher/wgdynamic-go",
+		"Description": "Package wgdynamic implements a client and server for the the wg-dynamic protocol. MIT Licensed."
+	},
+	{
 		"Name": "rtorrent_exporter",
 		"Link": "https://github.com/mdlayher/rtorrent_exporter",
 		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
@@ -25,11 +35,6 @@
 		"Description": "Provides detection and access to System Management BIOS (SMBIOS) and Desktop Management Interface (DMI) data and structures. MIT Licensed."
 	},
 	{
-		"Name": "wgipam",
-		"Link": "https://github.com/mdlayher/wgipam",
-		"Description": "Command wgipamd implements an IP Address Management (IPAM) daemon for dynamic IP address assignment to WireGuard peers, using the wg-dynamic protocol. Apache 2.0 Licensed."
-	},
-	{
 		"Name": "ndp",
 		"Link": "https://github.com/mdlayher/ndp",
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "heos",
 		"Link": "https://github.com/mdlayher/heos",
 		"Description": "Package heos provides a client for the Denon HEOS wireless music system protocol. MIT Licensed."
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
