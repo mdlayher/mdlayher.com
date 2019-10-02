@@ -1,8 +1,23 @@
 [
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "rfc4193",
+		"Link": "https://github.com/mdlayher/rfc4193",
+		"Description": "Package rfc4193 implements Unique Local IPv6 Unicast Address prefix generation, as described in RFC 4193. MIT Licensed."
 	},
 	{
 		"Name": "wgipam",
@@ -28,21 +43,6 @@
 		"Name": "monkey-rs",
 		"Link": "https://github.com/mdlayher/monkey-rs",
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
-	},
-	{
-		"Name": "smbios-rs",
-		"Link": "https://github.com/mdlayher/smbios-rs",
-		"Description": "Provides detection and access to System Management BIOS (SMBIOS) and Desktop Management Interface (DMI) data and structures. MIT Licensed."
-	},
-	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
-	},
-	{
-		"Name": "heos",
-		"Link": "https://github.com/mdlayher/heos",
-		"Description": "Package heos provides a client for the Denon HEOS wireless music system protocol. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",

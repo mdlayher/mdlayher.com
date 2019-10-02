@@ -3,7 +3,7 @@
 		"Title": "Building a net.Conn type from the ground up",
 		"Venue": "GopherCon UK 2019",
 		"Description": "Leveraging Go's runtime network poller to create custom net.Conn and net.Listener implementations.",
-		"VideoLink": "",
+		"VideoLink": "https://www.youtube.com/watch?v=H7b8GGJxpMk",
 		"Resources": [
 			{
 				"Kind": "slides",
