@@ -1,5 +1,15 @@
 [
 	{
+		"Name": "rfc4193",
+		"Link": "https://github.com/mdlayher/rfc4193",
+		"Description": "Package rfc4193 implements Unique Local IPv6 Unicast Address prefix generation, as described in RFC 4193. MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
 		"Name": "talks",
 		"Link": "https://github.com/mdlayher/talks",
 		"Description": "Talks by Matt Layher.  MIT Licensed."
@@ -8,16 +18,6 @@
 		"Name": "wireguard_exporter",
 		"Link": "https://github.com/mdlayher/wireguard_exporter",
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
-	},
-	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
-		"Name": "rfc4193",
-		"Link": "https://github.com/mdlayher/rfc4193",
-		"Description": "Package rfc4193 implements Unique Local IPv6 Unicast Address prefix generation, as described in RFC 4193. MIT Licensed."
 	},
 	{
 		"Name": "wgipam",
