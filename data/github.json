@@ -1,15 +1,5 @@
 [
 	{
-		"Name": "eui64",
-		"Link": "https://github.com/mdlayher/eui64",
-		"Description": "Package eui64 enables creation and parsing of Modified EUI-64 format interface identifiers, as described in RFC 4291, Section 2.5.1.  MIT Licensed."
-	},
-	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -18,6 +8,16 @@
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "eui64",
+		"Link": "https://github.com/mdlayher/eui64",
+		"Description": "Package eui64 enables creation and parsing of Modified EUI-64 format interface identifiers, as described in RFC 4291, Section 2.5.1.  MIT Licensed."
+	},
+	{
+		"Name": "genetlink",
+		"Link": "https://github.com/mdlayher/genetlink",
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
 	},
 	{
 		"Name": "raw",
