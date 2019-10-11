@@ -5,6 +5,11 @@
 		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
 	},
 	{
+		"Name": "rtorrent",
+		"Link": "https://github.com/mdlayher/rtorrent",
+		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed."
+	},
+	{
 		"Name": "monkey-rs",
 		"Link": "https://github.com/mdlayher/monkey-rs",
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "rfc4193",
 		"Link": "https://github.com/mdlayher/rfc4193",
 		"Description": "Package rfc4193 implements Unique Local IPv6 Unicast Address prefix generation, as described in RFC 4193. MIT Licensed."
-	},
-	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
