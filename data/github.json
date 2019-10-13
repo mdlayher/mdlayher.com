@@ -1,13 +1,13 @@
 [
 	{
-		"Name": "rtorrent_exporter",
-		"Link": "https://github.com/mdlayher/rtorrent_exporter",
-		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
-	},
-	{
 		"Name": "monkey-rs",
 		"Link": "https://github.com/mdlayher/monkey-rs",
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
+	},
+	{
+		"Name": "rtorrent_exporter",
+		"Link": "https://github.com/mdlayher/rtorrent_exporter",
+		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
 	},
 	{
 		"Name": "rtorrent",
