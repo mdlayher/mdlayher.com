@@ -5,6 +5,11 @@
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
 	},
 	{
+		"Name": "arp",
+		"Link": "https://github.com/mdlayher/arp",
+		"Description": "Package arp implements the ARP protocol, as described in RFC 826. MIT Licensed."
+	},
+	{
 		"Name": "rtorrent_exporter",
 		"Link": "https://github.com/mdlayher/rtorrent_exporter",
 		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "eui64",
 		"Link": "https://github.com/mdlayher/eui64",
 		"Description": "Package eui64 enables creation and parsing of Modified EUI-64 format interface identifiers, as described in RFC 4291, Section 2.5.1.  MIT Licensed."
-	},
-	{
-		"Name": "rfc4193",
-		"Link": "https://github.com/mdlayher/rfc4193",
-		"Description": "Package rfc4193 implements Unique Local IPv6 Unicast Address prefix generation, as described in RFC 4193. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
