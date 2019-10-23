@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
 		"Name": "monkey-rs",
 		"Link": "https://github.com/mdlayher/monkey-rs",
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
@@ -18,11 +23,6 @@
 		"Name": "rtorrent",
 		"Link": "https://github.com/mdlayher/rtorrent",
 		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed."
-	},
-	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
 		"Name": "netlink",
