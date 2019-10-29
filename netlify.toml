@@ -7,6 +7,9 @@ HUGO_VERSION = "0.59.0"
 
 [[headers]]
   for = "/*"
-
   [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
