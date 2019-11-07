@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
+	},
+	{
 		"Name": "monkey-rs",
 		"Link": "https://github.com/mdlayher/monkey-rs",
 		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "raw",
 		"Link": "https://github.com/mdlayher/raw",
 		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
