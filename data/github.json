@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "devlink",
+		"Link": "https://github.com/mdlayher/devlink",
+		"Description": "Package devlink provides access to Linux's devlink interface. MIT Licensed."
+	},
+	{
 		"Name": "vsock",
 		"Link": "https://github.com/mdlayher/vsock",
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
@@ -13,11 +18,6 @@
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
-		"Name": "devlink",
-		"Link": "https://github.com/mdlayher/devlink",
-		"Description": "Package devlink provides access to Linux's devlink interface. MIT Licensed."
 	},
 	{
 		"Name": "arp",
