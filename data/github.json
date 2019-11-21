@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
 		"Name": "devlink",
 		"Link": "https://github.com/mdlayher/devlink",
 		"Description": "Package devlink provides access to Linux's devlink interface. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",

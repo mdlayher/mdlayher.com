@@ -1,5 +1,17 @@
 [
 	{
+		"Title": "Monitoring, the Prometheus Way (with Ganesh Vernekar)",
+		"Venue": "KubeCon/Cloud Native Con NA 2019",
+		"Description": "An introduction to the Prometheus metrics and monitoring system.",
+		"VideoLink": "",
+		"Resources": [
+			{
+				"Kind": "slides",
+				"Link": "https://github.com/mdlayher/talks/blob/master/conferences/2019/kccncna/monitoring-the-prometheus-way.pdf"
+			}
+		]
+	},
+	{
 		"Title": "Building a net.Conn type from the ground up",
 		"Venue": "GopherCon UK 2019",
 		"Description": "Leveraging Go's runtime network poller to create custom net.Conn and net.Listener implementations.",
