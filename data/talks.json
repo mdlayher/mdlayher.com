@@ -3,7 +3,7 @@
 		"Title": "Monitoring, the Prometheus Way (with Ganesh Vernekar)",
 		"Venue": "KubeCon/Cloud Native Con NA 2019",
 		"Description": "An introduction to the Prometheus metrics and monitoring system.",
-		"VideoLink": "",
+		"VideoLink": "https://www.youtube.com/watch?v=mC6Zt5Ga9UQ",
 		"Resources": [
 			{
 				"Kind": "slides",

@@ -1,13 +1,13 @@
 [
 	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
 		"Name": "talks",
 		"Link": "https://github.com/mdlayher/talks",
 		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
 		"Name": "devlink",
