@@ -5,6 +5,11 @@
 		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
 	},
 	{
+		"Name": "untappd",
+		"Link": "https://github.com/mdlayher/untappd",
+		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed."
+	},
+	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "vsock",
 		"Link": "https://github.com/mdlayher/vsock",
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
-	},
-	{
-		"Name": "monkey-rs",
-		"Link": "https://github.com/mdlayher/monkey-rs",
-		"Description": "A Rust implementation of the Monkey programming language from https://interpreterbook.com/. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
