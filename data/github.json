@@ -5,11 +5,6 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "wgipam",
-		"Link": "https://github.com/mdlayher/wgipam",
-		"Description": "Command wgipamd implements an IP Address Management (IPAM) daemon for dynamic IP address assignment to WireGuard peers, using the wg-dynamic protocol. Apache 2.0 Licensed."
-	},
-	{
 		"Name": "ndp",
 		"Link": "https://github.com/mdlayher/ndp",
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
@@ -18,6 +13,11 @@
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "wgipam",
+		"Link": "https://github.com/mdlayher/wgipam",
+		"Description": "Command wgipamd implements an IP Address Management (IPAM) daemon for dynamic IP address assignment to WireGuard peers, using the wg-dynamic protocol. Apache 2.0 Licensed."
 	},
 	{
 		"Name": "wgdynamic-go",
