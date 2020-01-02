@@ -1,13 +1,23 @@
 [
 	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
+	},
+	{
+		"Name": "schedgroup",
+		"Link": "https://github.com/mdlayher/schedgroup",
+		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed."
+	},
+	{
+		"Name": "untappd",
+		"Link": "https://github.com/mdlayher/untappd",
+		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
 		"Name": "ndp",
@@ -33,16 +43,6 @@
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
-		"Name": "fuzz-corpus",
-		"Link": "https://github.com/mdlayher/fuzz-corpus",
-		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
-	},
-	{
-		"Name": "untappd",
-		"Link": "https://github.com/mdlayher/untappd",
-		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
