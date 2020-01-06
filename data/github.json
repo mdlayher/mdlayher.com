@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "arp",
 		"Link": "https://github.com/mdlayher/arp",
 		"Description": "Package arp implements the ARP protocol, as described in RFC 826. MIT Licensed."
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
