@@ -5,14 +5,14 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "genetlink",
+		"Link": "https://github.com/mdlayher/genetlink",
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
 	},
 	{
 		"Name": "schedgroup",
