@@ -41,10 +41,3 @@ If you'd like to get in touch, feel free to reach out on:
 - [Gophers Slack: @mdlayher, #networking](https://invite.slack.golangbridge.org/)
 
 ![Colorado avatar](/img/avatar/colorado.jpg)
-*Hiking in Colorado*
-
-![KubeCon avatar](/img/avatar/kubecon.jpg)
-*KubeCon presentation*
-
-![skydiving avatar](/img/avatar/skydiving.jpg)
-*Skydiving is great!*
