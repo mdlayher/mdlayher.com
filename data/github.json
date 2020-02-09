@@ -5,6 +5,16 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
+		"Name": "fuzz-corpus",
+		"Link": "https://github.com/mdlayher/fuzz-corpus",
+		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
+	},
+	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -25,11 +35,6 @@
 		"Description": "Package netstate provides notification of network interface state changes. MIT Licensed."
 	},
 	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
-	},
-	{
 		"Name": "schedgroup",
 		"Link": "https://github.com/mdlayher/schedgroup",
 		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
 		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
-	},
-	{
-		"Name": "wgipam",
-		"Link": "https://github.com/mdlayher/wgipam",
-		"Description": "Command wgipamd implements an IP Address Management (IPAM) daemon for dynamic IP address assignment to WireGuard peers, using the wg-dynamic protocol. Apache 2.0 Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
