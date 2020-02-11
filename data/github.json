@@ -1,5 +1,15 @@
 [
 	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
@@ -20,11 +30,6 @@
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	},
 	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
-	},
-	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "schedgroup",
 		"Link": "https://github.com/mdlayher/schedgroup",
 		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed."
-	},
-	{
-		"Name": "genetlink",
-		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
