@@ -13,7 +13,7 @@ Router Advertisements (RAs).
 I've [written](/blog/) and [spoken](/talks/) about IPv6 and NDP a few times in
 the past, but if you want a quick intro or refresher, [check out my blog](/blog/network-protocol-breakdown-ndp-and-go/).
 
-NDP RAs are allow clients to discover an IPv6 default route and gain connectivity
+NDP RAs allow clients to discover an IPv6 default route and gain connectivity
 to the IPv6 internet. On top of that, SLAAC allows advertising a prefix which
 clients use to generate their own addresses, so most home users will never need
 to deploy a DHCPv6 server.
