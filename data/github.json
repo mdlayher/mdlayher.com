@@ -5,6 +5,16 @@
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
@@ -30,19 +40,9 @@
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	},
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
 		"Name": "netstate",
 		"Link": "https://github.com/mdlayher/netstate",
 		"Description": "Package netstate provides notification of network interface state changes. MIT Licensed."
-	},
-	{
-		"Name": "schedgroup",
-		"Link": "https://github.com/mdlayher/schedgroup",
-		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
