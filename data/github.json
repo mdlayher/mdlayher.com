@@ -1,13 +1,13 @@
 [
 	{
-		"Name": "scanrs",
-		"Link": "https://github.com/mdlayher/scanrs",
-		"Description": "A port scanner written in Rust, as an exercise to learn more about Rust! MIT Licensed."
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "scanrs",
+		"Link": "https://github.com/mdlayher/scanrs",
+		"Description": "A port scanner written in Rust, as an exercise to learn more about Rust! MIT Licensed."
 	},
 	{
 		"Name": "apcupsd",
