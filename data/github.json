@@ -1,13 +1,18 @@
 [
 	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
+		"Name": "corerad",
+		"Link": "https://github.com/mdlayher/corerad",
+		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
 		"Name": "scanrs",
@@ -23,11 +28,6 @@
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
-		"Name": "corerad",
-		"Link": "https://github.com/mdlayher/corerad",
-		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
 		"Name": "untappd",
