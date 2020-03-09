@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "raw",
+		"Link": "https://github.com/mdlayher/raw",
+		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -38,11 +43,6 @@
 		"Name": "fuzz-corpus",
 		"Link": "https://github.com/mdlayher/fuzz-corpus",
 		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
-	},
-	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
