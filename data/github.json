@@ -1,13 +1,18 @@
 [
 	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "wifi",
+		"Link": "https://github.com/mdlayher/wifi",
+		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed."
+	},
+	{
+		"Name": "raw",
+		"Link": "https://github.com/mdlayher/raw",
+		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
 	},
 	{
 		"Name": "corerad",
@@ -38,11 +43,6 @@
 		"Name": "untappd",
 		"Link": "https://github.com/mdlayher/untappd",
 		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed."
-	},
-	{
-		"Name": "fuzz-corpus",
-		"Link": "https://github.com/mdlayher/fuzz-corpus",
-		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
