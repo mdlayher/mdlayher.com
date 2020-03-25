@@ -1,5 +1,15 @@
 [
 	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "waveform",
+		"Link": "https://github.com/mdlayher/waveform",
+		"Description": "Go package capable of generating waveform images from audio streams. MIT Licensed."
+	},
+	{
 		"Name": "rtorrent_exporter",
 		"Link": "https://github.com/mdlayher/rtorrent_exporter",
 		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
@@ -33,16 +43,6 @@
 		"Name": "scanrs",
 		"Link": "https://github.com/mdlayher/scanrs",
 		"Description": "A port scanner written in Rust, as an exercise to learn more about Rust! MIT Licensed."
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
