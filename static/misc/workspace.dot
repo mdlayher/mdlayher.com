@@ -1,0 +1,45 @@
+digraph pc {
+    // Key:
+    //
+    // DisplayPort: box
+    // HDMI: dot
+    // RCA: curve
+    // TRS: inv
+    // speaker: tee
+    // Toslink: diamond
+    // USB: normal
+    // XLR: crow
+    // other: none
+
+    // Displays: DisplayPort and USB.
+    "Desktop PC" -> "Dell U2718Q (L)" [arrowhead=box]
+    "Desktop PC" -> "Dell U2718Q (C)" [arrowhead=box]
+    "Desktop PC" -> "Dell U2718Q (R)" [arrowhead=box]
+    "Desktop PC" -> "Dell U2718Q (C)" [dir=both]
+    "Desktop PC" -> "Dell U2718Q (R)" [dir=both]
+
+    // Non-computer AV devices: HDMI, Toslink.
+    "Nintendo Switch" -> "Amazon HDMI audio extractor" -> "Dell U2718Q (R)" [arrowhead=dot]
+    "Amazon HDMI audio extractor" -> "Schiit Modi 2 Uber" [arrowhead=diamond]
+
+    // Audio chain: RCA, TRS, USB, XLR.
+    "Audio-Technica AT2035" -> "Focusrite Scarlett 2i2" [arrowhead=crow]
+    "Focusrite Scarlett 2i2" -> "Dell U2718Q (C)"
+    "Dell U2718Q (C)" -> "Schiit Modi 2 Uber"
+    "Schiit Modi 2 Uber" -> "Onkyo TX-8255" [arrowhead=curve]
+    "Auxiliary 3.5mm" -> "Onkyo TX-8255" [arrowhead=curve]
+    "FM antenna" -> "Onkyo TX-8255" [arrowhead=none]
+    "Onkyo TX-8255" -> "Schiit Vali 2" [arrowhead=curve]
+    "Schiit Vali 2" -> "Sennheiser HD650" [arrowhead=inv]
+    "Onkyo TX-8255" -> "Polk PSW505" [arrowhead=tee]
+    "Polk PSW505" -> "Polk Monitor 40 (L)" [arrowhead=tee]
+    "Polk PSW505" -> "Polk Monitor 40 (R)" [arrowhead=tee]
+
+    // USB devices.
+    "APC BR1500G" -> "Desktop PC"
+    "Logitech MX Ergo Plus" -> "Dell U2718Q (R)"
+    "Logitech C922x" -> "Dell U2718Q (R)"
+    "Kinesis Advantage 2" -> "Desktop PC"
+    "Anker USB3 hub" -> "Desktop PC" [dir=both]
+    "Yubico YubiKey 5" -> "Anker USB3 hub"
+}
