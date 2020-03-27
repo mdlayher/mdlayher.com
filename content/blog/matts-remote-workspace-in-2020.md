@@ -241,7 +241,7 @@ Let's start with audio input:
   has a README explaining how to install the Windows/Mac Focusrite Control
   software. You can bypass the software and enable full functionality by holding
   the 48V button for 5 seconds, but this is only explained on page 9 of the manual.
-- [Microphone: Audio-Technica AT2035](https://www.amazon.com/gp/product/B07QR73T66)
+- [Microphone: Audio-Technica AT2035](https://www.amazon.com/gp/product/B00D6RMFG6)
   - It's a cardioid pickup pattern condenser microphone, which means:
       - It has reduced sensitivity on the sides and rear, so there's less background
       noise in your audio.
