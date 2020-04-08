@@ -40,9 +40,9 @@
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
-		"Name": "scanrs",
-		"Link": "https://github.com/mdlayher/scanrs",
-		"Description": "A port scanner written in Rust, as an exercise to learn more about Rust! MIT Licensed."
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
