@@ -1,5 +1,10 @@
 [
 	{
+		"Name": "fuzz-corpus",
+		"Link": "https://github.com/mdlayher/fuzz-corpus",
+		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
+	},
+	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
@@ -38,11 +43,6 @@
 		"Name": "wireguard_exporter",
 		"Link": "https://github.com/mdlayher/wireguard_exporter",
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
