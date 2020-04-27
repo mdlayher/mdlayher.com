@@ -1,8 +1,13 @@
 [
 	{
-		"Name": "fuzz-corpus",
-		"Link": "https://github.com/mdlayher/fuzz-corpus",
-		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
+	},
+	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
 		"Name": "corerad",
@@ -10,9 +15,24 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
+	},
+	{
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
+	},
+	{
+		"Name": "wol",
+		"Link": "https://github.com/mdlayher/wol",
+		"Description": "Package wol implements a Wake-on-LAN client.  MIT Licensed."
+	},
+	{
+		"Name": "fuzz-corpus",
+		"Link": "https://github.com/mdlayher/fuzz-corpus",
+		"Description": "go-fuzz corpus data for Matt Layher's projects. MIT Licensed."
 	},
 	{
 		"Name": "netlink",
@@ -23,26 +43,6 @@
 		"Name": "waveform",
 		"Link": "https://github.com/mdlayher/waveform",
 		"Description": "Go package capable of generating waveform images from audio streams. MIT Licensed."
-	},
-	{
-		"Name": "rtorrent_exporter",
-		"Link": "https://github.com/mdlayher/rtorrent_exporter",
-		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
-	},
-	{
-		"Name": "wifi",
-		"Link": "https://github.com/mdlayher/wifi",
-		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed."
-	},
-	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
-	},
-	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
