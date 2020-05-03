@@ -6,4 +6,5 @@ On and ever upward.
 * [Blog](/blog)
 * [GitHub](https://github.com/mdlayher)
 * [Talks](/talks)
+* [Twitch](https://twitch.tv/mdlayher)
 * [Twitter](https://twitter.com/mdlayher)

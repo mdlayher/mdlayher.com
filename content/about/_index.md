@@ -26,12 +26,13 @@ source projects:
 
 I enjoy authoring [blog posts](/blog) and [giving presentations](/#talks) about
 technical content at both meetups and conferences, including GopherCon and
-KubeCon/Cloud Native Con. I see these opportunities as a great challenge and as
-a force multiplier: by sharing my knowledge with others, we are able to achieve
-more together than I ever could on my own.
+KubeCon/Cloud Native Con. You can also find me [live-streaming](https://twitch.tv/mdlayher)
+Go and networking projects on Twitch! I see these opportunities as a great
+challenge and as a force multiplier: by sharing my knowledge with others, we are
+able to achieve more together than I ever could on my own.
 
 Some of my non-technology hobbies include [craft beer](https://untappd.com/user/mdlayher),
-bourbon, exercise, food, and music. It's always nice to take a break from computers
+whiskey, exercise, food, and music. It's always nice to take a break from computers
 and enjoy some time away with friends and family!
 
 If you'd like to get in touch, feel free to reach out on:
