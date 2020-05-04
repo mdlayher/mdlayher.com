@@ -8,3 +8,4 @@ On and ever upward.
 * [Talks](/talks)
 * [Twitch](https://twitch.tv/mdlayher)
 * [Twitter](https://twitter.com/mdlayher)
+* [YouTube](https://www.youtube.com/channel/UChgqV1LNU9tBWcRnAP6tKGQ)
