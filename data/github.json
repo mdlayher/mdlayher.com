@@ -5,14 +5,14 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+		"Name": "flightdeck",
+		"Link": "https://github.com/mdlayher/flightdeck",
+		"Description": "flightdeck is an experiment to create a highly customizable hardware/software interface for live streaming and other computer activities. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "schedgroup",
-		"Link": "https://github.com/mdlayher/schedgroup",
-		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed."
+		"Name": "netx",
+		"Link": "https://github.com/mdlayher/netx",
+		"Description": "A collection of small Go networking packages. MIT Licensed."
 	},
 	{
 		"Name": "homelab",
@@ -20,9 +20,14 @@
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
-		"Name": "raw",
-		"Link": "https://github.com/mdlayher/raw",
-		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed."
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
 	},
 	{
 		"Name": "wireguard_exporter",
@@ -30,23 +35,8 @@
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
 	},
 	{
-		"Name": "multinet",
-		"Link": "https://github.com/mdlayher/multinet",
-		"Description": "Package multinet allows combining multiple package net types into one. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
-	},
-	{
-		"Name": "mdlayher.com",
-		"Link": "https://github.com/mdlayher/mdlayher.com",
-		"Description": "Matt Layher's personal static website. MIT Licensed."
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
 	}
 ]
