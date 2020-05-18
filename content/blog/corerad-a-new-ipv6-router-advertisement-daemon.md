@@ -109,7 +109,7 @@ At this time, **CoreRAD is in beta status**. This implies a few limitations:
 CoreRAD has been deployed on numerous home networks (thanks alpha testers!) and
 is a suitable radvd alternative for many use cases. I'm using it to enable IPv6
 connectivity with SLAAC and DNS options on all my home VLANs. You can
-[view my configuration file as a GitHub gist](https://gist.github.com/mdlayher/24f17ca77f08a9e49198d8ff5f84e552).
+[view my configuration file as a GitHub gist](https://gist.github.com/mdlayher/2ec56807458442191f87f6ae67fc5589).
 
 If you'd like to try it out, please see the [Getting started with CoreRAD](https://github.com/mdlayher/corerad/blob/master/docs/intro.md)
 document in the repository. Early adopters are also welcome to join us on
