@@ -1,5 +1,17 @@
 [
 	{
+		"Title": "schedgroup: a timer-based goroutine concurrency primitive",
+		"Venue": "GopherCon Europe 2020",
+		"Description": "Building and Go package which can schedule tasks to be performed at or after a specified time.",
+		"VideoLink": "",
+		"Resources": [
+			{
+				"Kind": "slides",
+				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/conferences/2020/gopherconeu/schedgroup.slide"
+			}
+		]
+	},
+	{
 		"Title": "Monitoring, the Prometheus Way (with Ganesh Vernekar)",
 		"Venue": "KubeCon/Cloud Native Con NA 2019",
 		"Description": "An introduction to the Prometheus metrics and monitoring system.",
