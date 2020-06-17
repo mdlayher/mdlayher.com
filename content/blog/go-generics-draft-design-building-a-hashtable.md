@@ -168,16 +168,16 @@ key/value pair types. But we do have one constraint: the keys in our hashtable
 must match the [predeclared type constraint `comparable`](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-type-parameters.md#comparable-types-in-constraints),
 so we can check for equality.
 
-For my design, I decided to enforce that both key and value types are comparable,
-so I could build a simple demo using two hashtables as an index and reverse
-index with flipped key/value types.
+Edit: originally this code used `type K, V comparable` but this is unnecessary.
+Thanks Brad Fitzpatrick and @nemetroid for pointing out that
+`type K comparable, V interface{}` is sufficient.
 
 ```go
 // Package hashtable implements a basic hashtable for generic key/value pairs.
 package hashtable
 
 // A Table is a basic generic hashtable.
-type Table(type K, V comparable) struct {
+type Table(type K comparable, V interface{}) struct {
     // hash is a function which can hash a key of type K with t.m.
     hash func(key K, m int) int
 
@@ -186,14 +186,14 @@ type Table(type K, V comparable) struct {
 }
 
 // A kv stores generic key/value data in a Table.
-type kv(type K, V comparable) struct {
+type kv(type K comparable, V interface{}) struct {
 	Key   K
 	Value V
 }
 
 // New creates a table with m internal buckets which uses the specified hash
 // function for an input type K.
-func New(type K, V comparable)(m int, hash func(K, int) int) *Table(K, V) {
+func New(type K comparable, V interface{})(m int, hash func(K, int) int) *Table(K, V) {
 	return &Table(K, V){
 		hash:  hash,
         m:     m,
@@ -205,7 +205,8 @@ func New(type K, V comparable)(m int, hash func(K, int) int) *Table(K, V) {
 
 The new type parameter lists are required wherever generic types are needed,
 thus each of these top-level types and functions must have the type parameter
-list for `K` and `V`, both of which must also be `comparable`.
+list for `K` and `V`. Types which are used for `K` must be `comparable`, and
+any type can be used for `V`, as indicated by `interface{}`.
 
 There were a couple of tricky things I learned while writing this code:
 
