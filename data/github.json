@@ -1,10 +1,5 @@
 [
 	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -15,38 +10,43 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "keylight",
-		"Link": "https://github.com/mdlayher/keylight",
-		"Description": "Package keylight allows control of Elgato Key Light devices. MIT Licensed."
+		"Name": "misc",
+		"Link": "https://github.com/mdlayher/misc",
+		"Description": "A collection of miscellaneous pieces of code, saved for future reference and use.  Feel free to use and modify anything in this repository."
 	},
 	{
-		"Name": "keylight_exporter",
-		"Link": "https://github.com/mdlayher/keylight_exporter",
-		"Description": "Command keylight_exporter implements a Prometheus exporter for Elgato Key Light devices. MIT Licensed."
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
 	},
 	{
-		"Name": "promtest",
-		"Link": "https://github.com/mdlayher/promtest",
-		"Description": "Package promtest provides helpers for testing applications which export Prometheus metrics. MIT Licensed."
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
 	},
 	{
-		"Name": "wifi",
-		"Link": "https://github.com/mdlayher/wifi",
-		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed."
+		"Name": "nixos_channel_exporter",
+		"Link": "https://github.com/mdlayher/nixos_channel_exporter",
+		"Description": "Command nixos_channel_exporter implements a Prometheus exporter for NixOS channel status metadata. MIT Licensed."
 	},
 	{
-		"Name": "flightdeck",
-		"Link": "https://github.com/mdlayher/flightdeck",
-		"Description": "flightdeck is an experiment to create a highly customizable hardware/software interface for live streaming and other computer activities. Apache 2.0 Licensed."
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed."
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
 	},
 	{
-		"Name": "metricslite",
-		"Link": "https://github.com/mdlayher/metricslite",
-		"Description": "Package metricslite implements a lightweight, testable metrics interface focused on Prometheus metrics. MIT Licensed."
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
+	},
+	{
+		"Name": "mdlayher.com",
+		"Link": "https://github.com/mdlayher/mdlayher.com",
+		"Description": "Matt Layher's personal static website. MIT Licensed."
 	}
 ]
