@@ -17,7 +17,7 @@ I am not an expert and can only speak from my limited experience and time with
 the design.
 
 This blog will describe the lessons I learned
-[porting my toy hashtable to the new generics draft design](https://go2goplay.golang.org/p/2pcBZTQdh3u).
+[porting my toy hashtable to the new generics draft design](https://go2goplay.golang.org/p/XsN2CdNieyM).
 If you'd like to skip the introduction and check out the generic code,
 [feel free to jump to "A generic hashtable"](#a-generic-hashtable).
 
@@ -353,7 +353,7 @@ for i, s := range append(strs, "nope!") {
 }
 ```
 
-The output of [our demo program](https://go2goplay.golang.org/p/2pcBZTQdh3u) is
+The output of [our demo program](https://go2goplay.golang.org/p/XsN2CdNieyM) is
 as follows:
 
 ```text
