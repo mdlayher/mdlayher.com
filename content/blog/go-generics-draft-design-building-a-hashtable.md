@@ -168,9 +168,14 @@ key/value pair types. But we do have one constraint: the keys in our hashtable
 must match the [predeclared type constraint `comparable`](https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-type-parameters.md#comparable-types-in-constraints),
 so we can check for equality.
 
-Edit: originally this code used `type K, V comparable` but this is unnecessary.
+Edit 1: originally this code used `type K, V comparable` but this is unnecessary.
 Thanks Brad Fitzpatrick and @nemetroid for pointing out that
 `type K comparable, V interface{}` is sufficient.
+
+Edit 2: thanks Bill Kennedy for spotting a typo in the type declaration for
+`Table.table` below, and thanks Bill and Robert Griesemer for identifying that
+no constraints are necessary for `type kv(type K, V) struct` because the `K`
+is never checked for equality within the `kv` type.
 
 ```go
 // Package hashtable implements a basic hashtable for generic key/value pairs.
@@ -182,11 +187,11 @@ type Table(type K comparable, V interface{}) struct {
     hash func(key K, m int) int
 
 	m     int
-	table [][]kv
+	table [][]kv(K, V)
 }
 
 // A kv stores generic key/value data in a Table.
-type kv(type K comparable, V interface{}) struct {
+type kv(type K, V) struct {
 	Key   K
 	Value V
 }
