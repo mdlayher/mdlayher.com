@@ -1,8 +1,23 @@
 [
 	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
+		"Name": "stream",
+		"Link": "https://github.com/mdlayher/stream",
+		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed."
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+	},
+	{
+		"Name": "consrv",
+		"Link": "https://github.com/mdlayher/consrv",
+		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. MIT Licensed."
 	},
 	{
 		"Name": "corerad",
@@ -10,39 +25,24 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "misc",
-		"Link": "https://github.com/mdlayher/misc",
-		"Description": "A collection of miscellaneous pieces of code, saved for future reference and use.  Feel free to use and modify anything in this repository."
+		"Name": "metricslite",
+		"Link": "https://github.com/mdlayher/metricslite",
+		"Description": "Package metricslite implements a lightweight, testable metrics interface focused on Prometheus metrics. MIT Licensed."
 	},
 	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
+		"Name": "sdnotify",
+		"Link": "https://github.com/mdlayher/sdnotify",
+		"Description": "Package sdnotify implements systemd readiness notifications as described in https://www.freedesktop.org/software/systemd/man/sd_notify.html. MIT Licensed."
 	},
 	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
+		"Name": "atmodem",
+		"Link": "https://github.com/mdlayher/atmodem",
+		"Description": "Package atmodem provides a high-level interface for controlling modems using the AT command set. MIT Licensed."
 	},
 	{
-		"Name": "nixos_channel_exporter",
-		"Link": "https://github.com/mdlayher/nixos_channel_exporter",
-		"Description": "Command nixos_channel_exporter implements a Prometheus exporter for NixOS channel status metadata. MIT Licensed."
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed."
-	},
-	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
+		"Name": "keylight_exporter",
+		"Link": "https://github.com/mdlayher/keylight_exporter",
+		"Description": "Command keylight_exporter implements a Prometheus exporter for Elgato Key Light devices. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
