@@ -1,15 +1,5 @@
 [
 	{
-		"Name": "talks",
-		"Link": "https://github.com/mdlayher/talks",
-		"Description": "Talks by Matt Layher.  MIT Licensed."
-	},
-	{
-		"Name": "stream",
-		"Link": "https://github.com/mdlayher/stream",
-		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed."
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
@@ -17,7 +7,12 @@
 	{
 		"Name": "consrv",
 		"Link": "https://github.com/mdlayher/consrv",
-		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. MIT Licensed."
+		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed."
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
 	},
 	{
 		"Name": "corerad",
@@ -25,24 +20,29 @@
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
+		"Name": "modemmanager",
+		"Link": "https://github.com/mdlayher/modemmanager",
+		"Description": "Package modemmanager enables Go programs to control ModemManager and its devices using D-Bus. MIT Licensed."
+	},
+	{
+		"Name": "modemmanager_exporter",
+		"Link": "https://github.com/mdlayher/modemmanager_exporter",
+		"Description": "Command modemmanager_exporter implements a Prometheus exporter for ModemManager and its devices. MIT Licensed."
+	},
+	{
+		"Name": "stream",
+		"Link": "https://github.com/mdlayher/stream",
+		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed."
+	},
+	{
+		"Name": "talks",
+		"Link": "https://github.com/mdlayher/talks",
+		"Description": "Talks by Matt Layher.  MIT Licensed."
+	},
+	{
 		"Name": "metricslite",
 		"Link": "https://github.com/mdlayher/metricslite",
 		"Description": "Package metricslite implements a lightweight, testable metrics interface focused on Prometheus metrics. MIT Licensed."
-	},
-	{
-		"Name": "sdnotify",
-		"Link": "https://github.com/mdlayher/sdnotify",
-		"Description": "Package sdnotify implements systemd readiness notifications as described in https://www.freedesktop.org/software/systemd/man/sd_notify.html. MIT Licensed."
-	},
-	{
-		"Name": "atmodem",
-		"Link": "https://github.com/mdlayher/atmodem",
-		"Description": "Package atmodem provides a high-level interface for controlling modems using the AT command set. MIT Licensed."
-	},
-	{
-		"Name": "keylight_exporter",
-		"Link": "https://github.com/mdlayher/keylight_exporter",
-		"Description": "Command keylight_exporter implements a Prometheus exporter for Elgato Key Light devices. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
