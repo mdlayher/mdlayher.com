@@ -19,7 +19,7 @@ source projects:
   [x/net](https://godoc.org/golang.org/x/net), and
   [x/sys/unix](https://godoc.org/golang.org/x/sys/unix)
 - [the Prometheus metrics and monitoring system](https://prometheus.io/)
-  - team member, focused on [node_exporter](https://github.com/prometheus/node_exporter)
+  - former team member
 - [the WireGuard VPN tunnel project](https://www.wireguard.com/)
   - maintainer of [wgctrl-go](https://github.com/WireGuard/wgctrl-go)
 
