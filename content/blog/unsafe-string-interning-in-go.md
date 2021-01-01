@@ -236,7 +236,7 @@ func Get(cmpVal interface{}) *Value {
 	defer mu.Unlock()
 
 	var v *Value
-	addr, ok := val[cmpVal]; ok {
+	if addr, ok := val[cmpVal]; ok {
 		// Value is already interned in the pool. In case a finalizer runs in
 		// the near future, we must "resurrect" this value to bring it back
 		// to the active part of its lifecycle.
@@ -290,7 +290,7 @@ know that this value cannot be removed from the pool.
 
 ```go
 	var v *Value
-	addr, ok := val[cmpVal]; ok {
+	if addr, ok := val[cmpVal]; ok {
 		// Value is already interned in the pool. In case a finalizer runs in
 		// the near future, we must "resurrect" this value to bring it back
 		// to the active part of its lifecycle.
