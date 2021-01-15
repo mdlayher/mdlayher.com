@@ -4,6 +4,13 @@ title = "Unsafe string interning in Go"
 subtitle = "I discuss the https://go4.org/intern package and the unsafe techniques it uses to implement string interning in Go."
 +++
 
+> Note: this project continues to evolve and some theoretical concerns about the
+> future safety of this approach have been identified and documented here:
+> https://github.com/go4org/intern/issues/13.
+>
+> If you're using this post as a reference, please look at the latest version of
+> package `intern` instead.
+
 For a few months, I've been collaborating on the
 [`inet.af/netaddr`](https://inet.af/netaddr) package for Go which introduces a
 new `netaddr.IP` type as an alternative to the standard library's
