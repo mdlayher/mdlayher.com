@@ -4,7 +4,7 @@ title = "About"
 
 ## Hello!
 
-My name is Matt Layher, and I am a Software Engineer at [Fastly](https://fastly.com),
+I'm Matt, and I'm a Staff Engineer at [Fastly](https://fastly.com),
 working remotely from Kalamazoo, MI. My primary interests include Linux,
 computer networking, distributed systems, open source software, and the Go
 programming language.
@@ -41,4 +41,4 @@ If you'd like to get in touch, feel free to reach out on:
 - [Email: mdlayher@gmail.com](mailto:mdlayher@gmail.com)
 - [Gophers Slack: @mdlayher, #networking](https://invite.slack.golangbridge.org/)
 
-![Colorado avatar](/img/avatar/colorado.jpg)
+![Current avatar](/img/avatar.jpg)
