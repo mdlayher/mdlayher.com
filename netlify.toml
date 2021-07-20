@@ -3,7 +3,7 @@ publish = "public"
 command = "hugo --minify"
 
 [build.environment]
-HUGO_VERSION = "0.59.0"
+HUGO_VERSION = "0.85.0"
 
 [[headers]]
   for = "/*"
