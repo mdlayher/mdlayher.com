@@ -1,8 +1,8 @@
 [
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+		"Name": "corerad",
+		"Link": "https://github.com/mdlayher/corerad",
+		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
 	},
 	{
 		"Name": "homelab",
@@ -10,29 +10,14 @@
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
 	},
 	{
-		"Name": "ethtool",
-		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed."
+		"Name": "netx",
+		"Link": "https://github.com/mdlayher/netx",
+		"Description": "A collection of small Go networking packages. MIT Licensed."
 	},
 	{
-		"Name": "corerad",
-		"Link": "https://github.com/mdlayher/corerad",
-		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
-	},
-	{
-		"Name": "stream",
-		"Link": "https://github.com/mdlayher/stream",
-		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed."
-	},
-	{
-		"Name": "rtorrent_exporter",
-		"Link": "https://github.com/mdlayher/rtorrent_exporter",
-		"Description": "Prometheus exporter that exposes metrics from rTorrent. MIT Licensed."
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
 	},
 	{
 		"Name": "consrv",
@@ -40,9 +25,24 @@
 		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed."
 	},
 	{
-		"Name": "untappd",
-		"Link": "https://github.com/mdlayher/untappd",
-		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed."
+		"Name": "socket",
+		"Link": "https://github.com/mdlayher/socket",
+		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed."
+	},
+	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed."
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+	},
+	{
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed."
 	},
 	{
 		"Name": "mdlayher.com",
