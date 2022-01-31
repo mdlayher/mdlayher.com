@@ -4,7 +4,7 @@ title = "About"
 
 ## Hello!
 
-I'm Matt, and I'm a Staff Engineer at [Fastly](https://fastly.com),
+I'm Matt, and I'm a Software Engineer at [PlanetScale](https://planetscale.com/),
 working remotely from Kalamazoo, MI. My primary interests include Linux,
 computer networking, distributed systems, open source software, and the Go
 programming language.

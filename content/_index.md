@@ -1,6 +1,6 @@
 # Matt Layher
 
-Staff Engineer. Go, Linux, networking, and open source software enthusiast.
+Software Engineer. Go, Linux, networking, and open source software enthusiast.
 On and ever upward.
 
 * [Blog](/blog)
