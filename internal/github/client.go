@@ -2,6 +2,7 @@ package github
 
 import (
 	"context"
+	"sort"
 
 	"github.com/google/go-github/v42/github"
 )
@@ -97,6 +98,11 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 			break
 		}
 	}
+
+	// Repos with tags are regularly maintained, sort those higher in the list.
+	sort.SliceStable(repos, func(i, j int) bool {
+		return repos[i].Tag != "" && repos[j].Tag == ""
+	})
 
 	return repos, nil
 }
