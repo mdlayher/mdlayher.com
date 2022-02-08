@@ -1,52 +1,62 @@
 [
 	{
-		"Name": "nbd-rs",
-		"Link": "https://github.com/mdlayher/nbd-rs",
-		"Description": "An asynchronous Rust implementation of the Network Block Device (NBD) protocol. MIT Licensed."
-	},
-	{
-		"Name": "corerad",
-		"Link": "https://github.com/mdlayher/corerad",
-		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed."
-	},
-	{
-		"Name": "vsock",
-		"Link": "https://github.com/mdlayher/vsock",
-		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed."
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "socket",
 		"Link": "https://github.com/mdlayher/socket",
-		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed."
+		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
+		"Tag": "v0.1.1"
 	},
 	{
-		"Name": "rtorrent",
-		"Link": "https://github.com/mdlayher/rtorrent",
-		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed."
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
+		"Tag": "v1.0.0"
+	},
+	{
+		"Name": "corerad",
+		"Link": "https://github.com/mdlayher/corerad",
+		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
+		"Tag": "v1.0.0"
 	},
 	{
 		"Name": "ethtool",
 		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed."
-	},
-	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed."
+		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "genetlink",
 		"Link": "https://github.com/mdlayher/genetlink",
-		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed."
+		"Description": "Package genetlink implements generic netlink interactions and data types. MIT Licensed.",
+		"Tag": "v1.2.0"
+	},
+	{
+		"Name": "consrv",
+		"Link": "https://github.com/mdlayher/consrv",
+		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed."
+		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed.",
+		"Tag": "v1.6.0"
+	},
+	{
+		"Name": "nbd-rs",
+		"Link": "https://github.com/mdlayher/nbd-rs",
+		"Description": "An asynchronous Rust client and server implementation of the Network Block Device (NBD) protocol. MIT Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "mdlayher.com",
 		"Link": "https://github.com/mdlayher/mdlayher.com",
-		"Description": "Matt Layher's personal static website. MIT Licensed."
+		"Description": "Matt Layher's personal static website. MIT Licensed.",
+		"Tag": ""
 	}
 ]

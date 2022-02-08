@@ -16,6 +16,7 @@ type Repository struct {
 	Name        string
 	Link        string
 	Description string
+	Tag         string
 }
 
 // userAgent identifies this client to GitHub's API.
@@ -69,10 +70,26 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 			continue
 		}
 
+		// Look for the latest tagged release, if one exists.
+		releases, _, err := c.c.Repositories.ListReleases(
+			ctx,
+			c.username,
+			r.GetName(), &github.ListOptions{PerPage: 1},
+		)
+		if err != nil {
+			return nil, err
+		}
+
+		var tag string
+		if len(releases) > 0 {
+			tag = releases[0].GetTagName()
+		}
+
 		repos = append(repos, &Repository{
 			Name:        r.GetName(),
 			Link:        r.GetHTMLURL(),
 			Description: r.GetDescription(),
+			Tag:         tag,
 		})
 
 		// Only return 10 repositories at most.
