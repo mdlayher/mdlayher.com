@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/google/go-github/github"
+	"github.com/google/go-github/v42/github"
 )
 
 func Test_clientListRepositories(t *testing.T) {

@@ -3,7 +3,7 @@ package github
 import (
 	"context"
 
-	"github.com/google/go-github/github"
+	"github.com/google/go-github/v42/github"
 )
 
 // A Client is a GitHub client.
