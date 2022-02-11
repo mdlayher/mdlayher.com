@@ -1,15 +1,15 @@
 [
 	{
-		"Name": "socket",
-		"Link": "https://github.com/mdlayher/socket",
-		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
-		"Tag": "v0.1.1"
-	},
-	{
 		"Name": "vsock",
 		"Link": "https://github.com/mdlayher/vsock",
 		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
-		"Tag": "v1.0.0"
+		"Tag": "v1.0.1"
+	},
+	{
+		"Name": "socket",
+		"Link": "https://github.com/mdlayher/socket",
+		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
+		"Tag": "v0.1.2"
 	},
 	{
 		"Name": "corerad",
@@ -36,15 +36,15 @@
 		"Tag": ""
 	},
 	{
-		"Name": "ethtool",
-		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "consrv",
 		"Link": "https://github.com/mdlayher/consrv",
 		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "ethtool",
+		"Link": "https://github.com/mdlayher/ethtool",
+		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
 		"Tag": ""
 	},
 	{
