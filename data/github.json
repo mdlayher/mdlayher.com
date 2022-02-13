@@ -1,17 +1,5 @@
 [
 	{
-		"Name": "vsock",
-		"Link": "https://github.com/mdlayher/vsock",
-		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
-		"Tag": "v1.1.0"
-	},
-	{
-		"Name": "socket",
-		"Link": "https://github.com/mdlayher/socket",
-		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
-		"Tag": "v0.2.0"
-	},
-	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
@@ -30,21 +18,39 @@
 		"Tag": "v1.6.0"
 	},
 	{
+		"Name": "socket",
+		"Link": "https://github.com/mdlayher/socket",
+		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
+		"Tag": "v0.2.0"
+	},
+	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
+		"Tag": "v1.1.0"
+	},
+	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
+		"Tag": ""
+	},
+	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
 		"Tag": ""
 	},
 	{
-		"Name": "consrv",
-		"Link": "https://github.com/mdlayher/consrv",
-		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "ethtool",
 		"Link": "https://github.com/mdlayher/ethtool",
 		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "consrv",
+		"Link": "https://github.com/mdlayher/consrv",
+		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
 		"Tag": ""
 	},
 	{
