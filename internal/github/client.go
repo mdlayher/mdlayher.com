@@ -49,11 +49,11 @@ type client struct {
 
 // ListRepositories implements Client.
 func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
-	// Grab 15 most recently pushed repositories, though we will limit the
+	// Grab 20 most recently pushed repositories, though we will limit the
 	// number of results after filtering.
 	options := &github.RepositoryListOptions{
 		Sort:        "pushed",
-		ListOptions: github.ListOptions{PerPage: 15},
+		ListOptions: github.ListOptions{PerPage: 20},
 	}
 
 	// Only need repos belonging to the specified user.
@@ -67,7 +67,8 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 		// Skip:
 		//   - archived repositories
 		//   - forks
-		if r.GetArchived() || r.GetFork() {
+		//   - this website (it's already linked)
+		if r.GetArchived() || r.GetFork() || r.GetName() == "mdlayher.com" {
 			continue
 		}
 
@@ -93,8 +94,8 @@ func (c *client) ListRepositories(ctx context.Context) ([]*Repository, error) {
 			Tag:         tag,
 		})
 
-		// Only return 10 repositories at most.
-		if len(repos) == 10 {
+		// Only return X repositories at most.
+		if len(repos) == 15 {
 			break
 		}
 	}

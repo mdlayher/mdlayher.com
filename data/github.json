@@ -54,9 +54,27 @@
 		"Tag": ""
 	},
 	{
-		"Name": "mdlayher.com",
-		"Link": "https://github.com/mdlayher/mdlayher.com",
-		"Description": "Matt Layher's personal static website. MIT Licensed.",
+		"Name": "nbd-rs",
+		"Link": "https://github.com/mdlayher/nbd-rs",
+		"Description": "An asynchronous Rust client and server implementation of the Network Block Device (NBD) protocol. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "wifi",
+		"Link": "https://github.com/mdlayher/wifi",
+		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
 		"Tag": ""
 	}
 ]
