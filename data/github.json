@@ -30,27 +30,27 @@
 		"Tag": "v1.1.0"
 	},
 	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "homelab",
 		"Link": "https://github.com/mdlayher/homelab",
 		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
 		"Tag": ""
 	},
 	{
-		"Name": "ethtool",
-		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "consrv",
 		"Link": "https://github.com/mdlayher/consrv",
 		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "ethtool",
+		"Link": "https://github.com/mdlayher/ethtool",
+		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -75,6 +75,18 @@
 		"Name": "apcupsd_exporter",
 		"Link": "https://github.com/mdlayher/apcupsd_exporter",
 		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "rtorrent",
+		"Link": "https://github.com/mdlayher/rtorrent",
+		"Description": "Package rtorrent implements a client for rTorrent.  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "raw",
+		"Link": "https://github.com/mdlayher/raw",
+		"Description": "Package raw enables reading and writing data at the device driver level for a network interface.  MIT Licensed.",
 		"Tag": ""
 	}
 ]
