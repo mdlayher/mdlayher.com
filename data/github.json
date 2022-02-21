@@ -1,5 +1,23 @@
 [
 	{
+		"Name": "packet",
+		"Link": "https://github.com/mdlayher/packet",
+		"Description": "Package packet provides access to Linux packet sockets (AF_PACKET). MIT Licensed.",
+		"Tag": "v1.0.0"
+	},
+	{
+		"Name": "socket",
+		"Link": "https://github.com/mdlayher/socket",
+		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
+		"Tag": "v0.2.1"
+	},
+	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
+		"Tag": "v1.1.1"
+	},
+	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
@@ -18,21 +36,21 @@
 		"Tag": "v1.6.0"
 	},
 	{
-		"Name": "socket",
-		"Link": "https://github.com/mdlayher/socket",
-		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
-		"Tag": "v0.2.0"
+		"Name": "arp",
+		"Link": "https://github.com/mdlayher/arp",
+		"Description": "Package arp implements the ARP protocol, as described in RFC 826. MIT Licensed.",
+		"Tag": ""
 	},
 	{
-		"Name": "vsock",
-		"Link": "https://github.com/mdlayher/vsock",
-		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
-		"Tag": "v1.1.0"
+		"Name": "ethernet",
+		"Link": "https://github.com/mdlayher/ethernet",
+		"Description": "Package ethernet implements marshaling and unmarshaling of IEEE 802.3 Ethernet II frames and IEEE 802.1Q VLAN tags. MIT Licensed.",
+		"Tag": ""
 	},
 	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -42,9 +60,9 @@
 		"Tag": ""
 	},
 	{
-		"Name": "ethtool",
-		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
+		"Name": "wifi",
+		"Link": "https://github.com/mdlayher/wifi",
+		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -54,27 +72,15 @@
 		"Tag": ""
 	},
 	{
-		"Name": "nbd-rs",
-		"Link": "https://github.com/mdlayher/nbd-rs",
-		"Description": "An asynchronous Rust client and server implementation of the Network Block Device (NBD) protocol. MIT Licensed.",
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
 		"Tag": ""
 	},
 	{
-		"Name": "wifi",
-		"Link": "https://github.com/mdlayher/wifi",
-		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
+		"Name": "ethtool",
+		"Link": "https://github.com/mdlayher/ethtool",
+		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
 		"Tag": ""
 	}
 ]
