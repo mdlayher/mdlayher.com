@@ -80,7 +80,7 @@ func Test_clientListRepositories(t *testing.T) {
 func handleRepos(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
 
-	if diff := cmp.Diff("15", q.Get("per_page")); diff != "" {
+	if diff := cmp.Diff("20", q.Get("per_page")); diff != "" {
 		panicf("unexpected per_page parameter (-want +got):\n%s", diff)
 	}
 	if diff := cmp.Diff("pushed", q.Get("sort")); diff != "" {
