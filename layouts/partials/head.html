@@ -7,19 +7,23 @@
 	<meta name="description" content="{{ .Description }}">
 	{{- end }}
 
-	<title>
-		{{- if eq .URL "/" }}
-		{{ .Site.Title }}
-		{{- else }}
-		{{ .Title }} &middot; {{ .Site.Title }}
-		{{- end }}
-	</title>
+	<!-- Social metadata -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@mdlayher" />
+	<meta name="twitter:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+	<meta name="twitter:description" content="{{ .Site.Params.Description }}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+	<meta property="og:site_name" content="{{ .Site.Params.Description }}" />
+
+	<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
 
 	<!-- CSS -->
-	{{- $inServerMode	:= .Site.IsServer }}
-	{{- $cssTarget		:= "css/style.css" }}
-	{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-	{{- $style			:= resources.Get "scss/tale.scss" | toCSS $cssOptions }}
+	{{- $inServerMode := .Site.IsServer }}
+	{{- $cssTarget := "css/style.css" }}
+	{{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath"
+	$cssTarget "outputStyle" "compressed") }}
+	{{- $style := resources.Get "scss/tale.scss" | toCSS $cssOptions }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 	{{ range .Site.Params.css -}}
 	<link rel="stylesheet" href="{{ . | relURL }}">
@@ -27,6 +31,7 @@
 
 	<!-- RSS -->
 	{{ range .AlternativeOutputFormats -}}
-	{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ printf `
+	<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 </head>
