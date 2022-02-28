@@ -1,15 +1,15 @@
 [
 	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
+		"Tag": "v1.6.0"
+	},
+	{
 		"Name": "socket",
 		"Link": "https://github.com/mdlayher/socket",
 		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
 		"Tag": "v0.2.2"
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets. MIT Licensed.",
-		"Tag": "v1.6.0"
 	},
 	{
 		"Name": "packet",
