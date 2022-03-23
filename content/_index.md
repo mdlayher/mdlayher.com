@@ -4,8 +4,8 @@ title = "Home"
 
 # Matt Layher
 
-Software Engineer. Go, Linux, networking, and open source software enthusiast.
-On and ever upward.
+Software Engineer. Go, Rust, Linux, networking, and open source software. On and
+ever upward.
 
 * [Blog](/blog)
 * [GitHub](https://github.com/mdlayher)
