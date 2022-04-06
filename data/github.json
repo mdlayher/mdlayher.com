@@ -3,7 +3,19 @@
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
-		"Tag": "v1.1.1"
+		"Tag": "v1.1.2"
+	},
+	{
+		"Name": "sdnotify",
+		"Link": "https://github.com/mdlayher/sdnotify",
+		"Description": "Package sdnotify implements systemd readiness notifications as described in https://www.freedesktop.org/software/systemd/man/sd_notify.html. MIT Licensed.",
+		"Tag": "v1.0.0"
+	},
+	{
+		"Name": "schedgroup",
+		"Link": "https://github.com/mdlayher/schedgroup",
+		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed.",
+		"Tag": "v1.0.0"
 	},
 	{
 		"Name": "ndp",
@@ -24,10 +36,28 @@
 		"Tag": "v0.3.0"
 	},
 	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
-		"Tag": "v1.6.0"
+		"Name": "taskstats",
+		"Link": "https://github.com/mdlayher/taskstats",
+		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "zedhook",
+		"Link": "https://github.com/mdlayher/zedhook",
+		"Description": "zedhook provides a ZEDLET (ZFS Event Daemon Linkage for Executable Tasks) and zevent receiver server to monitor and log ZFS events produced by ZED. Apache 2.0 Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "metricslite",
+		"Link": "https://github.com/mdlayher/metricslite",
+		"Description": "Package metricslite implements a lightweight, testable metrics interface focused on Prometheus metrics. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "wifi",
+		"Link": "https://github.com/mdlayher/wifi",
+		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "consrv",
@@ -48,33 +78,9 @@
 		"Tag": ""
 	},
 	{
-		"Name": "wifi",
-		"Link": "https://github.com/mdlayher/wifi",
-		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "apcupsd",
 		"Link": "https://github.com/mdlayher/apcupsd",
 		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "keylight",
-		"Link": "https://github.com/mdlayher/keylight",
-		"Description": "Package keylight allows control of Elgato Key Light devices. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "kcm",
-		"Link": "https://github.com/mdlayher/kcm",
-		"Description": "Package kcm provides access to Linux Kernel Connection Multiplexor sockets (AF_KCM). MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "ethtool",
-		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
 		"Tag": ""
 	}
 ]
