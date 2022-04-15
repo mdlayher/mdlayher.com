@@ -1,9 +1,21 @@
 [
 	{
+		"Name": "consrv",
+		"Link": "https://github.com/mdlayher/consrv",
+		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
+		"Tag": "v1.0.0"
+	},
+	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
 		"Tag": "v1.1.2"
+	},
+	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
+		"Tag": "v0.10.0"
 	},
 	{
 		"Name": "sdnotify",
@@ -18,33 +30,33 @@
 		"Tag": "v1.0.0"
 	},
 	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
-		"Tag": "v0.10.0"
-	},
-	{
 		"Name": "socket",
 		"Link": "https://github.com/mdlayher/socket",
 		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
 		"Tag": "v0.2.3"
 	},
 	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
-		"Tag": "v0.3.0"
-	},
-	{
-		"Name": "taskstats",
-		"Link": "https://github.com/mdlayher/taskstats",
-		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed.",
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
 		"Tag": ""
 	},
 	{
 		"Name": "zedhook",
 		"Link": "https://github.com/mdlayher/zedhook",
 		"Description": "zedhook provides a ZEDLET (ZFS Event Daemon Linkage for Executable Tasks) and zevent receiver server to monitor and log ZFS events produced by ZED. Apache 2.0 Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "stream",
+		"Link": "https://github.com/mdlayher/stream",
+		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "taskstats",
+		"Link": "https://github.com/mdlayher/taskstats",
+		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -60,21 +72,9 @@
 		"Tag": ""
 	},
 	{
-		"Name": "consrv",
-		"Link": "https://github.com/mdlayher/consrv",
-		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "pidfd",
 		"Link": "https://github.com/mdlayher/pidfd",
 		"Description": "Package pidfd provides access to Linux process file descriptors. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
 		"Tag": ""
 	},
 	{
