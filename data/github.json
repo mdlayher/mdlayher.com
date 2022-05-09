@@ -1,15 +1,21 @@
 [
 	{
+		"Name": "corerad",
+		"Link": "https://github.com/mdlayher/corerad",
+		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
+		"Tag": "v1.2.1"
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
+		"Tag": "v1.6.0"
+	},
+	{
 		"Name": "consrv",
 		"Link": "https://github.com/mdlayher/consrv",
 		"Description": "Command consrv is a SSH to serial console bridge server, originally designed for deployment on gokrazy.org devices. Apache 2.0 Licensed.",
 		"Tag": "v1.0.0"
-	},
-	{
-		"Name": "corerad",
-		"Link": "https://github.com/mdlayher/corerad",
-		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
-		"Tag": "v1.1.2"
 	},
 	{
 		"Name": "ndp",
@@ -42,9 +48,21 @@
 		"Tag": ""
 	},
 	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed.",
+		"Tag": ""
+	},
+	{
 		"Name": "zedhook",
 		"Link": "https://github.com/mdlayher/zedhook",
 		"Description": "zedhook provides a ZEDLET (ZFS Event Daemon Linkage for Executable Tasks) and zevent receiver server to monitor and log ZFS events produced by ZED. Apache 2.0 Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "netx",
+		"Link": "https://github.com/mdlayher/netx",
+		"Description": "A collection of small Go networking packages. MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -69,18 +87,6 @@
 		"Name": "wifi",
 		"Link": "https://github.com/mdlayher/wifi",
 		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "pidfd",
-		"Link": "https://github.com/mdlayher/pidfd",
-		"Description": "Package pidfd provides access to Linux process file descriptors. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed.",
 		"Tag": ""
 	}
 ]
