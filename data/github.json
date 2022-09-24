@@ -6,10 +6,16 @@
 		"Tag": "v1.2.1"
 	},
 	{
+		"Name": "ndp",
+		"Link": "https://github.com/mdlayher/ndp",
+		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
+		"Tag": "v1.0.0"
+	},
+	{
 		"Name": "netlink",
 		"Link": "https://github.com/mdlayher/netlink",
 		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
-		"Tag": "v1.6.0"
+		"Tag": "v1.6.2"
 	},
 	{
 		"Name": "consrv",
@@ -18,28 +24,46 @@
 		"Tag": "v1.0.0"
 	},
 	{
-		"Name": "ndp",
-		"Link": "https://github.com/mdlayher/ndp",
-		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
-		"Tag": "v0.10.0"
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
+		"Tag": "v0.3.0"
 	},
 	{
-		"Name": "sdnotify",
-		"Link": "https://github.com/mdlayher/sdnotify",
-		"Description": "Package sdnotify implements systemd readiness notifications as described in https://www.freedesktop.org/software/systemd/man/sd_notify.html. MIT Licensed.",
+		"Name": "packet",
+		"Link": "https://github.com/mdlayher/packet",
+		"Description": "Package packet provides access to Linux packet sockets (AF_PACKET). MIT Licensed.",
 		"Tag": "v1.0.0"
 	},
 	{
-		"Name": "schedgroup",
-		"Link": "https://github.com/mdlayher/schedgroup",
-		"Description": "Package schedgroup provides a goroutine worker pool which schedules tasks to be performed at or after a specified time. MIT Licensed.",
-		"Tag": "v1.0.0"
+		"Name": "yamlnetlink",
+		"Link": "https://github.com/mdlayher/yamlnetlink",
+		"Description": "Package yamlnetlink provides support for parsing YAML netlink specifications. MIT Licensed.",
+		"Tag": ""
 	},
 	{
-		"Name": "socket",
-		"Link": "https://github.com/mdlayher/socket",
-		"Description": "Package socket provides a low-level network connection type which integrates with Go's runtime network poller to provide asynchronous I/O and deadline support. MIT Licensed.",
-		"Tag": "v0.2.3"
+		"Name": "prombolt",
+		"Link": "https://github.com/mdlayher/prombolt",
+		"Description": "Package prombolt provides a Prometheus metrics collector for Bolt databases.  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "ethtool",
+		"Link": "https://github.com/mdlayher/ethtool",
+		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "apcupsd",
+		"Link": "https://github.com/mdlayher/apcupsd",
+		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "arp",
+		"Link": "https://github.com/mdlayher/arp",
+		"Description": "Package arp implements the ARP protocol, as described in RFC 826. MIT Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "homelab",
@@ -48,45 +72,21 @@
 		"Tag": ""
 	},
 	{
+		"Name": "untappd",
+		"Link": "https://github.com/mdlayher/untappd",
+		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "ordered",
+		"Link": "https://github.com/mdlayher/ordered",
+		"Description": "Package ordered implements data structures which maintain consistent ordering of inserted elements.",
+		"Tag": ""
+	},
+	{
 		"Name": "wireguard_exporter",
 		"Link": "https://github.com/mdlayher/wireguard_exporter",
 		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "zedhook",
-		"Link": "https://github.com/mdlayher/zedhook",
-		"Description": "zedhook provides a ZEDLET (ZFS Event Daemon Linkage for Executable Tasks) and zevent receiver server to monitor and log ZFS events produced by ZED. Apache 2.0 Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "netx",
-		"Link": "https://github.com/mdlayher/netx",
-		"Description": "A collection of small Go networking packages. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "stream",
-		"Link": "https://github.com/mdlayher/stream",
-		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "taskstats",
-		"Link": "https://github.com/mdlayher/taskstats",
-		"Description": "Package taskstats provides access to Linux's taskstats interface, for sending per-task and per-process statistics from the kernel to userspace.  MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "metricslite",
-		"Link": "https://github.com/mdlayher/metricslite",
-		"Description": "Package metricslite implements a lightweight, testable metrics interface focused on Prometheus metrics. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "wifi",
-		"Link": "https://github.com/mdlayher/wifi",
-		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
 		"Tag": ""
 	}
 ]
