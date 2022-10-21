@@ -1,5 +1,11 @@
 [
 	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
+		"Tag": "v1.6.2"
+	},
+	{
 		"Name": "corerad",
 		"Link": "https://github.com/mdlayher/corerad",
 		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
@@ -10,12 +16,6 @@
 		"Link": "https://github.com/mdlayher/ndp",
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
 		"Tag": "v1.0.0"
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
-		"Tag": "v1.6.2"
 	},
 	{
 		"Name": "consrv",
@@ -36,9 +36,33 @@
 		"Tag": "v1.0.0"
 	},
 	{
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
+		"Tag": ""
+	},
+	{
 		"Name": "yamlnetlink",
 		"Link": "https://github.com/mdlayher/yamlnetlink",
 		"Description": "Package yamlnetlink provides support for parsing YAML netlink specifications. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "smbios-rs",
+		"Link": "https://github.com/mdlayher/smbios-rs",
+		"Description": "Provides detection and access to System Management BIOS (SMBIOS) and Desktop Management Interface (DMI) data and structures. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "wireguard_exporter",
+		"Link": "https://github.com/mdlayher/wireguard_exporter",
+		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "watchdog",
+		"Link": "https://github.com/mdlayher/watchdog",
+		"Description": "Package watchdog implements control of hardware watchdog devices. MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -66,12 +90,6 @@
 		"Tag": ""
 	},
 	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
-		"Tag": ""
-	},
-	{
 		"Name": "untappd",
 		"Link": "https://github.com/mdlayher/untappd",
 		"Description": "Package untappd provides an Untappd APIv4 client, written in Go. MIT Licensed.",
@@ -84,9 +102,21 @@
 		"Tag": ""
 	},
 	{
-		"Name": "wireguard_exporter",
-		"Link": "https://github.com/mdlayher/wireguard_exporter",
-		"Description": "Command wireguard_exporter implements a Prometheus exporter for WireGuard devices. MIT Licensed.",
+		"Name": "zedhook",
+		"Link": "https://github.com/mdlayher/zedhook",
+		"Description": "zedhook provides a ZEDLET (ZFS Event Daemon Linkage for Executable Tasks) and zevent receiver server to monitor and log ZFS events produced by ZED. Apache 2.0 Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "netx",
+		"Link": "https://github.com/mdlayher/netx",
+		"Description": "A collection of small Go networking packages. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "stream",
+		"Link": "https://github.com/mdlayher/stream",
+		"Description": "File storage and an issue tracker for stream topic suggestions for Matt's Twitch stream. MIT Licensed.",
 		"Tag": ""
 	}
 ]
