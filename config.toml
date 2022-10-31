@@ -10,3 +10,6 @@ pygmentsStyle = "vs"
   Description = "Matt Layher - mdlayher.com"
   Source = "github.com/mdlayher/mdlayher.com"
   css = ["/override.css"]
+
+[markup.goldmark.renderer]
+unsafe= true
