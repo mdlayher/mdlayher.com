@@ -171,7 +171,7 @@
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/misc/a-brief-intro-to-go/a-brief-intro-to-go.slide"
+				"Link": "https://go-talks.appspot.com/github.com/mdlayher/talks/misc/a-brief-intro-to-go/a-brief-intro-to-go.slide"
 			}
 		]
 	},
@@ -183,7 +183,7 @@
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/misc/package-ovs/package-ovs.slide"
+				"Link": "https://go-talks.appspot.com/github.com/mdlayher/talks/misc/package-ovs/package-ovs.slide"
 			}
 		]
 	},
@@ -195,7 +195,7 @@
 		"Resources": [
 			{
 				"Kind": "slides",
-				"Link": "https://talks.godoc.org/github.com/mdlayher/talks/misc/self-contained-testing-in-go/self-contained-testing-in-go.slide"
+				"Link": "https://go-talks.appspot.com/github.com/mdlayher/talks/misc/self-contained-testing-in-go/self-contained-testing-in-go.slide"
 			}
 		]
 	}
