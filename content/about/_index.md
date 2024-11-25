@@ -37,7 +37,7 @@ and enjoy some time away with friends and family!
 
 If you'd like to get in touch, feel free to reach out on:
 
-- [Twitter: @mdlayher](https://twitter.com/mdlayher)
+- [Bluesky: @mdlayher.com](https://bsky.app/profile/mdlayher.com)
 - [Email: mdlayher@gmail.com](mailto:mdlayher@gmail.com)
 - [Gophers Slack: @mdlayher, #networking](https://invite.slack.golangbridge.org/)
 

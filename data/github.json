@@ -1,15 +1,39 @@
 [
 	{
-		"Name": "ethtool",
-		"Link": "https://github.com/mdlayher/ethtool",
-		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
-		"Tag": "v0.1.0"
-	},
-	{
 		"Name": "wifi",
 		"Link": "https://github.com/mdlayher/wifi",
 		"Description": "Package wifi provides access to IEEE 802.11 WiFi device actions and statistics.  MIT Licensed.",
-		"Tag": "v0.1.0"
+		"Tag": "v0.3.0"
+	},
+	{
+		"Name": "ethtool",
+		"Link": "https://github.com/mdlayher/ethtool",
+		"Description": "Package ethtool allows control of the Linux ethtool generic netlink interface. MIT Licensed.",
+		"Tag": "v0.2.0"
+	},
+	{
+		"Name": "corerad",
+		"Link": "https://github.com/mdlayher/corerad",
+		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
+		"Tag": "v1.3.1"
+	},
+	{
+		"Name": "apcupsd_exporter",
+		"Link": "https://github.com/mdlayher/apcupsd_exporter",
+		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
+		"Tag": "v0.3.0"
+	},
+	{
+		"Name": "vsock",
+		"Link": "https://github.com/mdlayher/vsock",
+		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
+		"Tag": "v1.2.1"
+	},
+	{
+		"Name": "netlink",
+		"Link": "https://github.com/mdlayher/netlink",
+		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
+		"Tag": "v1.7.2"
 	},
 	{
 		"Name": "socket",
@@ -18,22 +42,10 @@
 		"Tag": "v0.5.1"
 	},
 	{
-		"Name": "corerad",
-		"Link": "https://github.com/mdlayher/corerad",
-		"Description": "CoreRAD is an extensible and observable IPv6 Neighbor Discovery Protocol router advertisement daemon. Apache 2.0 Licensed.",
-		"Tag": "v1.3.0"
-	},
-	{
 		"Name": "ndp",
 		"Link": "https://github.com/mdlayher/ndp",
 		"Description": "Package ndp implements the Neighbor Discovery Protocol, as described in RFC 4861.  MIT Licensed.",
 		"Tag": "v1.1.0"
-	},
-	{
-		"Name": "netlink",
-		"Link": "https://github.com/mdlayher/netlink",
-		"Description": "Package netlink provides low-level access to Linux netlink sockets (AF_NETLINK). MIT Licensed.",
-		"Tag": "v1.7.2"
 	},
 	{
 		"Name": "consrv",
@@ -48,16 +60,10 @@
 		"Tag": "v1.3.2"
 	},
 	{
-		"Name": "vsock",
-		"Link": "https://github.com/mdlayher/vsock",
-		"Description": "Package vsock provides access to Linux VM sockets (AF_VSOCK) for communication between a hypervisor and its virtual machines.  MIT Licensed.",
-		"Tag": "v1.2.1"
-	},
-	{
-		"Name": "apcupsd_exporter",
-		"Link": "https://github.com/mdlayher/apcupsd_exporter",
-		"Description": "Prometheus exporter that exposes metrics from apcupsd's NIS. MIT Licensed.",
-		"Tag": "v0.3.0"
+		"Name": "homelab",
+		"Link": "https://github.com/mdlayher/homelab",
+		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
+		"Tag": ""
 	},
 	{
 		"Name": "wifiqr",
@@ -66,9 +72,15 @@
 		"Tag": ""
 	},
 	{
-		"Name": "homelab",
-		"Link": "https://github.com/mdlayher/homelab",
-		"Description": "Configuration management for Matt Layher's machines. MIT Licensed.",
+		"Name": "rvexec",
+		"Link": "https://github.com/mdlayher/rvexec",
+		"Description": "WIP riscv64 and Rust experiments. MIT Licensed.",
+		"Tag": ""
+	},
+	{
+		"Name": "modemmanager_exporter",
+		"Link": "https://github.com/mdlayher/modemmanager_exporter",
+		"Description": "Command modemmanager_exporter implements a Prometheus exporter for ModemManager and its devices. MIT Licensed.",
 		"Tag": ""
 	},
 	{
@@ -105,18 +117,6 @@
 		"Name": "networkd",
 		"Link": "https://github.com/mdlayher/networkd",
 		"Description": "Package networkd enables control of systemd-networkd using D-Bus. MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "apcupsd",
-		"Link": "https://github.com/mdlayher/apcupsd",
-		"Description": "Package apcupsd provides a client for the apcupsd Network Information Server (NIS).  MIT Licensed.",
-		"Tag": ""
-	},
-	{
-		"Name": "netx",
-		"Link": "https://github.com/mdlayher/netx",
-		"Description": "A collection of small Go networking packages. MIT Licensed.",
 		"Tag": ""
 	}
 ]
